@@ -1,0 +1,3220 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ultimate Member\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-20 16:50+0200\n"
+"PO-Revision-Date: 2015-01-20 16:50+0200\n"
+"Last-Translator: Calum Allison <umplugin@gmail.com>\n"
+"Language-Team: Ultimate Member <umplugin@gmail.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/core/lib/ReduxFramework/ReduxCore/extensions/customizer/extension_customizer.php:473
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:1908
+msgid "You have changes that are not saved. Would you like to save them now?"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/extensions/customizer/extension_customizer.php:474
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:1916
+msgid "Are you sure? Resetting will lose all custom values."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/extensions/customizer/extension_customizer.php:475
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:1932
+msgid "Your current options will be replaced with the values of this preset. Would you like to proceed?"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/extensions/customizer/extension_customizer.php:508
+msgid "You have changes that are not saved.  Would you like to save them now?"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/extensions/customizer/extension_customizer.php:509
+msgid "Are you sure?  Resetting will lose all custom values."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/extensions/customizer/extension_customizer.php:510
+msgid "Your current options will be replaced with the values of this preset.  Would you like to proceed?"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:222
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:226 admin/core/um-admin-metabox.php:272
+msgid "Options"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:1310
+msgid "Ultimate Member"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:1314
+#, php-format
+msgid "%s | Ultimate Member"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:1318
+msgid "Dashboard"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:1328 core/um-taxonomies.php:18
+msgid "Forms"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:1330 core/um-taxonomies.php:36
+msgid "User Roles"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:1333 core/um-taxonomies.php:56
+msgid "Member Directories"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:1924
+msgid "Are you sure? Resetting will lose all custom values in this section."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:1939
+msgid "Please Wait"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:2064 um-config.php:77
+msgid "Enable"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:2069 um-config.php:78
+msgid "Disable"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:2075
+msgid "moving the mouse over"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:2077
+msgid "clicking"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:2081
+#, php-format
+msgid ""
+"Hints are tooltips that popup when %d the hint icon, offering addition information about the field in which "
+"they appear.  They can be %d d by using the link below."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:2086
+msgid "Hints"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:2211 admin/templates/form/login_settings.php:6
+msgid "Default"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3286
+msgid "Warning- This options panel will not work properly without javascript!"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3337
+msgid "Developer Mode Enabled"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3365
+msgid "Expand"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3367
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3675
+msgid "Save Changes"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3371
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3679
+msgid "Reset Section"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3373
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3681
+msgid "Reset All"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3378
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3686
+msgid "Working..."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3398
+msgid "Settings Imported!"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3413
+msgid "All Defaults Restored!"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3427
+msgid "Section Defaults Restored!"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3441
+msgid "Settings Saved!"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3459
+msgid "Settings have changed, you should save them!"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3467
+msgid "error(s) were found!"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3475
+msgid "warning(s) were found!"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3539
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:3618
+msgid "System Info"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/framework.php:4272
+msgid "Please create a team.php template in admin templates."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/class.redux_filesystem.php:22
+msgid "Unable to create a required directory. Please ensure that"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/class.redux_filesystem.php:24
+msgid "has the proper read/write permissions or enter your FTP information below."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/class.redux_functions.php:253
+msgid "Dismiss"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/class.redux_themecheck.php:61
+#, php-format
+msgid ""
+"The theme you are testing has %s embedded. We invite you to read the %sTheme-Check Documentation%s to "
+"understand some warnings you will see because of Redux."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/class.redux_themecheck.php:109
+msgid ""
+"The following directories & files are still located in your <strong>Redux</strong>  directory. They may "
+"cause errors in Theme-Check."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/debug.php:41
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/debug.php:69
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/debug.php:76
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/debug.php:77
+msgid "Options Object"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/debug.php:54
+msgid "Show Object in Javascript Console Object"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/background/field_background.php:124
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/color/field_color.php:72
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:79
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:91
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/color_rgba/field_color_rgba.php:77
+msgid "Transparent"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/background/field_background.php:141
+msgid "Background Repeat"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/background/field_background.php:157
+msgid "Background Clip"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/background/field_background.php:173
+msgid "Background Origin"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/background/field_background.php:188
+msgid "Background Size"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/background/field_background.php:203
+msgid "Background Attachment"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/background/field_background.php:223
+msgid "Background Position"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/background/field_background.php:277
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/media/field_media.php:149
+msgid "No media selected"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/background/field_background.php:314
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/media/field_media.php:204
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:126
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:188 core/um-fields.php:729
+#: core/um-fields.php:750
+msgid "Upload"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/background/field_background.php:321
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/media/field_media.php:211
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/multi_text/field_multi_text.php:69
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/multi_text/field_multi_text.php:73
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/multi_text/field_multi_text.php:76
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:133
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:190
+#: core/um-actions-profile.php:141
+msgid "Remove"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/border/field_border.php:114
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/spacing/field_spacing.php:191
+msgid "All"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/border/field_border.php:127
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/spacing/field_spacing.php:215
+msgid "Top"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/border/field_border.php:134
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/spacing/field_spacing.php:222
+msgid "Right"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/border/field_border.php:141
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/spacing/field_spacing.php:229
+msgid "Bottom"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/border/field_border.php:148
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/spacing/field_spacing.php:236
+msgid "Left"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/border/field_border.php:162
+msgid "Border style"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:68
+msgid "From "
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:82
+msgid "To "
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/dimensions/field_dimensions.php:161
+msgid "Width"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/dimensions/field_dimensions.php:177
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:436
+msgid "Height"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/dimensions/field_dimensions.php:188
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/dimensions/field_dimensions.php:189
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/spacing/field_spacing.php:245
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/spacing/field_spacing.php:246
+msgid "Units"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/gallery/field_gallery.php:73
+msgid "Add/Edit Gallery"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/gallery/field_gallery.php:74
+msgid "Clear Gallery"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/link_color/field_link_color.php:87
+msgid "Regular"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/link_color/field_link_color.php:91
+msgid "Hover"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/link_color/field_link_color.php:95
+msgid "Visited"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/link_color/field_link_color.php:99
+msgid "Active"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/multi_text/field_multi_text.php:61
+msgid "Add More"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/password/field_password.php:62
+msgid "Password"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/password/field_password.php:63
+msgid "Username"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/select/field_select.php:82
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/select_image/field_select_image.php:62
+msgid "Select an item"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/select/field_select.php:126
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/select_image/field_select_image.php:143
+msgid "No items of this type were found."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:68
+msgid "Slide"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:73
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:145
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:200
+#: admin/core/um-admin-columns.php:26 admin/core/um-admin-columns.php:44
+msgid "Title"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:149
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:204
+msgid "Description"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:153
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:207
+msgid "URL"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:167
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:220 core/um-filters-user.php:17
+msgid "Delete"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:223
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/switch/field_switch.php:41
+msgid "On"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/switch/field_switch.php:44
+msgid "Off"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:227
+msgid "Font Family"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:228
+msgid "Font family"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:254
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:255
+msgid "Backup Font Family"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:269
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:276
+msgid "Font style"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:270
+msgid "Font Weight &amp; Style"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:276
+msgid "Style"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:316
+msgid "Font subsets"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:318
+msgid "Font Subsets"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:319
+msgid "Subsets"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:319
+msgid "Font script"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:336
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:337
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:338
+msgid "Text Align"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:359
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:360
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:361
+msgid "Text Transform"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:382
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:383
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:384
+msgid "Font Variant"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:402
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:403
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:404
+msgid "Text Decoration"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:426
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:427
+msgid "Font Size"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:427
+msgid "Size"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:435
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:436
+msgid "Line Height"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:444
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:445
+msgid "Word Spacing"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:453
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:454
+msgid "Letter Spacing"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:472
+msgid "Font Color"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:474
+msgid "Font color"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:841
+msgid "Standard Fonts"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:942
+msgid "Google Webfonts"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:78
+msgid "Import / Export Options"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:81
+msgid "Import Options"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:82
+msgid "Import from file"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:82
+msgid "Import from URL"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:85
+msgid "Input your backup file below and hit Import to restore your sites options from a backup."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:90
+msgid "Input the URL to another sites options set and hit Import to load the options from that site."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:94
+msgid "Import"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:94
+msgid "WARNING! This will overwrite all existing option values, please proceed with caution!"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:97
+msgid "Export Options"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:100
+msgid ""
+"Here you can copy/download your current option settings. Keep this safe as you can use it as a backup should "
+"anything go wrong, or you can use it to restore your settings on this site (or any other site)."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:104
+msgid "Copy"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:104
+msgid "Download"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:104
+msgid "Copy Link"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:140
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:149
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/import_export.php:150
+msgid "Import / Export"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/validation/color/validation_color.php:15
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/validation/color_rgba/validation_color_rgba.php:14
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/validation/colorrgba/validation_colorrgba.php:16
+msgid "This field must be a valid color value."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/validation/comma_numeric/validation_comma_numeric.php:16
+msgid "You must provide a comma separated list of numerical values for this option."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/validation/date/validation_date.php:16
+msgid "This field must be a valid date."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/validation/email/validation_email.php:16
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/validation/email_not_empty/validation_email_not_empty.php:16
+msgid "You must provide a valid email for this option."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/validation/no_html/validation_no_html.php:15
+msgid "You must not enter any HTML in this field, all HTML tags have been removed."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/validation/no_special_chars/validation_no_special_chars.php:16
+msgid "You must not enter any special characters in this field, all special characters have been removed."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/validation/not_empty/validation_not_empty.php:16
+msgid "This field cannot be empty. Please provide a value."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/validation/numeric/validation_numeric.php:16
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/validation/numeric_not_empty/validation_numeric_not_empty.php:16
+msgid "You must provide a numerical value for this option."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/validation/url/validation_url.php:16
+msgid "You must provide a valid URL for this option."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:40
+msgid "Welcome to Redux Framework"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:48
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:295
+msgid "Redux Framework Changelog"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:56
+msgid "Getting started with Redux Framework"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:64
+msgid "The people that develop Redux Framework"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:135
+msgid "What's New"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:139
+msgid "Getting Started"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:143
+msgid "Changelog"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:147
+msgid "Credits"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:164
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:333
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:471
+#, php-format
+msgid "Welcome to Redux Framework %s"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:167
+#, php-format
+msgid "Thank you for updating to the latest version! Redux Framework %s is ready to <add description>"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:169
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:300
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:338
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:476
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:174
+msgid "Some Feature"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:178
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:182
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:195
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:199
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:203
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:208
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:221
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:225
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:230
+msgid "Feature"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:190
+msgid "Some feature"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:217
+msgid "More Features"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:223
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:227
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:232
+msgid "description"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:238
+msgid "Additional Updates"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:242
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:246
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:252
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:256
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:262
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:266
+msgid "Cool thing"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:244
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:248
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:254
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:258
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:264
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:268
+msgid "cool thing description."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:277
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:316
+msgid "Go to Redux Framework"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:278
+msgid "View the Full Changelog"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:298
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:336
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:474
+#, php-format
+msgid "Thank you for updating to the latest version! Redux Framework %s is ready to make your <description>"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:305
+msgid "Full Changelog"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:342
+msgid "Use the tips below to get started using Redux Framework. You'll be up and running in no time!"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:345
+msgid "Creating Your First Panel"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:350
+#, php-format
+msgid "<a href=\"%s\">%s &rarr; Add New</a>"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:352
+#, php-format
+msgid ""
+"The %s menu is your access point for all aspects of your Easy Digital Downloads product creation and setup. "
+"To create your first product, simply click Add New and then fill out the product details."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:354
+msgid "Product Price"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:356
+msgid ""
+"Products can have simple prices or variable prices if you wish to have more than one price point for a "
+"product. For a single price, simply enter the price. For multiple price points, click <em>Enable variable "
+"pricing</em> and enter the options."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:358
+msgid "Download Files"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:360
+msgid ""
+"Uploading the downloadable files is simple. Click <em>Upload File</em> in the Download Files section and "
+"choose your download file. To add more than one file, simply click the <em>Add New</em> button."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:366
+msgid "Display a Product Grid"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:373
+msgid "Flexible Product Grids"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:375
+msgid ""
+"The [downloads] shortcode will display a product grid that works with any theme, no matter the size. It is "
+"even responsive!"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:377
+msgid "Change the Number of Columns"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:379
+msgid "You can easily change the number of columns by adding the columns=\"x\" parameter:"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:385
+msgid "Additional Display Options"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:387
+#, php-format
+msgid ""
+"The product grids can be customized in any way you wish and there is <a href=\"%s\">extensive documentation</"
+"a> to assist you."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:392
+msgid "Purchase Buttons Anywhere"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:397
+msgid "The <em>[purchase_link]</em> Shortcode"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:399
+msgid ""
+"With easily accessible shortcodes to display purchase buttons, you can add a Buy Now or Add to Cart button "
+"for any product anywhere on your site in seconds."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:401
+msgid "Buy Now Buttons"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:403
+msgid ""
+"Purchase buttons can behave as either Add to Cart or Buy Now buttons. With Buy Now buttons customers are "
+"taken straight to PayPal, giving them the most frictionless purchasing experience possible."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:409
+msgid "Need Help?"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:413
+msgid "Phenomenal Support"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:415
+msgid ""
+"We do our best to provide the best support we can. If you encounter a problem or have a question, post a "
+"question in the <a href=\"https://easydigitaldownloads.com/support\">support forums</a>."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:417
+msgid "Need Even Faster Support?"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:419
+msgid ""
+"Our <a href=\"https://easydigitaldownloads.com/support/pricing/\">Priority Support forums</a> are there for "
+"customers that need faster and/or more in-depth assistance."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:425
+msgid "Stay Up to Date"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:429
+msgid "Get Notified of Extension Releases"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:431
+msgid ""
+"New extensions that make Easy Digital Downloads even more powerful are released nearly every single week. "
+"Subscribe to the newsletter to stay up to date with our latest releases. <a href=\"http://eepurl.com/kaerz\" "
+"target=\"_blank\">Signup now</a> to ensure you do not miss a release!"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:433
+msgid "Get Alerted About New Tutorials"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:435
+msgid ""
+"<a href=\"http://eepurl.com/kaerz\" target=\"_blank\">Signup now</a> to hear about the latest tutorial "
+"releases that explain how to take Easy Digital Downloads further."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:441
+msgid "Extensions for Everything"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:445
+msgid "Over 250 Extensions"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:447
+msgid ""
+"Add-on plugins are available that greatly extend the default functionality of Easy Digital Downloads. There "
+"are extensions for payment processors, such as Stripe and PayPal, extensions for newsletter integrations, "
+"and many, many more."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:449
+msgid "Visit the Extension Store"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:451
+msgid ""
+"<a href=\"https://asydigitaldownloads.com/extensions\" target=\"_blank\">The Extensions store</a> has a list "
+"of all available extensions, including convenient category filters so you can find exactly what you are "
+"looking for."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:480
+msgid "Redux Framework is created by a worldwide team of developers who <something witty here>"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:500
+msgid "No valid changlog was found."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/ReduxCore/inc/welcome.php:539
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/class.redux-plugin.php:306
+msgid "Redux Framework has an embedded demo."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/class.redux-plugin.php:306
+msgid "Click here to activate the sample config file."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/class.redux-plugin.php:407
+msgid "Repo"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/class.redux-plugin.php:408
+msgid "Generator"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/class.redux-plugin.php:409
+msgid "Issues"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/class.redux-plugin.php:410
+msgid "Documentation"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/class.redux-plugin.php:415
+msgid "Deactivate Demo Mode"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/class.redux-plugin.php:417
+msgid "Activate Demo Mode"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/tests/includes/class-tivwp-dm-controller.php:28
+msgid "Must call in of after the \"plugins_loaded\" action."
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/tests/includes/class-tivwp-dm-controller.php:138
+#, php-format
+msgid "Unknown action \"%1$s\" specified for %2$s"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/tests/includes/class-tivwp-dm-controller.php:143
+#, php-format
+msgid "The unknown action has been replaced with \"%s\""
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/tests/includes/class-tivwp-dm-controller.php:158
+#, php-format
+msgid "Automatic action performed: \"%s\""
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/tests/includes/class-tivwp-dm.php:112
+msgid "Activate Development Plugins"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/tests/includes/class-tivwp-dm.php:119
+msgid "Deactivate Development Plugins"
+msgstr ""
+
+#: admin/core/lib/ReduxFramework/tests/includes/class-tivwp-dm.php:131
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: admin/core/um-admin-access.php:70
+msgid "Access Control"
+msgstr ""
+
+#: admin/core/um-admin-actions-ajax.php:11 admin/core/um-admin-actions-fields.php:11
+#: admin/core/um-admin-actions-modal.php:95
+msgid "Please login as administrator"
+msgstr ""
+
+#: admin/core/um-admin-actions-modal.php:23
+msgid "Manage conditional fields support"
+msgstr ""
+
+#: admin/core/um-admin-actions-modal.php:25
+msgid "Add conditional fields support"
+msgstr ""
+
+#: admin/core/um-admin-actions-modal.php:120
+msgid "Search Icons..."
+msgstr ""
+
+#: admin/core/um-admin-actions-modal.php:141
+msgid "Setup New Field"
+msgstr ""
+
+#: admin/core/um-admin-actions-modal.php:157
+msgid "Predefined Fields"
+msgstr ""
+
+#: admin/core/um-admin-actions-modal.php:169
+msgid "None"
+msgstr ""
+
+#: admin/core/um-admin-actions-modal.php:173
+msgid "Custom Fields"
+msgstr ""
+
+#: admin/core/um-admin-actions-modal.php:184
+msgid "You did not create any custom fields"
+msgstr ""
+
+#: admin/core/um-admin-actions-modal.php:218 admin/core/um-admin-actions-modal.php:288
+msgid "This field type is not setup correcty."
+msgstr ""
+
+#: admin/core/um-admin-builder.php:92 admin/core/um-admin-builder.php:158 admin/core/um-admin-dragdrop.php:140
+msgid "Add Row"
+msgstr ""
+
+#: admin/core/um-admin-builder.php:93 admin/core/um-admin-builder.php:159 admin/core/um-admin-dragdrop.php:141
+msgid "Edit Row"
+msgstr ""
+
+#: admin/core/um-admin-builder.php:162 admin/core/um-admin-dragdrop.php:143
+#: admin/core/um-admin-dragdrop.php:157 admin/core/um-admin-dragdrop.php:182
+msgid "Delete Row"
+msgstr ""
+
+#: admin/core/um-admin-columns.php:25 admin/core/um-admin-columns.php:43
+msgid "ID"
+msgstr ""
+
+#: admin/core/um-admin-columns.php:27
+msgid "Type"
+msgstr ""
+
+#: admin/core/um-admin-columns.php:28 admin/core/um-admin-columns.php:45 admin/core/um-admin-metabox.php:219
+#: admin/core/um-admin-metabox.php:259
+msgid "Shortcode"
+msgstr ""
+
+#: admin/core/um-admin-columns.php:29 admin/core/um-admin-columns.php:46
+msgid "Date"
+msgstr ""
+
+#: admin/core/um-admin-functions.php:28 admin/core/um-admin-functions.php:31
+msgid "Form updated."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:29 admin/core/um-admin-functions.php:47
+msgid "Custom field updated."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:30 admin/core/um-admin-functions.php:48
+msgid "Custom field deleted."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:32
+msgid "Form restored to revision."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:33
+msgid "Form created."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:34
+msgid "Form saved."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:35
+msgid "Form submitted."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:36
+msgid "Form scheduled."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:37
+msgid "Form draft updated."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:46 admin/core/um-admin-functions.php:49
+msgid "Role updated."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:50
+msgid "Role restored to revision."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:51
+msgid "Role created."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:52
+msgid "Role saved."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:53
+msgid "Role submitted."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:54
+msgid "Role scheduled."
+msgstr ""
+
+#: admin/core/um-admin-functions.php:55
+msgid "Role draft updated."
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:112 um-config.php:209 um-config.php:241
+msgid "Yes"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:113 admin/core/um-admin-roles.php:48 um-config.php:210 um-config.php:242
+msgid "No"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:214
+msgid "General Options"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:215
+msgid "Profile Card"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:216
+msgid "Search Options"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:217
+msgid "Results &amp; Pagination"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:221
+msgid "Styling: General"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:223
+msgid "Styling: Profile Card"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:232
+msgid "Administrative Permissions"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:234
+msgid "General Permissions"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:236
+msgid "Profile Access"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:238
+msgid "Homepage Options"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:240
+msgid "Registration Options"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:242
+msgid "Login Options"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:244
+msgid "Logout Options"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:246
+msgid "Delete Options"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:255
+msgid "Select Form Type"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:257
+msgid "Form Builder"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:261 admin/core/um-admin-metabox.php:265 admin/core/um-admin-metabox.php:267
+msgid "Customize this form"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:271
+msgid "User Meta"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:455
+msgid "If"
+msgstr ""
+
+#: admin/core/um-admin-metabox.php:524
+msgid "Value"
+msgstr ""
+
+#: admin/core/um-admin-notices.php:24
+#, php-format
+msgid ""
+"Registration is disabled. Please go to the <a href=\"%s\">general settings</a> page in the WordPress admin "
+"and select anyone can register. <a href=\"%s\">Hide this notice</a>"
+msgstr ""
+
+#: admin/core/um-admin-notices.php:42
+msgid "User has been updated."
+msgstr ""
+
+#: admin/core/um-admin-notices.php:46
+msgid "Users have been updated."
+msgstr ""
+
+#: admin/core/um-admin-notices.php:50
+msgid "Super administrators cannot be modified."
+msgstr ""
+
+#: admin/core/um-admin-notices.php:51
+msgid "Other users have been updated."
+msgstr ""
+
+#: admin/core/um-admin-redux.php:59 admin/core/um-admin-redux.php:60 index.php:59
+msgid "Settings"
+msgstr ""
+
+#: admin/core/um-admin-roles.php:20
+msgid "Role Title"
+msgstr ""
+
+#: admin/core/um-admin-roles.php:21
+msgid "No. of Members"
+msgstr ""
+
+#: admin/core/um-admin-roles.php:21
+msgid "The total number of members who have this role on your site"
+msgstr ""
+
+#: admin/core/um-admin-roles.php:22
+msgid "Core / Built-in"
+msgstr ""
+
+#: admin/core/um-admin-roles.php:22
+msgid "A core role is installed by default and may not be removed"
+msgstr ""
+
+#: admin/core/um-admin-roles.php:23
+msgid "WP-Admin Access"
+msgstr ""
+
+#: admin/core/um-admin-roles.php:23
+msgid "Let you know If users of this role can view the WordPress backend or not"
+msgstr ""
+
+#: admin/core/um-admin-roles.php:46
+msgid "This role can access the WordPress backend"
+msgstr ""
+
+#: admin/core/um-admin-roles.php:64
+msgid "Core"
+msgstr ""
+
+#: admin/core/um-admin-tracking.php:151
+msgid ""
+"Help us improve Ultimate Member’s compatibility with other plugins and themes by allowing us to track non-"
+"sensitive data on your site. Click <a href=\"http://ultimatemember.com/tracking/\">here</a> to see what data "
+"we track."
+msgstr ""
+
+#: admin/core/um-admin-tracking.php:155 um-config.php:1427
+msgid "Allow tracking"
+msgstr ""
+
+#: admin/core/um-admin-tracking.php:156
+msgid "Do not allow tracking"
+msgstr ""
+
+#: admin/core/um-admin-users.php:34
+msgid "Edit"
+msgstr ""
+
+#: admin/core/um-admin-users.php:35
+msgid "Edit in frontend"
+msgstr ""
+
+#: admin/core/um-admin-users.php:111 admin/core/um-admin-users.php:146
+msgid "You do not have enough permissions to do that."
+msgstr ""
+
+#: admin/core/um-admin-users.php:193 admin/core/um-admin-users.php:195
+msgid "Take Action"
+msgstr ""
+
+#: admin/core/um-admin-users.php:199 core/um-fields.php:1175
+msgid "Apply"
+msgstr ""
+
+#: admin/core/um-admin-users.php:205
+msgid "Community role&hellip;"
+msgstr ""
+
+#: admin/core/um-admin-users.php:212
+msgid "Change"
+msgstr ""
+
+#: admin/core/um-admin-users.php:230
+msgid "Community Role"
+msgstr ""
+
+#: admin/core/um-admin-users.php:230
+msgid "This is the membership role set by Ultimate Member plugin"
+msgstr ""
+
+#: admin/core/um-admin-users.php:232
+msgid "WordPress Role"
+msgstr ""
+
+#: admin/core/um-admin-users.php:232
+msgid "This is the membership role set by WordPress"
+msgstr ""
+
+#: admin/core/um-admin-users.php:234
+msgid "Status"
+msgstr ""
+
+#: admin/core/um-admin-users.php:234
+msgid "This is current user status in your membership site"
+msgstr ""
+
+#: admin/templates/access/settings.php:1
+msgid "Apply custom access settings?"
+msgstr ""
+
+#: admin/templates/access/settings.php:1
+msgid "Switch to yes to override global access settings"
+msgstr ""
+
+#: admin/templates/access/settings.php:10
+msgid "Content Availability"
+msgstr ""
+
+#: admin/templates/access/settings.php:10
+msgid "Who can access this content?"
+msgstr ""
+
+#: admin/templates/access/settings.php:16
+msgid "Content accessible to Everyone"
+msgstr ""
+
+#: admin/templates/access/settings.php:17
+msgid "Content accessible to Logged Out Users"
+msgstr ""
+
+#: admin/templates/access/settings.php:18
+msgid "Content accessible to Logged In Users"
+msgstr ""
+
+#: admin/templates/access/settings.php:24 admin/templates/access/settings.php:50
+msgid "Redirect URL"
+msgstr ""
+
+#: admin/templates/access/settings.php:24 admin/templates/access/settings.php:50
+msgid "This is the URL that user is redirected to If he is not permitted to view this content"
+msgstr ""
+
+#: admin/templates/access/settings.php:38
+msgid "Select the member roles that can see this content?"
+msgstr ""
+
+#: admin/templates/access/settings.php:38
+msgid "If you do not select any role, all members wil be able to view this content"
+msgstr ""
+
+#: admin/templates/dashboard/overview.php:70
+msgid "No users are awaiting manual verification so far."
+msgstr ""
+
+#: admin/templates/dashboard/overview.php:107
+msgid "No users are awaiting e-mail validation yet."
+msgstr ""
+
+#: admin/templates/dashboard/overview.php:140
+msgid "No users have been deactivated recently."
+msgstr ""
+
+#: admin/templates/directory/appearance.php:3 admin/templates/form/login_customize.php:14
+#: admin/templates/form/profile_customize.php:26 admin/templates/form/register_customize.php:26
+msgid "Template"
+msgstr ""
+
+#: admin/templates/directory/general.php:19
+msgid "User Roles to Display"
+msgstr ""
+
+#: admin/templates/directory/general.php:32
+msgid "Only show members who have uploaded a profile photo"
+msgstr ""
+
+#: admin/templates/directory/general.php:41
+msgid "Only show members who have uploaded a cover photo"
+msgstr ""
+
+#: admin/templates/directory/general.php:50
+msgid "Sort users by"
+msgstr ""
+
+#: admin/templates/directory/general.php:67
+msgid "Meta key"
+msgstr ""
+
+#: admin/templates/directory/pagination.php:41
+msgid "Number of profiles per page"
+msgstr ""
+
+#: admin/templates/directory/pagination.php:50
+msgid "Maximum number of profiles"
+msgstr ""
+
+#: admin/templates/directory/profile.php:6
+msgid "Enable Profile Photo"
+msgstr ""
+
+#: admin/templates/directory/profile.php:15
+msgid "Enable Cover Photo"
+msgstr ""
+
+#: admin/templates/directory/profile.php:24
+msgid "Show display name"
+msgstr ""
+
+#: admin/templates/directory/profile.php:33
+msgid "Show tagline below profile name"
+msgstr ""
+
+#: admin/templates/directory/profile.php:42
+msgid "Choose field(s) to display in tagline"
+msgstr ""
+
+#: admin/templates/directory/profile.php:90
+msgid "Show extra user information below tagline?"
+msgstr ""
+
+#: admin/templates/directory/profile.php:99
+msgid "Enable reveal section transition by default"
+msgstr ""
+
+#: admin/templates/directory/profile.php:108
+msgid "Choose field(s) to display in reveal section"
+msgstr ""
+
+#: admin/templates/directory/profile.php:156
+msgid "Show social connect icons"
+msgstr ""
+
+#: admin/templates/directory/profile_card.php:3
+msgid "Profile card background"
+msgstr ""
+
+#: admin/templates/directory/profile_card.php:7
+msgid "Profile card text"
+msgstr ""
+
+#: admin/templates/directory/profile_card.php:11
+msgid "Profile card border color"
+msgstr ""
+
+#: admin/templates/directory/profile_card.php:15
+msgid "Profile photo border color"
+msgstr ""
+
+#: admin/templates/directory/search.php:6
+msgid "Enable Search feature"
+msgstr ""
+
+#: admin/templates/directory/search.php:15
+msgid "User Roles that can use search"
+msgstr ""
+
+#: admin/templates/directory/search.php:28
+msgid "Choose field(s) to enable in search"
+msgstr ""
+
+#: admin/templates/directory/search.php:76
+msgid "Results Text"
+msgstr ""
+
+#: admin/templates/directory/search.php:79 core/um-setup.php:47
+msgid "{total_users} Members"
+msgstr ""
+
+#: admin/templates/directory/search.php:85
+msgid "Custom text If no users were found"
+msgstr ""
+
+#: admin/templates/directory/search.php:88 core/um-setup.php:48
+msgid "We are sorry. We cannot find any users who match your search criteria."
+msgstr ""
+
+#: admin/templates/form/builder.php:14
+msgid "Live Preview"
+msgstr ""
+
+#: admin/templates/form/builder.php:28
+msgid "Add Master Row"
+msgstr ""
+
+#: admin/templates/form/login_customize.php:4 admin/templates/form/profile_customize.php:4
+#: admin/templates/form/register_customize.php:4
+msgid "Use global settings?"
+msgstr ""
+
+#: admin/templates/form/login_customize.php:26 admin/templates/form/profile_customize.php:38
+#: admin/templates/form/register_customize.php:38
+msgid "Max. Width (px or %)"
+msgstr ""
+
+#: admin/templates/form/login_customize.php:30 admin/templates/form/profile_customize.php:42
+#: admin/templates/form/register_customize.php:42
+msgid "Alignment"
+msgstr ""
+
+#: admin/templates/form/login_customize.php:40 admin/templates/form/profile_customize.php:52
+#: admin/templates/form/register_customize.php:52
+msgid "Field Icons"
+msgstr ""
+
+#: admin/templates/form/login_customize.php:50 admin/templates/form/profile_customize.php:62
+#: admin/templates/form/register_customize.php:62
+msgid "Primary Button Text"
+msgstr ""
+
+#: admin/templates/form/login_customize.php:54 admin/templates/form/profile_customize.php:66
+#: admin/templates/form/register_customize.php:66
+msgid "Primary Button Color"
+msgstr ""
+
+#: admin/templates/form/login_customize.php:58 admin/templates/form/profile_customize.php:70
+#: admin/templates/form/register_customize.php:70
+msgid "Primary Button Hover Color"
+msgstr ""
+
+#: admin/templates/form/login_customize.php:62 admin/templates/form/profile_customize.php:74
+#: admin/templates/form/register_customize.php:74
+msgid "Primary Button Text Color"
+msgstr ""
+
+#: admin/templates/form/login_customize.php:67 admin/templates/form/profile_customize.php:79
+#: admin/templates/form/register_customize.php:79
+msgid "Show Secondary Button"
+msgstr ""
+
+#: admin/templates/form/login_customize.php:75 admin/templates/form/profile_customize.php:87
+#: admin/templates/form/register_customize.php:87
+msgid "Secondary Button Text"
+msgstr ""
+
+#: admin/templates/form/login_customize.php:79 admin/templates/form/profile_customize.php:91
+#: admin/templates/form/register_customize.php:91
+msgid "Secondary Button Color"
+msgstr ""
+
+#: admin/templates/form/login_customize.php:83 admin/templates/form/profile_customize.php:95
+#: admin/templates/form/register_customize.php:95
+msgid "Secondary Button Hover Color"
+msgstr ""
+
+#: admin/templates/form/login_customize.php:87 admin/templates/form/profile_customize.php:99
+#: admin/templates/form/register_customize.php:99
+msgid "Secondary Button Text Color"
+msgstr ""
+
+#: admin/templates/form/login_settings.php:3
+msgid "Redirection after Login"
+msgstr ""
+
+#: admin/templates/form/login_settings.php:16 admin/templates/role/delete.php:18
+#: admin/templates/role/login.php:20 admin/templates/role/logout.php:18 admin/templates/role/register.php:37
+#: admin/templates/role/register.php:75 admin/templates/role/register.php:113
+msgid "Set Custom Redirect URL"
+msgstr ""
+
+#: admin/templates/form/mode.php:6
+msgid "<strong>Note:</strong> Form type cannot be changed for the default forms."
+msgstr ""
+
+#: admin/templates/form/mode.php:9 um-config.php:1225
+msgid "Registration Form"
+msgstr ""
+
+#: admin/templates/form/mode.php:11
+msgid "Profile Form"
+msgstr ""
+
+#: admin/templates/form/mode.php:13 um-config.php:1316
+msgid "Login Form"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:14
+msgid "Make this profile role-specific"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:103
+msgid "Base Background Color"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:107
+msgid "Enable Cover Photos"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:115
+msgid "Cover photo ratio"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:125 um-config.php:1093
+msgid "Profile Photo Size"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:129 um-config.php:1102
+msgid "Profile Photo Style"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:132 um-config.php:1106
+msgid "Circle"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:133 um-config.php:1107
+msgid "Rounded Corners"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:134 um-config.php:1108
+msgid "Square"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:139
+msgid "Header Background Color"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:143
+msgid "Header Meta Text Color"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:147
+msgid "Header Link Color"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:151
+msgid "Header Link Hover"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:155
+msgid "Header Icon Link Color"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:159
+msgid "Header Icon Link Hover"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:164
+msgid "Show display name in profile header?"
+msgstr ""
+
+#: admin/templates/form/profile_customize.php:173
+msgid "Show user description in profile header?"
+msgstr ""
+
+#: admin/templates/form/profile_settings.php:4
+msgid "Field(s) to show in user meta"
+msgstr ""
+
+#: admin/templates/form/register_customize.php:4
+msgid "Switch to no if you want to customize this form settings, styling &amp; appearance"
+msgstr ""
+
+#: admin/templates/form/register_customize.php:14
+msgid "Assign role to form"
+msgstr ""
+
+#: admin/templates/form/register_customize.php:38
+msgid "The maximum width of shortcode in pixels or percentage relative to its parent, e.g. 600px or 70%"
+msgstr ""
+
+#: admin/templates/form/register_customize.php:42 um-config.php:1002 um-config.php:1251 um-config.php:1342
+msgid "The shortcode is centered by default unless you specify otherwise here"
+msgstr ""
+
+#: admin/templates/form/register_customize.php:52
+msgid "Whether to show field icons and where to show them relative to the field"
+msgstr ""
+
+#: admin/templates/form/register_customize.php:62 admin/templates/form/register_customize.php:87
+msgid "Customize the button text"
+msgstr ""
+
+#: admin/templates/form/register_customize.php:66
+msgid "Override the default primary button color"
+msgstr ""
+
+#: admin/templates/form/register_customize.php:70
+msgid "Override the default primary button hover color"
+msgstr ""
+
+#: admin/templates/form/register_customize.php:74
+msgid "Override the default primary button text color"
+msgstr ""
+
+#: admin/templates/form/register_customize.php:91
+msgid "Override the default secondary button color"
+msgstr ""
+
+#: admin/templates/form/register_customize.php:95
+msgid "Override the default secondary button hover color"
+msgstr ""
+
+#: admin/templates/form/register_customize.php:99
+msgid "Override the default secondary button text color"
+msgstr ""
+
+#: admin/templates/modal/dynamic_edit_field.php:6
+msgid "Edit Field"
+msgstr ""
+
+#: admin/templates/modal/dynamic_edit_field.php:14 admin/templates/modal/dynamic_edit_row.php:14
+msgid "Update"
+msgstr ""
+
+#: admin/templates/modal/dynamic_edit_field.php:15 admin/templates/modal/dynamic_edit_row.php:15
+#: admin/templates/modal/dynamic_new_divider.php:15 admin/templates/modal/dynamic_new_field.php:15
+#: admin/templates/modal/dynamic_new_group.php:15 core/um-actions-profile.php:142
+#: core/um-actions-profile.php:234 core/um-actions-profile.php:244 core/um-actions-profile.php:369
+#: core/um-fields.php:1176 core/um-fields.php:1261
+msgid "Cancel"
+msgstr ""
+
+#: admin/templates/modal/dynamic_edit_row.php:6
+msgid "Edit Row Settings"
+msgstr ""
+
+#: admin/templates/modal/dynamic_form_preview.php:4
+msgid "Live Form Preview"
+msgstr ""
+
+#: admin/templates/modal/dynamic_form_preview.php:12
+msgid "Continue editing"
+msgstr ""
+
+#: admin/templates/modal/dynamic_new_divider.php:6
+msgid "Add a New Divider"
+msgstr ""
+
+#: admin/templates/modal/dynamic_new_divider.php:14 admin/templates/modal/dynamic_new_field.php:14
+#: admin/templates/modal/dynamic_new_group.php:14
+msgid "Add"
+msgstr ""
+
+#: admin/templates/modal/dynamic_new_field.php:6
+msgid "Add a New Field"
+msgstr ""
+
+#: admin/templates/modal/dynamic_new_group.php:6
+msgid "Add a New Field Group"
+msgstr ""
+
+#: admin/templates/modal/dynamic_registration_preview.php:4
+msgid "Review Registration Details"
+msgstr ""
+
+#: admin/templates/modal/fields.php:4
+msgid "Fields Manager"
+msgstr ""
+
+#: admin/templates/modal/fonticons.php:4
+#, php-format
+msgid "Choose from %s available icons"
+msgstr ""
+
+#: admin/templates/role/admin.php:7 admin/templates/role/admin.php:12
+msgid "Can access wp-admin?"
+msgstr ""
+
+#: admin/templates/role/admin.php:7
+msgid "The core admin role must always have access to wp-admin / WordPress backend"
+msgstr ""
+
+#: admin/templates/role/admin.php:12
+msgid ""
+"Allow this role to access the admin dashboard. If turned on the WordPress toolbar will appear at top of the "
+"page."
+msgstr ""
+
+#: admin/templates/role/admin.php:18
+msgid "Can edit other member accounts?"
+msgstr ""
+
+#: admin/templates/role/admin.php:18
+msgid "Allow this role to edit accounts of other members"
+msgstr ""
+
+#: admin/templates/role/admin.php:23
+msgid "Can edit these user roles only"
+msgstr ""
+
+#: admin/templates/role/admin.php:23
+msgid "Which roles that role can edit, choose none to allow role to edit all member roles"
+msgstr ""
+
+#: admin/templates/role/admin.php:36
+msgid "Can delete other member accounts?"
+msgstr ""
+
+#: admin/templates/role/admin.php:36
+msgid "Allow this role to edit the profile fields of certain roles only"
+msgstr ""
+
+#: admin/templates/role/admin.php:41
+msgid "Can delete these user roles only"
+msgstr ""
+
+#: admin/templates/role/admin.php:41
+msgid "Which roles that role can delete, choose none to allow role to delete all member roles"
+msgstr ""
+
+#: admin/templates/role/delete.php:6
+msgid "Action to be taken after account is deleted"
+msgstr ""
+
+#: admin/templates/role/delete.php:6
+msgid "Select what happens when a user with this role deletes their own account"
+msgstr ""
+
+#: admin/templates/role/delete.php:10 admin/templates/role/logout.php:10
+msgid "Go to Homepage"
+msgstr ""
+
+#: admin/templates/role/delete.php:11 admin/templates/role/logout.php:11
+msgid "Go to Custom URL"
+msgstr ""
+
+#: admin/templates/role/delete.php:18
+msgid "Set a url to redirect this user role to after they delete account"
+msgstr ""
+
+#: admin/templates/role/general.php:6
+msgid "Can edit their profile?"
+msgstr ""
+
+#: admin/templates/role/general.php:6
+msgid "Can this role edit his own profile?"
+msgstr ""
+
+#: admin/templates/role/general.php:11
+msgid "Can delete their account?"
+msgstr ""
+
+#: admin/templates/role/general.php:11
+msgid "Allow this role to delete their account and end their membership on your site"
+msgstr ""
+
+#: admin/templates/role/home.php:6
+msgid "Can view default homepage?"
+msgstr ""
+
+#: admin/templates/role/home.php:6
+msgid "Allow this user role to view your site's homepage"
+msgstr ""
+
+#: admin/templates/role/home.php:15
+msgid "Custom Homepage Redirect"
+msgstr ""
+
+#: admin/templates/role/home.php:15
+msgid "Set a url to redirect this user role to if they try to view your site's homepage "
+msgstr ""
+
+#: admin/templates/role/login.php:6
+msgid "Action to be taken after login"
+msgstr ""
+
+#: admin/templates/role/login.php:6
+msgid "Select what happens when a user with this role logins to your site"
+msgstr ""
+
+#: admin/templates/role/login.php:20
+msgid "Set a url to redirect this user role to after they login with their account"
+msgstr ""
+
+#: admin/templates/role/logout.php:6
+msgid "Action to be taken after logout"
+msgstr ""
+
+#: admin/templates/role/logout.php:6
+msgid "Select what happens when a user with this role logouts of your site"
+msgstr ""
+
+#: admin/templates/role/logout.php:18
+msgid "Set a url to redirect this user role to after they logout from site"
+msgstr ""
+
+#: admin/templates/role/profile.php:6
+msgid "Can view other member profiles?"
+msgstr ""
+
+#: admin/templates/role/profile.php:6
+msgid "Can this role view all member profiles?"
+msgstr ""
+
+#: admin/templates/role/profile.php:11
+msgid "Can view these user roles only"
+msgstr ""
+
+#: admin/templates/role/profile.php:11
+msgid "Which roles that role can view, choose none to allow role to view all member roles"
+msgstr ""
+
+#: admin/templates/role/profile.php:24
+msgid "Can make their profile private?"
+msgstr ""
+
+#: admin/templates/role/profile.php:24
+msgid "Can this role make their profile private?"
+msgstr ""
+
+#: admin/templates/role/profile.php:29
+msgid "Can view/access private profiles?"
+msgstr ""
+
+#: admin/templates/role/profile.php:29
+msgid "Can this role view private profiles?"
+msgstr ""
+
+#: admin/templates/role/register.php:6
+msgid "Registration Status"
+msgstr ""
+
+#: admin/templates/role/register.php:6
+msgid "Select the status you would like this user role to have after they register on your site"
+msgstr ""
+
+#: admin/templates/role/register.php:13
+msgid "Auto Approve"
+msgstr ""
+
+#: admin/templates/role/register.php:14
+msgid "Require Email Activation"
+msgstr ""
+
+#: admin/templates/role/register.php:15
+msgid "Require Admin Review"
+msgstr ""
+
+#: admin/templates/role/register.php:25 admin/templates/role/register.php:52
+#: admin/templates/role/register.php:90
+msgid "Action to be taken after registration"
+msgstr ""
+
+#: admin/templates/role/register.php:25 admin/templates/role/register.php:52
+#: admin/templates/role/register.php:90
+msgid ""
+"Select what action is taken after a person registers on your site. Depending on the status you can redirect "
+"them to their profile, a custom url or show a custom message"
+msgstr ""
+
+#: admin/templates/role/register.php:29
+msgid "Redirect to profile"
+msgstr ""
+
+#: admin/templates/role/register.php:30 admin/templates/role/register.php:59
+#: admin/templates/role/register.php:97
+msgid "Redirect to URL"
+msgstr ""
+
+#: admin/templates/role/register.php:58 admin/templates/role/register.php:96
+msgid "Show custom message"
+msgstr ""
+
+#: admin/templates/role/register.php:66 admin/templates/role/register.php:104
+msgid "Personalize the custom message"
+msgstr ""
+
+#: admin/templates/role/register.php:69
+msgid ""
+"Thank you for registering. Before you can login we need you to activate your account by clicking the "
+"activation link in the email we just sent you."
+msgstr ""
+
+#: admin/templates/role/register.php:107
+msgid ""
+"Thank you for applying for membership to our site. We will review your details and send you an email letting "
+"you know whether your application has been successful or not."
+msgstr ""
+
+#: core/um-actions-account.php:28 core/um-actions-account.php:97 core/um-actions-account.php:142
+msgid "Delete Account"
+msgstr ""
+
+#: core/um-actions-account.php:82 core/um-actions-password.php:107
+msgid "Your password must contain at least 8 characters"
+msgstr ""
+
+#: core/um-actions-account.php:86 core/um-actions-password.php:111
+msgid "Your password must contain less than 30 characters"
+msgstr ""
+
+#: core/um-actions-ajax.php:30 core/um-actions-ajax.php:45
+msgid "You can not edit this user"
+msgstr ""
+
+#: core/um-actions-ajax.php:62
+msgid "Invalid parameters"
+msgstr ""
+
+#: core/um-actions-ajax.php:65
+msgid "Invalid coordinates"
+msgstr ""
+
+#: core/um-actions-ajax.php:68
+msgid "Invalid Image file"
+msgstr ""
+
+#: core/um-actions-core.php:65
+msgid "You do not have permission to delete this user."
+msgstr ""
+
+#: core/um-actions-form.php:82
+msgid "You are not allowed to use this word as your username."
+msgstr ""
+
+#: core/um-actions-form.php:142
+#, php-format
+msgid "%s is required"
+msgstr ""
+
+#: core/um-actions-form.php:148
+#, php-format
+msgid "You are only allowed to enter a maximum of %s words"
+msgstr ""
+
+#: core/um-actions-form.php:154
+#, php-format
+msgid "Your %s must contain at least %s characters"
+msgstr ""
+
+#: core/um-actions-form.php:160
+#, php-format
+msgid "Your %s must contain less than %s characters"
+msgstr ""
+
+#: core/um-actions-form.php:166
+msgid "You can not use HTML tags here"
+msgstr ""
+
+#: core/um-actions-form.php:172
+msgid "Your password must contain at least one capital letter and one number"
+msgstr ""
+
+#: core/um-actions-form.php:178
+msgid "Please confirm your password"
+msgstr ""
+
+#: core/um-actions-form.php:181
+msgid "Your passwords do not match"
+msgstr ""
+
+#: core/um-actions-form.php:187
+#, php-format
+msgid "Please select at least %s choices"
+msgstr ""
+
+#: core/um-actions-form.php:193
+#, php-format
+msgid "You can only select up to %s choices"
+msgstr ""
+
+#: core/um-actions-form.php:203
+msgid "Please enter a valid phone number"
+msgstr ""
+
+#: core/um-actions-form.php:209 core/um-actions-form.php:215 core/um-actions-form.php:221
+#: core/um-actions-form.php:227 core/um-actions-form.php:233 core/um-actions-form.php:239
+#, php-format
+msgid "Please enter a valid %s username or profile URL"
+msgstr ""
+
+#: core/um-actions-form.php:246 core/um-actions-form.php:260
+msgid "You must provide a username"
+msgstr ""
+
+#: core/um-actions-form.php:248 core/um-actions-form.php:262
+msgid "Your username is already taken"
+msgstr ""
+
+#: core/um-actions-form.php:250
+msgid "Username cannot be an email"
+msgstr ""
+
+#: core/um-actions-form.php:252 core/um-actions-form.php:266
+msgid "Your username contains invalid characters"
+msgstr ""
+
+#: core/um-actions-form.php:264 core/um-actions-form.php:276
+msgid "This email is already linked to an existing account"
+msgstr ""
+
+#: core/um-actions-form.php:274
+msgid "You must provide your email"
+msgstr ""
+
+#: core/um-actions-form.php:278
+msgid "This is not a valid email"
+msgstr ""
+
+#: core/um-actions-form.php:280
+msgid "Your email contains invalid characters"
+msgstr ""
+
+#: core/um-actions-form.php:294
+#, php-format
+msgid "Your user description must contain less than %s characters"
+msgstr ""
+
+#: core/um-actions-global.php:28
+msgid "Only fill in if you are not human"
+msgstr ""
+
+#: core/um-actions-login.php:16
+msgid "Please enter your username or email"
+msgstr ""
+
+#: core/um-actions-login.php:20
+msgid "Please enter your username"
+msgstr ""
+
+#: core/um-actions-login.php:24
+msgid "Please enter your email"
+msgstr ""
+
+#: core/um-actions-login.php:48
+msgid " Sorry, we can't find an account with that email address"
+msgstr ""
+
+#: core/um-actions-login.php:50
+msgid " Sorry, we can't find an account with that username"
+msgstr ""
+
+#: core/um-actions-login.php:54
+msgid "Please enter your password"
+msgstr ""
+
+#: core/um-actions-login.php:69
+msgid "Password is incorrect. Please try again."
+msgstr ""
+
+#: core/um-actions-login.php:202
+msgid "Forgot your password?"
+msgstr ""
+
+#: core/um-actions-members.php:60
+msgid "Search"
+msgstr ""
+
+#: core/um-actions-members.php:60
+msgid "Reset"
+msgstr ""
+
+#: core/um-actions-members.php:119
+msgid "Jump to page:"
+msgstr ""
+
+#: core/um-actions-members.php:123
+#, php-format
+msgid "%s of %d"
+msgstr ""
+
+#: core/um-actions-misc.php:58 core/um-actions-misc.php:81
+msgid "Registration is currently disabled"
+msgstr ""
+
+#: core/um-actions-misc.php:65
+msgid "You have successfully changed your password."
+msgstr ""
+
+#: core/um-actions-misc.php:77
+msgid "An error has been encountered"
+msgstr ""
+
+#: core/um-actions-misc.php:85 core/um-filters-login.php:12
+msgid "This email address has been blocked."
+msgstr ""
+
+#: core/um-actions-misc.php:89 core/um-filters-login.php:15
+msgid "Your IP address has been blocked."
+msgstr ""
+
+#: core/um-actions-misc.php:93 core/um-filters-login.php:57
+msgid "Your account has been disabled."
+msgstr ""
+
+#: core/um-actions-misc.php:97 core/um-filters-login.php:60
+msgid "Your account has not been approved yet."
+msgstr ""
+
+#: core/um-actions-misc.php:101 core/um-filters-login.php:63
+msgid "Your account is awaiting e-mail verifications."
+msgstr ""
+
+#: core/um-actions-misc.php:105 core/um-filters-login.php:66
+msgid "Your membership request has been rejected."
+msgstr ""
+
+#: core/um-actions-password.php:66 core/um-actions-password.php:97 core/um-form.php:80
+msgid "Hello, spam bot!"
+msgstr ""
+
+#: core/um-actions-password.php:69 core/um-actions-password.php:100 core/um-form.php:83
+msgid ""
+"Whoa, slow down! You're seeing this message because you tried to submit a form too fast and we think you "
+"might be a spam bot. If you are a real human being please wait a few seconds before submitting the form. "
+"Thanks!"
+msgstr ""
+
+#: core/um-actions-password.php:72
+msgid "Please provide your username or email"
+msgstr ""
+
+#: core/um-actions-password.php:78
+msgid " We can't find an account registered with that address or username "
+msgstr ""
+
+#: core/um-actions-password.php:175
+msgid "Reset my password"
+msgstr ""
+
+#: core/um-actions-password.php:202
+msgid "Change my password"
+msgstr ""
+
+#: core/um-actions-profile.php:18
+msgid "You are not allowed to edit this user."
+msgstr ""
+
+#: core/um-actions-profile.php:126
+msgid "Change your cover photo"
+msgstr ""
+
+#: core/um-actions-profile.php:140
+msgid "Change cover photo"
+msgstr ""
+
+#: core/um-actions-profile.php:176
+msgid "Upload a cover photo"
+msgstr ""
+
+#: core/um-actions-profile.php:233
+msgid "Upload photo"
+msgstr ""
+
+#: core/um-actions-profile.php:242 core/um-fields.php:1142 core/um-fields.php:1175
+msgid "Change photo"
+msgstr ""
+
+#: core/um-actions-profile.php:243
+msgid "Remove photo"
+msgstr ""
+
+#: core/um-actions-profile.php:281
+msgid "Tell us a bit about yourself..."
+msgstr ""
+
+#: core/um-actions-profile.php:291
+#, php-format
+msgid "This user account status is %s"
+msgstr ""
+
+#: core/um-actions-profile.php:366
+msgid "Edit Profile"
+msgstr ""
+
+#: core/um-actions-profile.php:367
+msgid "My Account"
+msgstr ""
+
+#: core/um-actions-profile.php:368
+msgid "Logout"
+msgstr ""
+
+#: core/um-builtin.php:777
+msgid "Enter your username or email"
+msgstr ""
+
+#: core/um-builtin.php:795 core/um-builtin.php:796
+msgid "Everyone"
+msgstr ""
+
+#: core/um-builtin.php:796 core/um-user.php:400
+msgid "Only me"
+msgstr ""
+
+#: core/um-builtin.php:803 core/um-builtin.php:806
+msgid "Hide my profile from directory"
+msgstr ""
+
+#: core/um-builtin.php:807
+msgid "Here you can hide yourself from appearing in public directory"
+msgstr ""
+
+#: core/um-cron.php:15
+msgid "Once Weekly"
+msgstr ""
+
+#: core/um-datetime.php:25
+#, php-format
+msgid "%s year old"
+msgstr ""
+
+#: core/um-datetime.php:27
+#, php-format
+msgid "%s years old"
+msgstr ""
+
+#: core/um-datetime.php:29
+msgid "Less than 1 year old"
+msgstr ""
+
+#: core/um-fields.php:897
+msgid "Current Password"
+msgstr ""
+
+#: core/um-fields.php:958
+#, php-format
+msgid "Confirm New %s"
+msgstr ""
+
+#: core/um-fields.php:1133 core/um-fields.php:1205
+msgid "Upload Photo"
+msgstr ""
+
+#: core/um-fields.php:1175 core/um-fields.php:1260
+msgid "Processing..."
+msgstr ""
+
+#: core/um-fields.php:1221 core/um-fields.php:1260
+msgid "Change file"
+msgstr ""
+
+#: core/um-fields.php:1260
+msgid "Save"
+msgstr ""
+
+#: core/um-files.php:303
+msgid "Your image is invalid or too large!"
+msgstr ""
+
+#: core/um-files.php:309 core/um-files.php:311
+#, php-format
+msgid "Your photo is too small. It must be at least %spx wide."
+msgstr ""
+
+#: core/um-filters-fields.php:8
+msgid "Age"
+msgstr ""
+
+#: core/um-filters-fields.php:52
+msgid "This file has been removed."
+msgstr ""
+
+#: core/um-filters-fields.php:74
+msgid "Untitled photo"
+msgstr ""
+
+#: core/um-filters-user.php:11 core/um-filters-user.php:33 core/um-filters-user.php:38
+msgid "Approve Membership"
+msgstr ""
+
+#: core/um-filters-user.php:12 core/um-filters-user.php:34
+msgid "Reject Membership"
+msgstr ""
+
+#: core/um-filters-user.php:13 core/um-filters-user.php:42
+msgid "Put as Pending Review"
+msgstr ""
+
+#: core/um-filters-user.php:14 core/um-filters-user.php:46
+msgid "Resend Activation E-mail"
+msgstr ""
+
+#: core/um-filters-user.php:15
+msgid "Deactivate"
+msgstr ""
+
+#: core/um-filters-user.php:16
+msgid "Reactivate"
+msgstr ""
+
+#: core/um-filters-user.php:50
+msgid "Deactivate this account"
+msgstr ""
+
+#: core/um-filters-user.php:54
+msgid "Reactivate this account"
+msgstr ""
+
+#: core/um-filters-user.php:58
+msgid "Delete this user"
+msgstr ""
+
+#: core/um-navmenu-walker-edit.php:18
+msgid "Display Mode"
+msgstr ""
+
+#: core/um-navmenu-walker-edit.php:19
+msgid "By Role"
+msgstr ""
+
+#: core/um-navmenu-walker-edit.php:78
+msgid "Who can see this menu link?"
+msgstr ""
+
+#: core/um-navmenu-walker-edit.php:98
+msgid "Select the member roles that can see this link"
+msgstr ""
+
+#: core/um-password.php:29
+msgid "This is not a valid hash, or it has expired."
+msgstr ""
+
+#: core/um-taxonomies.php:19
+msgid "Form"
+msgstr ""
+
+#: core/um-taxonomies.php:20 core/um-taxonomies.php:38 core/um-taxonomies.php:58
+msgid "Add New"
+msgstr ""
+
+#: core/um-taxonomies.php:21
+msgid "Add New Form"
+msgstr ""
+
+#: core/um-taxonomies.php:22
+msgid "Edit Form"
+msgstr ""
+
+#: core/um-taxonomies.php:23
+msgid "You did not create any forms yet"
+msgstr ""
+
+#: core/um-taxonomies.php:24 core/um-taxonomies.php:42 core/um-taxonomies.php:62
+msgid "Nothing found in Trash"
+msgstr ""
+
+#: core/um-taxonomies.php:25
+msgid "Search Forms"
+msgstr ""
+
+#: core/um-taxonomies.php:37
+msgid "User Role"
+msgstr ""
+
+#: core/um-taxonomies.php:39
+msgid "Add New User Role"
+msgstr ""
+
+#: core/um-taxonomies.php:40
+msgid "Edit User Role"
+msgstr ""
+
+#: core/um-taxonomies.php:41
+msgid "You did not create any user roles yet"
+msgstr ""
+
+#: core/um-taxonomies.php:43
+msgid "Search User Roles"
+msgstr ""
+
+#: core/um-taxonomies.php:57
+msgid "Member Directory"
+msgstr ""
+
+#: core/um-taxonomies.php:59
+msgid "Add New Member Directory"
+msgstr ""
+
+#: core/um-taxonomies.php:60
+msgid "Edit Member Directory"
+msgstr ""
+
+#: core/um-taxonomies.php:61
+msgid "You did not create any member directories yet"
+msgstr ""
+
+#: core/um-taxonomies.php:63
+msgid "Search Member Directories"
+msgstr ""
+
+#: index.php:57
+msgid "Docs"
+msgstr ""
+
+#: index.php:58
+msgid "Support"
+msgstr ""
+
+#: index.php:63
+msgid "Remove this plugin"
+msgstr ""
+
+#: index.php:63
+msgid "Uninstall"
+msgstr ""
+
+#: um-config.php:13
+msgid "Users"
+msgstr ""
+
+#: um-config.php:20
+msgid "Default New User Role"
+msgstr ""
+
+#: um-config.php:21
+msgid ""
+"Select the default role that will be assigned to user after registration If you did not specify custom role "
+"settings per form."
+msgstr ""
+
+#: um-config.php:24
+msgid "Choose user role..."
+msgstr ""
+
+#: um-config.php:31
+msgid "Profile Permalink Base"
+msgstr ""
+
+#: um-config.php:32
+msgid "Here you can control the permalink structure of the user profile URL globally"
+msgstr ""
+
+#: um-config.php:40 um-config.php:60
+msgid "Select..."
+msgstr ""
+
+#: um-config.php:47
+msgid "User Display Name"
+msgstr ""
+
+#: um-config.php:48
+msgid ""
+"This is the name that will be displayed for users on the front end of your site. Default setting uses first/"
+"last name as display name if it exists"
+msgstr ""
+
+#: um-config.php:66
+msgid "Display Name Custom Field(s)"
+msgstr ""
+
+#: um-config.php:74
+msgid "Members Directory"
+msgstr ""
+
+#: um-config.php:92
+msgid "Account"
+msgstr ""
+
+#: um-config.php:98
+msgid "Password Account Tab"
+msgstr ""
+
+#: um-config.php:108
+msgid "Privacy Account Tab"
+msgstr ""
+
+#: um-config.php:118
+msgid "Notifications Account Tab"
+msgstr ""
+
+#: um-config.php:129
+msgid "Delete Account Tab"
+msgstr ""
+
+#: um-config.php:139
+msgid "Account Deletion Custom Text"
+msgstr ""
+
+#: um-config.php:141
+msgid "This is custom text that will be displayed to users before they delete their accounts from your site"
+msgstr ""
+
+#: um-config.php:160
+msgid "Access"
+msgstr ""
+
+#: um-config.php:167
+msgid "Global Site Access"
+msgstr ""
+
+#: um-config.php:179
+msgid "Custom Redirect URL"
+msgstr ""
+
+#: um-config.php:188
+msgid "Exclude the following URLs"
+msgstr ""
+
+#: um-config.php:189
+msgid "Here you can exclude URLs beside the redirect URI to be accessible to everyone"
+msgstr ""
+
+#: um-config.php:190
+msgid "Add New URL"
+msgstr ""
+
+#: um-config.php:197
+msgid "Panic Key"
+msgstr ""
+
+#: um-config.php:206
+msgid "Allow Backend Login Screen for Guests"
+msgstr ""
+
+#: um-config.php:217
+msgid "Redirect to alternative login page"
+msgstr ""
+
+#: um-config.php:218
+msgid "If you disable backend access to login screen, specify here where a user will be redirected"
+msgstr ""
+
+#: um-config.php:230 um-config.php:262
+msgid "Custom URL"
+msgstr ""
+
+#: um-config.php:238
+msgid "Allow Backend Register Screen for Guests"
+msgstr ""
+
+#: um-config.php:249
+msgid "Redirect to alternative register page"
+msgstr ""
+
+#: um-config.php:250
+msgid "If you disable backend access to register screen, specify here where a user will be redirected"
+msgstr ""
+
+#: um-config.php:270
+msgid "Blocked IP Addresses"
+msgstr ""
+
+#: um-config.php:271
+msgid "Enter one IP per line, you can also use wildcards to block a specific range e.g. 41.83.*.*"
+msgstr ""
+
+#: um-config.php:272
+msgid ""
+"This will block the listed IPs from signing up or signing in to the site, you can use full IP numbers or "
+"target specific range with a wildcard"
+msgstr ""
+
+#: um-config.php:278
+msgid "Blocked Email Addresses"
+msgstr ""
+
+#: um-config.php:279
+msgid ""
+"Enter one email address per line and you can also specify all emails from specific service to be blocked by "
+"using wildcard: *@hotmail.com"
+msgstr ""
+
+#: um-config.php:280
+msgid "This will block the specified e-mail addresses from being able to sign up or sign in to your site."
+msgstr ""
+
+#: um-config.php:286
+msgid "Blacklist Words"
+msgstr ""
+
+#: um-config.php:287
+msgid ""
+"The words specified here can not be used as username during registration, please enter one word per line to "
+"prevent the usage of this word in a username / during registration"
+msgstr ""
+
+#: um-config.php:288
+msgid ""
+"This option lets you specify blacklist of words to prevent anyone from signing up with such a word as their "
+"username"
+msgstr ""
+
+#: um-config.php:303
+msgid "Emails"
+msgstr ""
+
+#: um-config.php:309
+msgid "Mail appears from"
+msgstr ""
+
+#: um-config.php:310
+msgid "e.g. Site Name"
+msgstr ""
+
+#: um-config.php:317
+msgid "Mail appears from address"
+msgstr ""
+
+#: um-config.php:318 um-config.php:602
+msgid "e.g. admin@companyname.com"
+msgstr ""
+
+#: um-config.php:325 um-config.php:333 um-config.php:343
+msgid "Account Welcome Email"
+msgstr ""
+
+#: um-config.php:334 um-config.php:370 um-config.php:402 um-config.php:434 um-config.php:470 um-config.php:501
+#: um-config.php:532 um-config.php:563 um-config.php:617 um-config.php:648 um-config.php:680
+msgid "Subject Line"
+msgstr ""
+
+#: um-config.php:344 um-config.php:380 um-config.php:412 um-config.php:444 um-config.php:480 um-config.php:511
+#: um-config.php:542 um-config.php:573 um-config.php:627 um-config.php:658 um-config.php:690
+msgid "Message Body"
+msgstr ""
+
+#: um-config.php:361 um-config.php:369 um-config.php:379
+msgid "Account Activation Email"
+msgstr ""
+
+#: um-config.php:393 um-config.php:401 um-config.php:411
+msgid "Pending Review Email"
+msgstr ""
+
+#: um-config.php:425 um-config.php:433 um-config.php:443
+msgid "Account Approved Email"
+msgstr ""
+
+#: um-config.php:461 um-config.php:469 um-config.php:479
+msgid "Account Rejected Email"
+msgstr ""
+
+#: um-config.php:492 um-config.php:500 um-config.php:510
+msgid "Account Deactivated Email"
+msgstr ""
+
+#: um-config.php:523 um-config.php:531 um-config.php:541
+msgid "Account Deleted Email"
+msgstr ""
+
+#: um-config.php:554 um-config.php:562 um-config.php:572
+msgid "Password Reset Email"
+msgstr ""
+
+#: um-config.php:594
+msgid "Notifications"
+msgstr ""
+
+#: um-config.php:600
+msgid "Admin E-mail Address"
+msgstr ""
+
+#: um-config.php:608 um-config.php:616 um-config.php:626
+msgid "New User Notification"
+msgstr ""
+
+#: um-config.php:639 um-config.php:647 um-config.php:657
+msgid "Account Needs Review Notification"
+msgstr ""
+
+#: um-config.php:671 um-config.php:679 um-config.php:689
+msgid "Account Deletion Notification"
+msgstr ""
+
+#: um-config.php:707
+msgid "Uploads"
+msgstr ""
+
+#: um-config.php:713
+msgid "Profile Photo Thumbnail Sizes"
+msgstr ""
+
+#: um-config.php:714
+msgid "Here you can define which thumbnail sizes will be created for each profile photo upload."
+msgstr ""
+
+#: um-config.php:717 um-config.php:727
+msgid "Add New Size"
+msgstr ""
+
+#: um-config.php:723
+msgid "Cover Photo Thumbnail Sizes"
+msgstr ""
+
+#: um-config.php:724
+msgid "Here you can define which thumbnail sizes will be created for each cover photo upload."
+msgstr ""
+
+#: um-config.php:733
+msgid "Image Quality"
+msgstr ""
+
+#: um-config.php:734
+msgid ""
+"Quality is used to determine quality of image uploads, and ranges from 0 (worst quality, smaller file) to "
+"100 (best quality, biggest file). The default range is 75."
+msgstr ""
+
+#: um-config.php:742
+msgid "Image Upload Maximum Width"
+msgstr ""
+
+#: um-config.php:743
+msgid "Any image upload above this width will be resized to this limit automatically."
+msgstr ""
+
+#: um-config.php:751
+msgid "Cover Photo Minimum Width"
+msgstr ""
+
+#: um-config.php:752
+msgid "This will be the minimum width for cover photo uploads"
+msgstr ""
+
+#: um-config.php:768
+msgid "SEO"
+msgstr ""
+
+#: um-config.php:774
+msgid "User Profile Title"
+msgstr ""
+
+#: um-config.php:783
+msgid "User Profile Dynamic Meta Description"
+msgstr ""
+
+#: um-config.php:784
+msgid "You can use dynamic tags to display dynamic user profile data in this field."
+msgstr ""
+
+#: um-config.php:785
+msgid "This will be used in the meta description that is available for search-engines."
+msgstr ""
+
+#: um-config.php:799
+msgid "Appearance"
+msgstr ""
+
+#: um-config.php:809
+msgid "General"
+msgstr ""
+
+#: um-config.php:816
+msgid "Members Default Template"
+msgstr ""
+
+#: um-config.php:817
+msgid "This will be the default template to output member directory"
+msgstr ""
+
+#: um-config.php:827
+msgid "General Active Color"
+msgstr ""
+
+#: um-config.php:829
+msgid ""
+"Active color is used commonly with many plugin elements as highlighted color or active selection for "
+"example. This color demonstrates the primary active color of the plugin"
+msgstr ""
+
+#: um-config.php:837
+msgid "General Secondary Color"
+msgstr ""
+
+#: um-config.php:839
+msgid "Secondary color is used for hovers, or active state for some elements of the plugin"
+msgstr ""
+
+#: um-config.php:847
+msgid "Default Primary Button Color"
+msgstr ""
+
+#: um-config.php:856
+msgid "Default Primary Button Hover Color"
+msgstr ""
+
+#: um-config.php:865
+msgid "Default Primary Button Text Color"
+msgstr ""
+
+#: um-config.php:874
+msgid "Default Secondary Button Color"
+msgstr ""
+
+#: um-config.php:883
+msgid "Default Secondary Button Hover Color"
+msgstr ""
+
+#: um-config.php:892
+msgid "Default Secondary Button Text Color"
+msgstr ""
+
+#: um-config.php:901
+msgid "Default Help Icon Color"
+msgstr ""
+
+#: um-config.php:913
+msgid "Form Inputs"
+msgstr ""
+
+#: um-config.php:920
+msgid "Field Label Color"
+msgstr ""
+
+#: um-config.php:928
+msgid "Field Border Style"
+msgstr ""
+
+#: um-config.php:937
+msgid "Field Background Color"
+msgstr ""
+
+#: um-config.php:946
+msgid "Field Text Color"
+msgstr ""
+
+#: um-config.php:955
+msgid "Field Placeholder Color"
+msgstr ""
+
+#: um-config.php:964
+msgid "Field Font Icon Color"
+msgstr ""
+
+#: um-config.php:976
+msgid "Profile"
+msgstr ""
+
+#: um-config.php:983
+msgid "Profile Default Template"
+msgstr ""
+
+#: um-config.php:984
+msgid "This will be the default template to output profile"
+msgstr ""
+
+#: um-config.php:992
+msgid "Profile Maximum Width"
+msgstr ""
+
+#: um-config.php:1001
+msgid "Profile Shortcode Alignment"
+msgstr ""
+
+#: um-config.php:1005 um-config.php:1254 um-config.php:1345
+msgid "Centered"
+msgstr ""
+
+#: um-config.php:1006 um-config.php:1255 um-config.php:1346
+msgid "Left aligned"
+msgstr ""
+
+#: um-config.php:1007 um-config.php:1256 um-config.php:1347
+msgid "Right aligned"
+msgstr ""
+
+#: um-config.php:1015
+msgid "Profile Field Icons"
+msgstr ""
+
+#: um-config.php:1016
+msgid "This is applicable for edit mode only"
+msgstr ""
+
+#: um-config.php:1019 um-config.php:1268 um-config.php:1359
+msgid "Show inside text field"
+msgstr ""
+
+#: um-config.php:1020 um-config.php:1269 um-config.php:1360
+msgid "Show with label"
+msgstr ""
+
+#: um-config.php:1021 um-config.php:1270 um-config.php:1361
+msgid "Turn off"
+msgstr ""
+
+#: um-config.php:1028
+msgid "Profile Primary Button Text"
+msgstr ""
+
+#: um-config.php:1036
+msgid "Profile Secondary Button"
+msgstr ""
+
+#: um-config.php:1044
+msgid "Profile Secondary Button Text"
+msgstr ""
+
+#: um-config.php:1054
+msgid "Profile Associated Role"
+msgstr ""
+
+#: um-config.php:1055
+msgid "Normally, you can leave this to default as this restricts the profile per specified role only"
+msgstr ""
+
+#: um-config.php:1064
+msgid "Profile Base Background Color"
+msgstr ""
+
+#: um-config.php:1073
+msgid "Profile Header Background Color"
+msgstr ""
+
+#: um-config.php:1083
+msgid "Default Profile Photo"
+msgstr ""
+
+#: um-config.php:1084
+msgid "You can change the default profile picture globally here. Please make sure that the photo is 300x300px."
+msgstr ""
+
+#: um-config.php:1103
+msgid "Whether to have rounded profile images, rounded corners, or none for the profile photo"
+msgstr ""
+
+#: um-config.php:1115
+msgid "Profile Cover Photos"
+msgstr ""
+
+#: um-config.php:1124
+msgid "Profile Cover Ratio"
+msgstr ""
+
+#: um-config.php:1125
+msgid "Choose global ratio for cover photos of profiles"
+msgstr ""
+
+#: um-config.php:1139
+msgid "Profile Header Meta Text Color"
+msgstr ""
+
+#: um-config.php:1148
+msgid "Profile Header Link Color"
+msgstr ""
+
+#: um-config.php:1157
+msgid "Profile Header Link Hover"
+msgstr ""
+
+#: um-config.php:1166
+msgid "Profile Header Icon Link Color"
+msgstr ""
+
+#: um-config.php:1175
+msgid "Profile Header Icon Link Hover"
+msgstr ""
+
+#: um-config.php:1183
+msgid "Show display name in profile header"
+msgstr ""
+
+#: um-config.php:1191
+msgid "Show user description in header"
+msgstr ""
+
+#: um-config.php:1199
+msgid "User description maximum chars"
+msgstr ""
+
+#: um-config.php:1208
+msgid "Profile Header Menu Position"
+msgstr ""
+
+#: um-config.php:1210
+msgid "For incompatible themes, please make the menu open from left instead of bottom by default."
+msgstr ""
+
+#: um-config.php:1232
+msgid "Registration Default Template"
+msgstr ""
+
+#: um-config.php:1233
+msgid "This will be the default template to output registration"
+msgstr ""
+
+#: um-config.php:1241
+msgid "Registration Maximum Width"
+msgstr ""
+
+#: um-config.php:1250
+msgid "Registration Shortcode Alignment"
+msgstr ""
+
+#: um-config.php:1264
+msgid "Registration Field Icons"
+msgstr ""
+
+#: um-config.php:1265
+msgid "This controls the display of field icons in the registration form"
+msgstr ""
+
+#: um-config.php:1277
+msgid "Registration Primary Button Text"
+msgstr ""
+
+#: um-config.php:1285
+msgid "Registration Secondary Button"
+msgstr ""
+
+#: um-config.php:1293
+msgid "Registration Secondary Button Text"
+msgstr ""
+
+#: um-config.php:1303
+msgid "Registration Default Role"
+msgstr ""
+
+#: um-config.php:1304
+msgid "This will be the default role assigned to users registering thru registration form"
+msgstr ""
+
+#: um-config.php:1323
+msgid "Login Default Template"
+msgstr ""
+
+#: um-config.php:1324
+msgid "This will be the default template to output login"
+msgstr ""
+
+#: um-config.php:1332
+msgid "Login Maximum Width"
+msgstr ""
+
+#: um-config.php:1341
+msgid "Login Shortcode Alignment"
+msgstr ""
+
+#: um-config.php:1355
+msgid "Login Field Icons"
+msgstr ""
+
+#: um-config.php:1356
+msgid "This controls the display of field icons in the login form"
+msgstr ""
+
+#: um-config.php:1368
+msgid "Login Primary Button Text"
+msgstr ""
+
+#: um-config.php:1376
+msgid "Login Secondary Button"
+msgstr ""
+
+#: um-config.php:1384
+msgid "Login Secondary Button Text"
+msgstr ""
+
+#: um-config.php:1401
+msgid "Advanced"
+msgstr ""
+
+#: um-config.php:1407
+msgid "Disable JS/CSS Compression"
+msgstr ""
+
+#: um-config.php:1409
+msgid ""
+"Not recommended. This will load all plugin js and css files separately and may slow down your website. Use "
+"this setting for development or debugging purposes only."
+msgstr ""
+
+#: um-config.php:1416
+msgid "Never load plugin JS and CSS on the following pages"
+msgstr ""
+
+#: um-config.php:1417
+msgid "Enter a url or page slug (e.g /about/) to disable loading the plugin's css and js on that page."
+msgstr ""
+
+#: um-config.php:1418
+msgid "Add New Page"
+msgstr ""
+
+#: um-config.php:1424
+msgid "Allow Tracking"
+msgstr ""
+
+#: um-config.php:1428
+msgid "Do not allow"
+msgstr ""
+
+#~ msgid "outdatedBrowser_page_message"
+#~ msgstr ""
+#~ "The site you are visiting can only be viewed using a modern browser. Please upgrade your browser to "
+#~ "increase safety and your browsing experience. Choose one of the browsers above. If you don't care <a href="
+#~ "\"?forwardOutdatedBrowser=1\">click here</a>"
+
+#~ msgid "404_page_message"
+#~ msgstr ""
+#~ "The Page you are looking for doesn't exist or an other error occurred. <a href=\"javascript:history."
+#~ "go(-1)\">Go back</a>, or head over to <a href=\"%s\">%s</a> to choose a new direction."
