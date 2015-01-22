@@ -7,7 +7,7 @@ Tags: members, member, membership, community, communities, profile, profiles, re
 Requires at least: 4.1
 Tested up to: 4.1
 
-Stable Tag: 1.0.15
+Stable Tag: 1.0.16
 
 License: GNU Version 2 or Any Later Version
 
@@ -164,6 +164,10 @@ We are currently in beta phase so at the moment the plugin only works on single 
 16. Appearance and Customization Settings
 
 == Changelog ==
+
+= 1.0.16: January 22, 2015 =
+
+* Fixed: Settings page: tracking popup removed
 
 = 1.0.15: January 22, 2015 =
 
