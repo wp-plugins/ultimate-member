@@ -50,9 +50,9 @@ Allow users to login directly from your site and avoid the ugly WordPress login 
 
 Ultimate Member gives every user of your site a beautiful user profile where they can edit their information. You can create unique profiles for each user role and decide what information to show on the profiles.
 
-**Custom fields**
+**Custom profile fields**
 
-With our custom fields, Ultimate Member allows you to gather any information you like from user's when they signup or via their profile. The plugin comes with a full range of field types including: text box, textarea, dropdown, multi-select, radio, checkbox, url, password, image upload, file upload, date picker, time picker and star ratings
+With our custom profile fields, Ultimate Member allows you to gather any information you like from user's when they register or when they fill in their profiles. The plugin comes with a full range of field types including: text box, textarea, dropdown, multi-select, radio, checkbox, url, password, image upload, file upload, date picker, time picker and star ratings.
 
 **Drag and drop form builder**
 
