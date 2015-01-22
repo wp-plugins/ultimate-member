@@ -7,7 +7,7 @@ Tags: members, member, membership, community, communities, profile, profiles, re
 Requires at least: 4.1
 Tested up to: 4.1
 
-Stable Tag: 1.0.10
+Stable Tag: 1.0.15
 
 License: GNU Version 2 or Any Later Version
 
@@ -164,6 +164,15 @@ We are currently in beta phase so at the moment the plugin only works on single 
 16. Appearance and Customization Settings
 
 == Changelog ==
+
+= 1.0.15: January 22, 2015 =
+
+* New: User profiles now show a cool message if the user profile field area is empty
+* New: Added 'visibility' setting to all field types in backend
+* Tweak: Members search function supports partial search matching
+* Tweak: Deleting photo or file removes file from server
+* Tweak: Deleting a user will delete all his personal uploads from the server
+* Fixed: Duplicate tooltip for password field has been removed
 
 = 1.0.10: January 22, 2015 =
 
