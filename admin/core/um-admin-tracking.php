@@ -39,8 +39,6 @@ class UM_Admin_Tracking {
 		
 		$data['version'] = ultimatemember_version;
 		
-		$data['email'] = get_bloginfo( 'admin_email' );
-		
 		$result = count_users();
 		$data['users_count'] = $result['total_users'];
 
@@ -109,7 +107,7 @@ class UM_Admin_Tracking {
 		
 		$this->setup_data();
 		
-		$request = wp_remote_post( 'http://ultimatemember.com/?um_action=checkin', array(
+		$request = wp_remote_post( 'https://ultimatemember.com/?um_action=checkin', array(
 			'method'      => 'POST',
 			'timeout'     => 20,
 			'redirection' => 5,
