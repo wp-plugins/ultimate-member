@@ -376,7 +376,8 @@
 	***/
 	function um_edit_my_profile_uri() {
 		global $ultimatemember;
-		$url = $ultimatemember->permalinks->add_query( 'um_action', 'edit' );
+		$url = $ultimatemember->permalinks->get_current_url(true);
+		$url = add_query_arg( 'um_action', 'edit', $url );
 		return $url;
 	}
 	
@@ -384,8 +385,7 @@
 	***	@remove edit profile args from url
 	***/
 	function um_edit_my_profile_cancel_uri() {
-		global $ultimatemember;
-		$url = $ultimatemember->permalinks->remove_query( 'um_action', 'edit' );
+		$url = remove_query_arg( 'um_action' );
 		return $url;
 	}
 	
