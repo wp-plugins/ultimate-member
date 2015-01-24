@@ -352,6 +352,12 @@ font-weight: normal;
 	background: #555;
 }
 
+.um-profile-nav-item i {
+	font-size: 20px;
+	width: 20px;
+	text-align: center;
+}
+
 .um-profile-subnav {
 	background: #eee;
 	padding: 15px;
@@ -384,8 +390,23 @@ font-weight: normal;
 .um-item {
 	padding: 20px 0;
 	border-bottom: 1px solid #eee;
+	position: relative;
 }
 
+.um-item-action {
+	position: absolute;
+	right: 0;
+	top: 16px;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.um-item-action a {color: #ccc}
+.um-item-action a:hover {color: #999}
+
+.um-item-link {padding-right: 40px}
 .um-item-link a {
 	color: #333;
 	font-size: 16px;

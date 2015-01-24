@@ -521,7 +521,7 @@
 				$nav_link = add_query_arg('profiletab', $id, $nav_link )
 				?>
 			
-			<div class="um-profile-nav-item <?php if ( $id == $active_tab ) echo 'active'; ?>"><a href="<?php echo $nav_link; ?>"><?php echo $tab['name']; ?></a></div>
+			<div class="um-profile-nav-item <?php if ( $id == $active_tab ) echo 'active'; ?>"><a href="<?php echo $nav_link; ?>" title="<?php echo $tab['name']; ?>"><i class="<?php echo $tab['icon']; ?> uimob500-show uimob340-show uimob800-show"></i><span class="uimob500-hide uimob340-hide uimob800-hide"><?php echo $tab['name']; ?></span></a></div>
 			
 			<?php } ?>
 			

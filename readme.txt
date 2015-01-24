@@ -3,11 +3,11 @@ Author URI: https://ultimatemember.com/
 Plugin URI: https://ultimatemember.com/
 Contributors: ultimatemember
 Donate link: 
-Tags: members, member, membership, community, communities, profile, profiles, registration, login, front-end registration, front-end login, social network, member directory, users, user, user profiles, user roles, conditional menus, role menus, restrict content, content protection, access control, search filters, conditional fields, conditional logic, custom fields, login page, user fields, form builder, profile builder, file uploads, star ratings, hide wp-admin, toolbar, logged-in users, sign in, sign up, role creation
+Tags: access control, community, communities, conditional fields, conditional logic, conditional menus, content protection, custom fields, file uploads, form builder, front-end login, front-end registration, hide wp-admin, login, login page, logged-in users, member, members, membership, member directory, profile, profiles, profile builder, registration, restrict content, role creation, role menus, search filters, sign in, sign up, social network, star ratings, toolbar, user, users, user fields, user profiles, user roles
 Requires at least: 4.1
 Tested up to: 4.1
 
-Stable Tag: 1.0.20
+Stable Tag: 1.0.21
 
 License: GNU Version 2 or Any Later Version
 
@@ -167,6 +167,13 @@ Yes. The plugin works fine with WordPress network / multisite now. In a recent u
 16. Appearance and Customization Settings
 
 == Changelog ==
+
+= 1.0.21: January 24, 2015 =
+
+* New: Added ajax action hook for development use
+* New: Extended profile hooks
+* New: you can restrict / apply access control to woocommerce shop page
+* Fixed: content restriction for woocommerce shop page
 
 = 1.0.20: January 24, 2015 =
 

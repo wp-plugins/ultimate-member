@@ -7,7 +7,8 @@
 	function um_profile_tabs( $tabs ) {
 		
 		$tabs['main'] = array(
-			'name' => __('About','ultimatemember')
+			'name' => __('About','ultimatemember'),
+			'icon' => 'um-faicon-user'
 		);
 		
 		return $tabs;
