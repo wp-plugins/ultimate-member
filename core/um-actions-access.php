@@ -73,7 +73,18 @@
 		$args = $ultimatemember->access->get_meta( $post_id );
 		extract($args);
 
-		if ( !isset( $args['custom_access_settings'] ) || $args['custom_access_settings'] == 0 ) return;
+		if ( !isset( $args['custom_access_settings'] ) || $args['custom_access_settings'] == 0 ) {
+			
+			$post_id = apply_filters('um_access_control_for_parent_posts', $post_id );
+			
+			$args = $ultimatemember->access->get_meta( $post_id );
+			extract($args);
+
+			if ( !isset( $args['custom_access_settings'] ) || $args['custom_access_settings'] == 0 ) {
+				return;
+			}
+			
+		}
 
 		$redirect_to = null;
 

@@ -5,10 +5,14 @@
 	***/
 	function um_get_avatar($content, $id='', $size = '96', $avatar_class = '', $default = '', $alt = '') {
 
-		if ( is_email( $id ) )
+		if ( !is_object( $id ) && is_email( $id ) ) {
 			$id = email_exists( $id );
-		
+		} else if ( is_object( $id ) ) {
+			$id = $id->user_id;
+		}
+
 		um_fetch_user( $id );
+
 		$avatar = um_user('profile_photo', $size);
 		um_reset_user();
 		return $avatar;
