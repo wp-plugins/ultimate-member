@@ -547,6 +547,10 @@ class UM_Fields {
 					$array['disabled'] = 'disabled="disabled"';
 				}
 				
+				if ( $key == 'user_login' && $this->set_mode == 'profile' && $this->editing == true ) {
+					$array['disabled'] = 'disabled="disabled"';
+				}
+				
 				$array['input'] = 'text';
 
 				if (!isset($array['autocomplete'])) $array['autocomplete'] = 'on';

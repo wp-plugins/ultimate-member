@@ -1024,6 +1024,14 @@ $this->sections[] = array(
 				'desc' 	   		=> 'The maximum width this shortcode can take from the page width',
         ),
 		
+        array(
+                'id'      		=> 'profile_area_max_width',
+                'type'     		=> 'text',
+                'title'    		=> __( 'Profile Area Maximum Width' ),
+                'default'  		=> um_get_metadefault('profile_area_max_width'),
+				'desc' 	   		=> 'The maximum width of the profile area inside profile (below profile header)',
+        ),
+		
 		array(
 				'id'       		=> 'profile_align',
                 'type'     		=> 'select',
