@@ -7,7 +7,7 @@ Tags: access control, community, communities, conditional fields, conditional lo
 Requires at least: 4.1
 Tested up to: 4.1
 
-Stable Tag: 1.0.23
+Stable Tag: 1.0.24
 
 License: GNU Version 2 or Any Later Version
 
@@ -167,6 +167,12 @@ Yes. The plugin works fine with WordPress network / multisite now. In a recent u
 16. Appearance and Customization Settings
 
 == Changelog ==
+
+= 1.0.24: January 26, 2015 =
+
+* Tweak: predefined fields are now localized (translatable)
+* Fixed: PHP warning in comments was fixed
+* Fixed: avatars in comments
 
 = 1.0.23: January 25, 2015 =
 
