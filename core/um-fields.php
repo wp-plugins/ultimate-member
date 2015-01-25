@@ -547,10 +547,6 @@ class UM_Fields {
 					$array['disabled'] = 'disabled="disabled"';
 				}
 				
-				if ( $key == 'user_login' && $this->set_mode == 'profile' && $this->editing == true ) {
-					$array['disabled'] = 'disabled="disabled"';
-				}
-				
 				$array['input'] = 'text';
 
 				if (!isset($array['autocomplete'])) $array['autocomplete'] = 'on';
@@ -818,6 +814,11 @@ class UM_Fields {
 		
 		if ( !um_can_view_field( $data ) ) return;
 		if ( !um_can_edit_field( $data ) ) return;
+		
+		// disable these fields in profile edit only
+		if ( in_array( $key, array('user_email','username','user_login') ) && $this->editing == true && $this->set_mode == 'profile' ) {
+			return;
+		}
 		
 		if ( isset( $data['required_opt'] ) ) {
 			$opt = $data['required_opt'];

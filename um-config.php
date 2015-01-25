@@ -761,7 +761,7 @@ $this->sections[] = array(
 				'id'       		=> 'image_compression',
                 'type'     		=> 'text',
                 'title'    		=> __( 'Image Quality' ),
-                'desc' 	   		=> __( 'Quality is used to determine quality of image uploads, and ranges from 0 (worst quality, smaller file) to 100 (best quality, biggest file). The default range is 75.' ),
+                'desc' 	   		=> __( 'Quality is used to determine quality of image uploads, and ranges from 0 (worst quality, smaller file) to 100 (best quality, biggest file). The default range is 60.' ),
                 'default'  		=> 60,
 				'validate' 		=> 'numeric',
         ),
