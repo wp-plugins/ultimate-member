@@ -61,12 +61,16 @@
 			
 			$post_id = get_option('woocommerce_shop_page_id');
 
+		} else if ( is_archive() ) {
+			
+			return;
+
 		} else {
 	
 			if ( !get_post_type() || !isset($post->ID) ) return;
 
 		}
-		
+
 		if ( !isset( $post_id ) )
 			$post_id = $post->ID;
 
