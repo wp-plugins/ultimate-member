@@ -181,7 +181,7 @@ class UM_Admin_Metabox {
 	***	@load a form metabox
 	***/
 	function load_metabox_form( $object, $box ) {
-		global $ultimatemember;
+		global $ultimatemember, $post;
 
 		$box['id'] = str_replace('um-admin-form-','', $box['id']);
 
