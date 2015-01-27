@@ -483,6 +483,7 @@
 		$user_id = get_current_user_id();
 		$role = get_user_meta( $user_id, 'role', true );
 		$permissions = $ultimatemember->query->role_data( $role );
+		$permissions = apply_filters('um_user_permissions_filter', $permissions, $user_id);
 		if ( $permissions[ $permission ] == 1 )
 			return true;
 		return false;
@@ -514,14 +515,14 @@
 		
 			case 'edit':
 				if ( get_current_user_id() == $user_id && um_user('can_edit_profile') ) $return = 1;
-				if ( !um_user('can_edit_everyone') ) $return = 0;
-				if ( get_current_user_id() == $user_id && !um_user('can_edit_profile') ) $return = 0;
-				if ( um_user('can_edit_roles') && !in_array( $ultimatemember->query->get_role_by_userid( $user_id ), um_user('can_edit_roles') ) ) $return = 0;
+					elseif ( !um_user('can_edit_everyone') ) $return = 0;
+					elseif ( get_current_user_id() == $user_id && !um_user('can_edit_profile') ) $return = 0;
+					elseif ( um_user('can_edit_roles') && !in_array( $ultimatemember->query->get_role_by_userid( $user_id ), um_user('can_edit_roles') ) ) $return = 0;
 				break;
 				
 			case 'delete':
 				if ( !um_user('can_delete_everyone') ) $return = 0;
-				if ( um_user('can_delete_roles') && !in_array( $ultimatemember->query->get_role_by_userid( $user_id ), um_user('can_delete_roles') ) ) $return = 0;
+				elseif ( um_user('can_delete_roles') && !in_array( $ultimatemember->query->get_role_by_userid( $user_id ), um_user('can_delete_roles') ) ) $return = 0;
 				break;
 			
 		}
