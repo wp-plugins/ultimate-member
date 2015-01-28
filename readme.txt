@@ -7,7 +7,7 @@ Tags: access control, community, communities, conditional fields, conditional lo
 Requires at least: 4.1
 Tested up to: 4.1
 
-Stable Tag: 1.0.28
+Stable Tag: 1.0.29
 
 License: GNU Version 2 or Any Later Version
 
@@ -169,6 +169,19 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Appearance and Customization Settings
 
 == Changelog ==
+
+= 1.0.29: January 28, 2015 =
+
+* New: added feature to show user display name in menu (e.g. Welcome, {display_name})
+* New: added option to add text to dividers (which can be added using the drag-and-drop form builder)
+* New: security improvement: added whitelisted IP(s) option to allow you to access the WP-admin screen always (prevents lockout)
+* New: added filter hook um_whitelisted_wpadmin_access to control access to wp-admin login screens (for developers)
+* New: added custom css option to apply extra css styling rules from plugin settings
+* New: added custom css option to each form allowing you to apply extra styling rules per form
+* New: added option to customize profile fields area width (per form basis) besides global option
+* Tweak: compatibility with default permalinks (Pretty permalinks are strongly recommended though!)
+* Tweak: improved the function that gets user IP address
+* Tweak: performance: inline css from the plugin is automatically compressed/minified
 
 = 1.0.28: January 27, 2015 =
 
