@@ -39,6 +39,9 @@ class UM_Rewrite {
 			$user = get_post($user_page_id);
 			$user_slug = $user->post_name;
 
+			$account = get_post($account_page_id);
+			$account_slug = $account->post_name;
+			
 			add_rewrite_rule(
 				'^'.$user_slug.'/([^/]*)$',
 				'index.php?page_id='.$user_page_id.'&um_user=$matches[1]',
@@ -46,7 +49,7 @@ class UM_Rewrite {
 			);
 			
 			add_rewrite_rule(
-				'^account/([^/]*)$',
+				'^'.$account_slug.'/([^/]*)$',
 				'index.php?page_id='.$account_page_id.'&um_tab=$matches[1]',
 				'top'
 			);

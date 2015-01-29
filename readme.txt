@@ -7,7 +7,7 @@ Tags: access control, community, communities, conditional fields, conditional lo
 Requires at least: 4.1
 Tested up to: 4.1
 
-Stable Tag: 1.0.31
+Stable Tag: 1.0.32
 
 License: GNU Version 2 or Any Later Version
 
@@ -169,6 +169,12 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Appearance and Customization Settings
 
 == Changelog ==
+
+= 1.0.32: January 30, 2015 =
+
+* New: added 3 new tags to use in email templates {first_name}, {last_name}, and {gender}
+* Fixed: Issue with account page permalink resolved - [view issue](https://ultimatemember.com/forums/topic/permalink-bug/)
+* Fixed: Issue with conditional menu items showing for un-approved users resolved - [view issue](https://ultimatemember.com/forums/topic/registration/)
 
 = 1.0.31: January 29, 2015 =
 
