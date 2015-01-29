@@ -147,6 +147,8 @@ class UM_Setup {
 			'_um_login_secondary_btn_hover' => '#e5e5e5',
 			'_um_login_secondary_btn_text' => '#666',
 			'_um_directory_template' => 'members',
+			'_um_directory_header' => __('{total_users} Members','ultimatemember'),
+			'_um_directory_header_single' => __('{total_users} Member','ultimatemember'),
 		);
 		
 		$this->core_form_meta_all = apply_filters('um_core_form_meta_all', $this->core_form_meta_all );

@@ -7,7 +7,7 @@ Tags: access control, community, communities, conditional fields, conditional lo
 Requires at least: 4.1
 Tested up to: 4.1
 
-Stable Tag: 1.0.30
+Stable Tag: 1.0.31
 
 License: GNU Version 2 or Any Later Version
 
@@ -169,6 +169,12 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Appearance and Customization Settings
 
 == Changelog ==
+
+= 1.0.31: January 29, 2015 =
+
+* Fixed: Issue with custom user page slug resolved [view issue](https://wordpress.org/support/topic/translate-plugin-9)
+* Fixed: PHP warning in members directory resolved
+* Fixed: Issue with hardcoded user profile URLs in menu
 
 = 1.0.30: January 29, 2015 =
 

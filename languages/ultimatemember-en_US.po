@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ultimate Member\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-29 15:23+0200\n"
-"PO-Revision-Date: 2015-01-29 15:23+0200\n"
+"POT-Creation-Date: 2015-01-29 16:27+0200\n"
+"PO-Revision-Date: 2015-01-29 16:27+0200\n"
 "Last-Translator: Calum Allison <umplugin@gmail.com>\n"
 "Language-Team: Ultimate Member <umplugin@gmail.com>\n"
 "Language: en_US\n"
@@ -2573,7 +2573,7 @@ msgstr ""
 msgid "Customize the search result text . e.g. Found 3,000 Members. Leave this blank to not show result text"
 msgstr ""
 
-#: admin/templates/directory/search.php:79 core/um-setup.php:47
+#: admin/templates/directory/search.php:79 core/um-setup.php:47 core/um-setup.php:150
 msgid "{total_users} Members"
 msgstr ""
 
@@ -2585,7 +2585,7 @@ msgstr ""
 msgid "Same as above but in case of 1 user found only"
 msgstr ""
 
-#: admin/templates/directory/search.php:88 core/um-setup.php:48
+#: admin/templates/directory/search.php:88 core/um-setup.php:48 core/um-setup.php:151
 msgid "{total_users} Member"
 msgstr ""
 
