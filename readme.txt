@@ -157,7 +157,7 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 == Screenshots ==
 
 1. Front-end User Profile (Edit mode)
-2. Forms
+2. Photo / File Upload Modal
 3. Custom Field Manager
 4. Adding a New Field
 5. User Roles
