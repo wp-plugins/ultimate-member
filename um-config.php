@@ -1286,6 +1286,61 @@ $this->sections[] = array(
 	
 );
 
+$tabs = $ultimatemember->profile->tabs_primary();
+$tab_options[] = array(
+                'id'       		=> 'profile_menu',
+                'type'     		=> 'switch',
+                'title'    		=> __('Enable profile menu'),
+				'default' 		=> 1,
+);
+
+foreach( $tabs as $id => $tab ) {
+$tab_options[] = array(
+                'id'       		=> 'profile_tab_' . $id,
+                'type'     		=> 'switch',
+                'title'    		=> sprintf(__('%s Tab','ultimatemember'), $tab ),
+				'default' 		=> 1,
+				'on'			=> __('Enabled'),
+				'off'			=> __('Disabled'),
+				'required'		=> array( 'profile_menu', '=', 1 ),
+);
+}
+
+$tab_options[] = array(
+                'id'       		=> 'profile_menu_default_tab',
+                'type'     		=> 'select',
+				'select2'		=> array( 'allowClear' => 0, 'minimumResultsForSearch' => -1 ),
+                'title'    		=> __( 'Profile menu default tab' ),
+                'desc' 	   		=> __( 'This will be the default tab on user profile page' ),
+                'default'  		=> 'main',
+				'options' 		=> $ultimatemember->profile->tabs_primary(),
+				'required'		=> array( 'profile_menu', '=', 1 ),
+);
+
+$tab_options[] = array(
+                'id'       		=> 'profile_menu_icons',
+                'type'     		=> 'switch',
+                'title'    		=> __('Enable menu icons in desktop view'),
+				'default' 		=> 1,
+				'required'		=> array( 'profile_menu', '=', 1 ),
+);
+
+$tab_options[] = array(
+                'id'       		=> 'profile_menu_counts',
+                'type'     		=> 'switch',
+                'title'    		=> __('Enable counts in menu'),
+				'default' 		=> 1,
+				'required'		=> array( 'profile_menu', '=', 1 ),
+);
+
+$this->sections[] = array(
+	
+    'subsection' => true,
+    'title'      => __( 'Profile Menu'),
+    'fields'     => $tab_options
+	
+);
+
 $this->sections[] = array(
 	
     'subsection' => true,

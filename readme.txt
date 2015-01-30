@@ -3,7 +3,7 @@ Author URI: https://ultimatemember.com/
 Plugin URI: https://ultimatemember.com/
 Contributors: ultimatemember
 Donate link: 
-Tags: access control, community, communities, conditional fields, conditional logic, conditional menus, content protection, custom fields, file uploads, form builder, front-end login, front-end registration, hide wp-admin, login, login page, logged-in users, mandrill, member, members, membership, member directory, profile, profiles, profile builder, registration, restrict content, role creation, role menus, search filters, sign in, sign up, social network, star ratings, toolbar, user, users, user fields, user profiles, user roles
+Tags: access control, author, authors, author profile, comments, community, communities, conditional fields, conditional logic, conditional menus, content protection, custom fields, file uploads, form builder, front-end login, front-end registration, hide wp-admin, login, login page, logged-in users, mandrill, member, members, membership, member directory, profile, profiles, profile builder, registration, restriction, restrict content, role creation, role menus, search filters, sign in, sign up, social network, star ratings, toolbar, user, users, user fields, user profiles, user roles
 Requires at least: 4.1
 Tested up to: 4.1
 
@@ -35,6 +35,7 @@ Features of the plugin include:
 * Custom e-mail templates
 * Content restriction
 * Conditional menus
+* Show author posts & comments on user profiles
 * Mobile adaptive & responsive
 * SEO optimized
 * Developer friendly with dozens of actions and filters
@@ -88,6 +89,10 @@ With Ultimate Member you can restrict content on a global or per page/post basis
 **Conditional menus**
 
 The plugin provides a range of customizable text only email templates which are triggered depending on certain events (e.g welcome email, account activation, account deleted etc). Each email type can be turned on/off. The plugin also offers a range of optional admin notification emails so you can find out when a new user registers or if new user needs reviewed.
+
+**Show author posts & comments on user profiles**
+
+The plugin provides a fully flexible menu and tab system on user profiles that allows you to optionally display a user’s posts and comments on their profile. With this feature you can put the focus on a user’s posts by making author posts the default tab when viewing a user profile.
 
 **Mobile adaptive & responsive**
 
@@ -152,23 +157,37 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 == Screenshots ==
 
 1. Front-end User Profile (Edit mode)
-2. Photo / File Upload Modal
-3. Image Crop Feature
-4. Account Page
-5. Photo Modal
-6. User Profile (Cover photo turned off)
-7. Searchable Member Directory
-8. Plugin Dashboard
-9. Plugin Settings Panel
-10. Forms
-11. Custom Field Manager
-12. Adding a New Field
-13. User Roles
-14. Adding a New Role
-15. Adding a New Directory
-16. Appearance and Customization Settings
+2. Forms
+3. Custom Field Manager
+4. Adding a New Field
+5. User Roles
+6. Adding a New Role
+7. Adding a New Directory
+8. Appearance and Customization Settings
+9. Plugin Dashboard
+10. Photo / File Upload Modal
+11. Image Crop Feature
+12. Account Page
+13. Photo Modal
+14. User Profile (Cover photo turned off)
+15. Searchable Member Directory
+16. Plugin Settings Panel
 
 == Changelog ==
+
+= 1.0.33: January 30, 2015 =
+
+* New: Introducing profile menu / tab system (optional)
+* New: display user posts and comments in profile menu (optional)
+* New: added option to force hide adminbar on the frontend even for administrators
+* Tweak: added profile menu options to plugin settings panel
+* Tweak: added option to enable/disable profile menu and/or profile menu tabs
+* Tweak: added option to show or hide post and comment counts (when the tabs are active)
+* Tweak: account activation via e-mail redirects user to login page and displays a success message
+* Fixed: issue with conditional logic on profile fields has been resolved
+* Fixed: bug with searching members by gender
+* Fixed: admin nav menus conditional logic conflict with some themes
+* Fixed: bug with datepicker field on windows servers
 
 = 1.0.32: January 30, 2015 =
 

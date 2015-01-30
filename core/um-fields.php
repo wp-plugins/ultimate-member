@@ -607,6 +607,7 @@ class UM_Fields {
 					$array['disabled_weekdays'] = '[' . implode(',',$array['disabled_weekdays']) . ']';
 				}
 				
+				// When date range is strictly defined
 				if ( $array['range'] == 'date_range' ) {
 					
 					$array['date_min'] = str_replace('/',',',$array['range_start']);
@@ -615,14 +616,31 @@ class UM_Fields {
 				} else {
 					
 					if ( $array['years_x'] == 'past' ) {
-						$array['date_min'] = date('Y,n,d', mktime(0, 0, 0, date("n") , date("d"), date("Y") - $array['years'] ) );
+
+						$date = new DateTime( date('Y-n-d') );
+						$past = $date->modify('-'.$array['years'].' years')->format('Y,n,d');
+						
+						$array['date_min'] = $past;
 						$array['date_max'] = date('Y,n,d');
+	
 					} else if ( $array['years_x'] == 'future' ) {
+						
+						$date = new DateTime( date('Y-n-d') );
+						$future = $date->modify('+'.$array['years'].' years')->format('Y,n,d');
+						
 						$array['date_min'] = date('Y,n,d');	
-						$array['date_max'] = date('Y,n,d', mktime(0, 0, 0, date("n") , date("d"), date("Y") + $array['years'] ) );
+						$array['date_max'] = $future;
+						
 					} else {
-						$array['date_min'] = date('Y,n,d', mktime(0, 0, 0, date("n") , date("d"), date("Y") - ( $array['years'] / 2 ) ) );
-						$array['date_max'] = date('Y,n,d', mktime(0, 0, 0, date("n") , date("d"), date("Y") + ( $array['years'] / 2 ) ) );
+						
+						$date = new DateTime( date('Y-n-d') );
+						$date_f = new DateTime( date('Y-n-d') );
+						$past = $date->modify('-'. ( $array['years'] / 2 ).' years')->format('Y,n,d');
+						$future = $date_f->modify('+'. ( $array['years'] / 2 ).' years')->format('Y,n,d');
+						
+						$array['date_min'] = $past;	
+						$array['date_max'] = $future;
+
 					}
 
 				}

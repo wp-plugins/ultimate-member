@@ -178,6 +178,7 @@ class UM_Setup {
 		$this->perms = array(
 			'core' => 'admin',
 			'can_access_wpadmin' => 1,
+			'can_not_see_adminbar' => 0,
 			'can_edit_everyone' => 1,
 			'can_delete_everyone' => 1,
 			'can_edit_profile' => 1,
@@ -196,6 +197,7 @@ class UM_Setup {
 		$this->nonadmin_perms = array(
 			'core' => 'member',
 			'can_access_wpadmin' => 0,
+			'can_not_see_adminbar' => 1,
 			'can_edit_everyone' => 0,
 			'can_delete_everyone' => 0,
 			'can_make_private_profile' => 0,
