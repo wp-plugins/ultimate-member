@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1
 
-Stable Tag: 1.0.32
+Stable Tag: 1.0.33
 
 License: GNU Version 2 or Any Later Version
 
@@ -156,22 +156,22 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 
 == Screenshots ==
 
-1. Front-end User Profile (Edit mode)
-2. Photo / File Upload Modal
-3. Custom Field Manager
-4. Adding a New Field
-5. User Roles
-6. Adding a New Role
-7. Adding a New Directory
-8. Appearance and Customization Settings
-9. Plugin Dashboard
-10. Photo / File Upload Modal
-11. Image Crop Feature
-12. Account Page
-13. Photo Modal
-14. User Profile (Cover photo turned off)
-15. Searchable Member Directory
-16. Plugin Settings Panel
+1. Screenshot 1
+2. Screenshot 2
+3. Screenshot 3
+4. Screenshot 4
+5. Screenshot 5
+6. Screenshot 6
+7. Screenshot 7
+8. Screenshot 8
+9. Screenshot 9
+10. Screenshot 10
+11. Screenshot 11
+12. Screenshot 12
+13. Screenshot 13
+14. Screenshot 14
+15. Screenshot 15
+16. Screenshot 16
 
 == Changelog ==
 
