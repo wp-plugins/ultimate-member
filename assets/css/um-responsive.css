@@ -562,6 +562,8 @@ div.uimob800 .um-account-meta img {
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
+	max-width: 100%;
+	height: auto;
 }
 
 div.uimob800 .um-profile-photo {

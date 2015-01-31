@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1
 
-Stable Tag: 1.0.34
+Stable Tag: 1.0.35
 
 License: GNU Version 2 or Any Later Version
 
@@ -174,6 +174,14 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.35: January 31, 2015 =
+
+* Tweak: exif module is not required anymore and does not stop photo uploads (exif is highly recommended)
+* Fixed: issue with changing a WP administrator role to a community administrator role
+* Fixed: issue with plugin uploads directory on some multisite installations
+* Fixed: conflict with default profile tab and editing profile
+* Fixed: minor css conflict on account page with some themes when viewed on tablets
 
 = 1.0.34: January 31, 2015 =
 

@@ -391,9 +391,10 @@
 	function um_edit_my_profile_uri() {
 		global $ultimatemember;
 		$url = $ultimatemember->permalinks->get_current_url( get_option('permalink_structure') );
-		$url = remove_query_arg( 'profiletab', $url );
-		$url = remove_query_arg( 'subnav', $url );
-		$url = add_query_arg( 'um_action', 'edit', $url );
+		$url = remove_query_arg('profiletab', $url);
+		$url = remove_query_arg('subnav', $url);
+		$url = add_query_arg('profiletab', 'main', $url);
+		$url = add_query_arg('um_action', 'edit', $url);
 		return $url;
 	}
 	
