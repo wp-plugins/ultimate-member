@@ -48,7 +48,6 @@ class UM_Fields {
 			echo $output;
 			
 		echo '</div>';
-						
 	}
 	
 	/***
@@ -448,28 +447,6 @@ class UM_Fields {
 		
 		return false;
 	}
-	
-	/***
-	***	@Fix for children custom fields
-	***/
-	function find_custom_field_data($key, $fields) {
-		foreach ($fields as $k => $v) {
-		
-			if ( $k == $key ){
-				return $fields[$key];
-			}
-				
-			if (isset($fields[$k]['fields'])) {
-				foreach( $fields[$k]['fields'] as $k1 => $v1 ){
-					if ($k1 == $key){
-						return $fields[$k]['fields'][$k1];
-					}
-				}
-			}
-
-		}
-		return array('');
-	}
 
 	/***
 	***	@Get Field Icon
@@ -509,9 +486,9 @@ class UM_Fields {
 		global $ultimatemember;
 		
 		$fields = $this->get_fields();
-		
-		if ( isset( $fields ) && is_array( $fields ) ) {
-			$array = $this->find_custom_field_data($key, $fields);
+
+		if ( isset( $fields ) && is_array( $fields ) && isset( $fields[$key] ) ) {
+			$array = $fields[$key];
 		} else {
 			$array = $ultimatemember->builtin->predefined_fields[$key];
 		}
@@ -1358,7 +1335,7 @@ class UM_Fields {
 						
 							$v = rtrim($v);
 							
-							if ( !is_numeric( $k ) ) {
+							if ( !is_numeric( $k ) && in_array($form_key, array('role') ) ) {
 								$option_value = $k;
 							} else {
 								$option_value = $v;
@@ -1456,7 +1433,7 @@ class UM_Fields {
 						
 							$v = rtrim($v);
 							
-							if ( !is_numeric( $k ) ) {
+							if ( !is_numeric( $k ) && in_array($form_key, array('role') ) ) {
 								$option_value = $k;
 							} else {
 								$option_value = $v;

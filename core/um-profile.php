@@ -5,7 +5,8 @@ class UM_Profile {
 	function __construct() {
 	
 		add_action('template_redirect', array(&$this, 'active_tab'), 10002);
-
+		add_action('template_redirect', array(&$this, 'active_subnav'), 10002);
+		
 	}
 	
 	/***
@@ -39,7 +40,7 @@ class UM_Profile {
 	}
 	
 	/***
-	***	@Get active tab
+	***	@Get active_tab
 	***/
 	function active_tab() {
 		
@@ -48,12 +49,22 @@ class UM_Profile {
 		if ( get_query_var('profiletab') ) {
 			$this->active_tab = get_query_var('profiletab');
 		}
+
+		return $this->active_tab;
+	}
+	
+	/***
+	***	@Get active active_subnav
+	***/
+	function active_subnav() {
+		
+		$this->active_subnav = null;
 		
 		if ( get_query_var('subnav') ) {
 			$this->active_subnav = get_query_var('subnav');
 		}
 		
-		return $this->active_tab;
+		return $this->active_subnav;
 	}
 	
 	/***

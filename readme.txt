@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1
 
-Stable Tag: 1.0.33
+Stable Tag: 1.0.34
 
 License: GNU Version 2 or Any Later Version
 
@@ -174,6 +174,16 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.34: January 31, 2015 =
+
+* New: added option to set a default cover photo
+* New: added option to hide restricted content from search and archive
+* Fixed: php error in title tab with ElegantThemes
+* Fixed: theme conflict with photo/cover upload
+* Fixed: issue with country field showing country code in profile
+* Fixed: issue with setting default tab
+* Fixed: issue with 2-name user roles
 
 = 1.0.33: January 30, 2015 =
 
