@@ -3,10 +3,32 @@
 class UM_Admin_Notices {
 
 	function __construct() {
+		
+		add_action('admin_init', array(&$this, 'create_languages_folder') );
 
 		add_action('admin_notices', array(&$this, 'main_notices'), 1);
 		
+		add_action('admin_notices', array(&$this, 'localize_note'), 2);
+		
 		add_action('admin_notices', array(&$this, 'show_update_messages'), 10);
+		
+	}
+	
+	/***
+	***	@to store plugin languages
+	***/
+	function create_languages_folder() {
+		
+		global $ultimatemember;
+		
+		$path = $ultimatemember->files->upload_basedir;
+		$path = str_replace('/uploads/ultimatemember','',$path);
+		$path = $path . '/languages/plugins/';
+		$path = str_replace('//','/',$path);
+		
+		if ( !file_exists( $path ) ) {
+			@mkdir( $path, 0777, true);
+		}
 		
 	}
 	
@@ -39,6 +61,28 @@ class UM_Admin_Notices {
 		
 		}
 		
+	}
+	
+	
+	/***
+	***	@localization notice
+	***/
+	function localize_note() {
+		global $ultimatemember;
+		
+		$locale = get_option('WPLANG');
+		if ( !$locale ) return;
+		if ( $locale == get_option('um_site_language') ) return;
+		if ( !isset( $ultimatemember->available_languages[$locale] ) ) return;
+		
+		$download_uri = add_query_arg('um_adm_action', 'um_language_downloader');
+			
+		echo '<div class="updated" style="border-color: #3ba1da;"><p>';
+		
+		echo sprintf(__('Your site language is <strong>%1$s</strong>. Good news! Ultimate Member is already available in <strong>%2$s language</strong>. <a href="%3$s">Download the translation</a> files and start using the plugin in your language now.','ultimatemember'), $locale, $ultimatemember->available_languages[$locale], $download_uri );
+		
+		echo '</p></div>';
+	
 	}
 	
 	/***

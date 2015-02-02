@@ -1,6 +1,41 @@
 <?php
 
 	/***
+	***	@download a language remotely
+	***/
+	add_action('um_admin_do_action__um_language_downloader', 'um_admin_do_action__um_language_downloader');
+	function um_admin_do_action__um_language_downloader( $action ){
+		global $ultimatemember;
+		if ( !is_admin() || !current_user_can('manage_options') ) die();
+		
+		$locale = get_option('WPLANG');
+		if ( !$locale ) return;
+		if ( $locale == get_option('um_site_language') ) return;
+		if ( !isset( $ultimatemember->available_languages[$locale] ) ) return;
+		
+		$path = $ultimatemember->files->upload_basedir;
+		$path = str_replace('/uploads/ultimatemember','',$path);
+		$path = $path . '/languages/plugins/';
+		$path = str_replace('//','/',$path);
+		
+		$remote = 'https://ultimatemember.com/wp-content/languages/plugins/ultimatemember-' . $locale . '.po';
+		$remote2 = 'https://ultimatemember.com/wp-content/languages/plugins/ultimatemember-' . $locale . '.mo';
+
+		$remote_tmp = download_url( $remote, $timeout = 300 );
+		copy( $remote_tmp, $path . 'ultimatemember-' . $locale . '.po' );
+		unlink( $remote_tmp );
+		
+		$remote2_tmp = download_url( $remote2, $timeout = 300 );
+		copy( $remote2_tmp, $path . 'ultimatemember-' . $locale . '.mo' );
+		unlink( $remote2_tmp );
+		
+		update_option('um_site_language', $locale);
+		
+		exit( wp_redirect( remove_query_arg('um_adm_action') ) );
+		
+	}
+	
+	/***
 	***	@Hide registration notice
 	***/
 	add_action('um_admin_do_action__um_can_register_notice', 'um_admin_do_action__um_can_register_notice');

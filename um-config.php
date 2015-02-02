@@ -10,7 +10,7 @@
 $this->sections[] = array(
 
     'icon'       => 'um-faicon-user',
-    'title'      => __( 'Users'),
+    'title'      => __( 'Users','ultimatemember'),
     'fields'     => array(
 		
 		array(
@@ -774,7 +774,7 @@ $this->sections[] = array(
 $this->sections[] = array(
 
     'icon'       => 'um-faicon-cloud-upload',
-    'title'      => __( 'Uploads'),
+    'title'      => __( 'Uploads','ultimatemember'),
     'fields'     => array(
 		
 		array(
@@ -866,7 +866,7 @@ $this->sections[] = array(
 $this->sections[] = array(
 
     'icon'       => 'um-faicon-paint-brush',
-    'title'      => __( 'Appearance'),
+    'title'      => __( 'Appearance','ultimatemember'),
     'fields'     => array(
 		
 	)
@@ -1596,7 +1596,7 @@ $this->sections[] = array(
 $this->sections[] = array(
 
     'icon'       => 'um-faicon-wrench',
-    'title'      => __( 'Advanced'),
+    'title'      => __('Advanced','ultimatemember'),
     'fields'     => array(
 		
         array(

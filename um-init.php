@@ -14,6 +14,12 @@ class UM_API {
 		
 		$this->honeypot = 'request';
 		
+		$this->available_languages = array(
+			'en_US' => 'English (US)',
+			'tr_TR' => 'Türkçe',
+			'it_IT' => 'Italiano'
+		);
+		
 	}
 	
 	/***
@@ -126,6 +132,10 @@ class UM_API {
 		$this->mobile = new Mobile_Detect;
 
 		$this->options = get_option('um_options');
+		
+		$domain = 'ultimatemember';
+		$locale = get_option('WPLANG');
+		load_textdomain($domain, WP_LANG_DIR . '/plugins/' .$domain.'-'.$locale.'.mo');
 		
 	}
 	
