@@ -14,7 +14,22 @@ class UM_Admin_Metabox {
 
 		add_action( 'load-post.php', array(&$this, 'add_metabox'), 9 );
 		add_action( 'load-post-new.php', array(&$this, 'add_metabox'), 9 );
+		
+		add_action( 'save_post', array(&$this, 'remove_rewrite_rules_option'), 10, 2 );
 	
+	}
+	
+	/***
+	***	@unset rewrite rules if the slug was changed
+	***/
+	function remove_rewrite_rules_option( $post_id ) {
+		if ( ! wp_is_post_revision( $post_id ) ) {
+			
+			if ( get_post_meta($post_id, '_um_core', true) ) {
+				delete_option('um_flush_rules'); // so they reset rewrite rules
+			}
+			
+		}
 	}
 	
 	/***

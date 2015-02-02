@@ -51,6 +51,9 @@
 			   ),
 			   $value
 		   );
+		   
+		$value = wpautop($value);
+		
 		return $value;
 	}
 	
