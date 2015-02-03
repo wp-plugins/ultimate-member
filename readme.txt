@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1
 
-Stable Tag: 1.0.38
+Stable Tag: 1.0.39
 
 License: GNU Version 2 or Any Later Version
 
@@ -104,7 +104,7 @@ The plugin is very SEO friendly and provides customizable dynamic page titles an
 
 **Developer friendly**
 
-Ultimate Member is developer friendly and includes hundreds of actions and filters for developers to customize the plugin. If you are wanting to integrate with Ultimate Member you can view codex here.
+Ultimate Member is developer friendly and includes hundreds of actions and filters for developers to customize the plugin. If you are wanting to integrate with Ultimate Member you can view [our codex](https://ultimatemember.com/codex/).
 
 **Future plans for Ultimate Member**
 
@@ -123,6 +123,7 @@ Looking for help with Ultimate Member? Join our [community forum](https://ultima
 Ultimate Member has been translated into the following languages:
 
 * English (US)
+* French
 * Italian
 * Turkish
 
@@ -182,6 +183,14 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.39: February 3, 2015 =
+
+* New: added support for child templates to allow customizing the templates of plugin via theme or child theme. [See how](https://ultimatemember.com/codex/overriding-default-ultimate-member-profile-templates/)
+* New: added French language pack
+* Tweak: improved localization notification in backend
+* Tweak: improved template loading
+* Fixed: a minor css issue with multi-select field placeholder
 
 = 1.0.38: February 3, 2015 =
 

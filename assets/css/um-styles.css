@@ -351,7 +351,7 @@ p.um-notice.err {
 .um-form input[type=text],
 .um-form input[type=password] {
 	padding: 0 12px !important;
-	width: 100% !important;
+	width: 100%;
 	display: block !important;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;

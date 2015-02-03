@@ -928,7 +928,7 @@ class UM_Admin_Metabox {
 					
 				<?php } else { ?>
 				
-					<p><label for="_format">Time User-Friendly Format <?php $this->tooltip('Choose the displayed time-format for this field'); ?></label>
+					<p><label for="_format">Time Format <?php $this->tooltip('Choose the displayed time-format for this field'); ?></label>
 						<select name="_format" id="_format" class="umaf-selectjs" style="width: 100%">
 							<option value="g:i a" <?php selected( 'g:i a', $this->edit_mode_value ); ?>><?php echo $ultimatemember->datetime->get_time('g:i a'); ?> ( 12-hr format )</option>
 							<option value="g:i A" <?php selected( 'g:i A', $this->edit_mode_value ); ?>><?php echo $ultimatemember->datetime->get_time('g:i A'); ?> ( 12-hr format )</option>

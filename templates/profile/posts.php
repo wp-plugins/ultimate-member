@@ -2,7 +2,7 @@
 
 <?php if ( $loop->have_posts()) { ?>
 			
-	<?php include_once um_path . 'templates/profile/posts-single.php'; ?>
+	<?php $ultimatemember->shortcodes->load_template('profile/posts-single'); ?>
 	
 	<div class="um-ajax-items">
 	

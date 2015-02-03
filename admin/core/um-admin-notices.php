@@ -49,13 +49,13 @@ class UM_Admin_Notices {
 		
 		}
 		
-		$hide_exif_notice = get_option('um_show_exif_notice');
+		$hide_exif_notice = get_option('um_hide_exif_notice');
 		
 		if ( !extension_loaded('exif') && !$hide_exif_notice ) {
 			
 			echo '<div class="updated" style="border-color: #3ba1da;"><p>';
 		
-			echo sprintf(__( 'Exif is not enabled on your server. Mobile photo uploads will not be rotated correctly until you enable the exif extension. <a href="%s">Hide this notice</a>', 'ultimatemember' ), add_query_arg('um_adm_action', 'um_show_exif_notice') );
+			echo sprintf(__( 'Exif is not enabled on your server. Mobile photo uploads will not be rotated correctly until you enable the exif extension. <a href="%s">Hide this notice</a>', 'ultimatemember' ), add_query_arg('um_adm_action', 'um_hide_exif_notice') );
 		
 			echo '</p></div>';
 		
@@ -72,16 +72,32 @@ class UM_Admin_Notices {
 		
 		$locale = get_option('WPLANG');
 		if ( !$locale ) return;
-		if ( $locale == get_option('um_site_language') ) return;
-		if ( !isset( $ultimatemember->available_languages[$locale] ) ) return;
+		if ( file_exists( WP_LANG_DIR . '/plugins/ultimatemember-' . $locale . '.mo' ) ) return;
 		
-		$download_uri = add_query_arg('um_adm_action', 'um_language_downloader');
+		if ( isset( $ultimatemember->available_languages[$locale] ) ) {
+		
+			$download_uri = add_query_arg('um_adm_action', 'um_language_downloader');
+				
+			echo '<div class="updated" style="border-color: #3ba1da;"><p>';
 			
-		echo '<div class="updated" style="border-color: #3ba1da;"><p>';
+			echo sprintf(__('Your site language is <strong>%1$s</strong>. Good news! Ultimate Member is already available in <strong>%2$s language</strong>. <a href="%3$s">Download the translation</a> files and start using the plugin in your language now.','ultimatemember'), $locale, $ultimatemember->available_languages[$locale], $download_uri );
+			
+			echo '</p></div>';
 		
-		echo sprintf(__('Your site language is <strong>%1$s</strong>. Good news! Ultimate Member is already available in <strong>%2$s language</strong>. <a href="%3$s">Download the translation</a> files and start using the plugin in your language now.','ultimatemember'), $locale, $ultimatemember->available_languages[$locale], $download_uri );
-		
-		echo '</p></div>';
+		} else {
+			
+			$hide_locale_notice = get_option('um_hide_locale_notice');
+			if ( !$hide_locale_notice ) {
+				
+			echo '<div class="updated" style="border-color: #3ba1da;"><p>';
+				
+			echo sprintf(__('Ultimate Member has not yet been translated to your langeuage: <strong>%1$s</strong>. If you have translated the plugin you need put these files <code>ultimatemember-%1$s.po and ultimatemember-%1$s.mo</code> in <strong>/wp-content/languages/plugins/</strong> for the plugin to be translated in your language. <a href="%2$s">Hide this notice</a>','ultimatemember'), $locale, add_query_arg('um_adm_action', 'um_hide_locale_notice') );
+				
+			echo '</p></div>';
+			
+			}
+			
+		}
 	
 	}
 	

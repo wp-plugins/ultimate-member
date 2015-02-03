@@ -2,7 +2,7 @@
 
 <?php if ( $loop ) { ?>
 			
-	<?php include_once um_path . 'templates/profile/comments-single.php'; ?>
+	<?php $ultimatemember->shortcodes->load_template('profile/comments-single'); ?>
 	
 	<div class="um-ajax-items">
 	
