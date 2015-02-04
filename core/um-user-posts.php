@@ -27,10 +27,11 @@ class UM_User_posts {
 		$author = $array[3];
 		
 		$offset_n = $posts_per_page + $offset;
-		$modified_args = "$post_type,$posts_per_page,$offset_n,$author";
 		
-		$loop = $ultimatemember->query->make("post_type=$post_type&posts_per_page=$posts_per_page&offset=$offset&author=$author");
-
+		$ultimatemember->shortcodes->modified_args = "$post_type,$posts_per_page,$offset_n,$author";
+		
+		$ultimatemember->shortcodes->loop = $ultimatemember->query->make("post_type=$post_type&posts_per_page=$posts_per_page&offset=$offset&author=$author");
+		
 		$ultimatemember->shortcodes->load_template('profile/posts-single');
 		
 	}
@@ -48,9 +49,10 @@ class UM_User_posts {
 		$author = $array[3];
 
 		$offset_n = $posts_per_page + $offset;
-		$modified_args = "$post_type,$posts_per_page,$offset_n,$author";
 		
-		$loop = $ultimatemember->query->make("post_type=$post_type&number=$posts_per_page&offset=$offset&author_email=$author");
+		$ultimatemember->shortcodes->modified_args = "$post_type,$posts_per_page,$offset_n,$author";
+		
+		$ultimatemember->shortcodes->loop = $ultimatemember->query->make("post_type=$post_type&number=$posts_per_page&offset=$offset&author_email=$author");
 
 		$ultimatemember->shortcodes->load_template('profile/comments-single');
 		

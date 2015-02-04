@@ -5,6 +5,8 @@ class UM_Shortcodes {
 	function __construct() {
 	
 		$this->message_mode = false;
+		
+		$this->loop = '';
 
 		add_shortcode('ultimatemember', array(&$this, 'ultimatemember'), 1);
 
@@ -14,7 +16,10 @@ class UM_Shortcodes {
 	***	@load a compatible template
 	***/
 	function load_template( $tpl ) {
-		global $ultimatemember, $loop, $modified_args;
+		global $ultimatemember;
+		
+		$loop = ( $this->loop ) ? $this->loop : '';
+		
 		if ( isset( $this->set_args ) && is_array( $this->set_args ) ) {
 			$args = $this->set_args;
 			extract( $args );

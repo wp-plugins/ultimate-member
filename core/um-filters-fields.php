@@ -26,6 +26,7 @@
 	***	@urls in description
 	***/
 	add_filter('um_profile_field_filter_hook__description', 'um_profile_field_filter_hook__description', 99, 2);
+	add_filter('um_profile_field_filter_hook__textarea', 'um_profile_field_filter_hook__description', 99, 2);
 	function um_profile_field_filter_hook__description( $value, $data ) {
 		global $ultimatemember;
 		

@@ -1262,13 +1262,9 @@ class UM_Admin_Metabox {
 			case '_html':
 				?>
 
-				<div class="um-admin-tri">
-
-					<p><label for="_html">Does this textarea accept HTML? <?php $this->tooltip('Turn on/off HTML tags for this textarea'); ?></label>
-						<?php if ( isset( $this->edit_mode_value ) ) $this->ui_on_off('_html', $this->edit_mode_value ); else  $this->ui_on_off('_html', 0); ?>
-					</p>
-					
-				</div>
+				<p><label for="_html">Does this textarea accept HTML? <?php $this->tooltip('Turn on/off HTML tags for this textarea'); ?></label>
+					<?php if ( isset( $this->edit_mode_value ) ) $this->ui_on_off('_html', $this->edit_mode_value ); else  $this->ui_on_off('_html', 0); ?>
+				</p>
 				
 				<?php
 				break;

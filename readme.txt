@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1
 
-Stable Tag: 1.0.39
+Stable Tag: 1.0.40
 
 License: GNU Version 2 or Any Later Version
 
@@ -183,6 +183,17 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.40: February 4, 2015 =
+
+* Tweak: line-breaks and automatic urls are now working for textarea fields
+* Tweak: updated ReduxFramework to latest version
+* Tweak: backend sentences are now properly localized / updated translation
+* Fixed: important issue with field positions in backend form builder
+* Fixed: issue with usernames that have spaces resolved
+* Fixed: conflict with page title in bbpress forums resolved
+* Fixed: issue with escaping the apostrophes resolved
+* Fixed: issue with loading more posts/comments in profile resolved
 
 = 1.0.39: February 3, 2015 =
 
