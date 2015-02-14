@@ -190,7 +190,7 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 
 * Tweak: when deleting users in backend, users will be deleted upon confirmation only
 * Tweak: deleted users content is assigned to admin by default (to avoid losing content)
-* Fixed: only include plugin js and css on specific pages
+* Fixed: include plugin js and css on specific pages only
 
 = 1.0.52: February 13, 2015 =
 
