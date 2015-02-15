@@ -10,6 +10,22 @@ class UM_Fields {
 	}
 	
 	/***
+	***	@standard checkbox field
+	***/
+	function checkbox( $id, $title ) {
+		?>
+		<div class="um-field um-field-c">
+				<div class="um-field-area">
+				<label class="um-field-checkbox active">
+					<input type="checkbox" name="<?php echo $id; ?>" value="1" checked /><span class="um-field-checkbox-state"><i class="um-icon-android-checkbox-outline"></i></span>
+					<span class="um-field-checkbox-option"> <?php echo $title; ?></span>
+				</label>
+				</div>
+			</div>
+		<?php
+	}
+	
+	/***
 	***	@show user social links
 	***/
 	function show_social_urls(){

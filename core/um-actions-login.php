@@ -116,7 +116,9 @@
 		global $ultimatemember;
 		extract( $args );
 
-		$ultimatemember->user->auto_login( um_user('ID') );
+		$rememberme = ( isset($args['rememberme']) ) ? 1 : 0;
+		
+		$ultimatemember->user->auto_login( um_user('ID'), $rememberme );
 		
 		// Priority redirect
 		if ( isset( $args['redirect_to'] ) ) {
@@ -173,6 +175,10 @@
 		?>
 		
 		<div class="um-col-alt">
+
+			<?php if ( isset( $args['show_rememberme'] ) && $args['show_rememberme'] ) {
+					echo $ultimatemember->fields->checkbox('rememberme', __('Keep me signed in','ultimatemember') );
+			} ?>
 
 			<?php if ( isset($args['secondary_btn']) && $args['secondary_btn'] != 0 ) { ?>
 			

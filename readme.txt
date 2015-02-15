@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1
 
-Stable Tag: 1.0.53
+Stable Tag: 1.0.54
 
 License: GNU Version 2 or Any Later Version
 
@@ -185,6 +185,13 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.54: February 15, 2015 =
+
+* New: added a remember me checkbox to login forms by default (optional)
+* Tweak: keep your users signed in even if they close browser (optional)
+* Tweak: minor css changes
+* Fixed: bug with double redirects (causing incorrect loop) after login on some sites
 
 = 1.0.53: February 14, 2015 =
 

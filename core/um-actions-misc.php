@@ -12,9 +12,7 @@
 		
 			echo '<input type="hidden" name="redirect_to" id="redirect_to" value="'.$_REQUEST['redirect_to'].'" />';
 
-		}
-
-		if ( isset( $args['after_login'] ) && !empty( $args['after_login'] ) ) {
+		} else if ( isset( $args['after_login'] ) && !empty( $args['after_login'] ) ) {
 			
 			switch( $args['after_login'] ) {
 				
