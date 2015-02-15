@@ -131,7 +131,7 @@
     line-height: 12px !important;
     vertical-align: middle !important;
     position: relative;
-    top: -7px;
+    top: -6px;
     margin-right: 8px;
 }
 
@@ -172,6 +172,15 @@ p.um-notice {
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
+	position: relative;
+}
+
+p.um-notice i {
+	position: absolute;
+	right: 14px;
+	top: 1px;
+	font-size: 30px;
+	cursor: pointer;
 }
 
 p.um-notice.success {

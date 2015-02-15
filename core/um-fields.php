@@ -14,14 +14,16 @@ class UM_Fields {
 	***/
 	function checkbox( $id, $title ) {
 		?>
+		
 		<div class="um-field um-field-c">
-				<div class="um-field-area">
+			<div class="um-field-area">
 				<label class="um-field-checkbox active">
 					<input type="checkbox" name="<?php echo $id; ?>" value="1" checked /><span class="um-field-checkbox-state"><i class="um-icon-android-checkbox-outline"></i></span>
 					<span class="um-field-checkbox-option"> <?php echo $title; ?></span>
 				</label>
-				</div>
 			</div>
+		</div>
+		
 		<?php
 	}
 	
@@ -839,11 +841,15 @@ class UM_Fields {
 		if ( !um_can_view_field( $data ) ) return;
 		if ( !um_can_edit_field( $data ) ) return;
 		
-		// disable these fields in profile edit only
+		// fields that need to be disabled in edit mode (profile)
 		if ( in_array( $key, array('user_email','username','user_login','user_password') ) && $this->editing == true && $this->set_mode == 'profile' ) {
 			return;
 		}
 		
+		// forbidden in edit mode?
+		if ( isset( $data['edit_forbidden'] ) ) return;
+		
+		// required option
 		if ( isset( $data['required_opt'] ) ) {
 			$opt = $data['required_opt'];
 			if ( um_get_option( $opt[0] ) != $opt[1] ) {
@@ -851,12 +857,14 @@ class UM_Fields {
 			}
 		}
 		
+		// required user permission
 		if ( isset( $data['required_perm'] ) ) {
 			if ( !um_user( $data['required_perm'] ) ) {
 				return;
 			}
 		}
 		
+		// do not show passwords
 		if ( isset( $ultimatemember->user->preview ) && $ultimatemember->user->preview ) {
 			if ( $data['type'] == 'password' ){
 				return;
@@ -864,7 +872,6 @@ class UM_Fields {
 		}
 
 		/* Begin by field type */
-
 		switch( $type ) {
 			
 			/* Default: Integration */

@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1
 
-Stable Tag: 1.0.54
+Stable Tag: 1.0.55
 
 License: GNU Version 2 or Any Later Version
 
@@ -123,11 +123,12 @@ Looking for help with Ultimate Member? Join our [community forum](https://ultima
 Ultimate Member has been translated into the following languages:
 
 * English (US)
-* French
-* Spanish
-* German
-* Italian
-* Turkish
+* Español
+* Français
+* Italiano
+* Deutsch
+* Nederlands
+* Türkçe
 
 == Installation ==
 
@@ -185,6 +186,17 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.55: February 15, 2015 =
+
+* New: added Dutch (Nederlands) language
+* New: show user registration/joined date in profile and/or member directory
+* New: added facebook meta tags on user profiles (You have to disable facebook og tags in your SEO plugin)
+* Tweak: sort users by default in "backend" by newest users first
+* Tweak: added a close icon to profile and account notices
+* Fixed: changed all time features to reflect WordPress installation time
+* Fixed: timestamp on registration info shows form submission date/day
+* Fixed: updated language files and new translation words
 
 = 1.0.54: February 15, 2015 =
 

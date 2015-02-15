@@ -45,13 +45,13 @@
 		
 		if ( !username_exists( $user_name ) ) {
 			if ( $is_email ) {
-				$ultimatemember->form->add_error( $field,  __(' Sorry, we can\'t find an account with that email address') );
+				$ultimatemember->form->add_error( $field,  __(' Sorry, we can\'t find an account with that email address','ultimatemember') );
 			} else {
-				$ultimatemember->form->add_error( $field,  __(' Sorry, we can\'t find an account with that username') );
+				$ultimatemember->form->add_error( $field,  __(' Sorry, we can\'t find an account with that username','ultimatemember') );
 			}
 		} else {
 			if ( $args['user_password'] == '' ) {
-				$ultimatemember->form->add_error( 'user_password',  __('Please enter your password') );
+				$ultimatemember->form->add_error( 'user_password',  __('Please enter your password','ultimatemember') );
 			}
 		}
 		
@@ -66,7 +66,7 @@
 
 				case 'incorrect_password':
 					if ( username_exists( $user_name ) ) {
-						$ultimatemember->form->add_error( 'user_password',  __('Password is incorrect. Please try again.') );
+						$ultimatemember->form->add_error( 'user_password',  __('Password is incorrect. Please try again.','ultimatemember') );
 					}
 					break;
 					
