@@ -342,6 +342,9 @@ class UM_Fields {
 	function field_value( $key, $default = false, $data = null ) {
 		global $ultimatemember;
 		
+		if ( isset($_SESSION) && isset($_SESSION['um_social_profile'][$key]) )
+			return $_SESSION['um_social_profile'][$key];
+		
 		$type = (isset($data['type']))?$data['type']:'';
 		
 		// preview in backend
