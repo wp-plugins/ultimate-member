@@ -406,6 +406,10 @@ class UM_Fields {
 					return true;
 				}
 				
+				if ( strstr( $data['default'], ', ') ) {
+					$data['default'] = explode(', ', $data['default']);
+				}
+				
 				if ( isset($data['default']) && !is_array($data['default']) && $data['default'] == $value ) {
 					return true;
 				}
@@ -1013,7 +1017,7 @@ class UM_Fields {
 						$output .= '<div class="um-field' . $classes . '"' . $conditional . ' data-key="'.$key.'">';
 								
 								if ( isset( $data['label'] ) ) {
-								$output .= $this->field_label( sprintf(__('Confirm New %s','ultimatemember'), $data['label'] ), $key, $data);
+								$output .= $this->field_label( sprintf(__('Confirm %s','ultimatemember'), $data['label'] ), $key, $data);
 								}
 								
 								$output .= '<div class="um-field-area">';
