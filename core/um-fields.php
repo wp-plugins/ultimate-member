@@ -1202,9 +1202,17 @@ class UM_Fields {
 					
 					if ( $this->field_value( $key, $default, $data ) ) {
 					
+						$uri = um_user_uploads_uri() . $this->field_value( $key, $default, $data );
+						
+						if ( isset( $ultimatemember->form->errors ) && !empty( $ultimatemember->form->errors ) ) {
+							if ( isset( $this->set_mode ) && $this->set_mode == 'register' ) {
+								$uri = $this->field_value( $key, $default, $data );
+							}
+						}
+						
 						$output .= '<div class="um-single-image-preview show '. $crop_class .'" data-crop="'.$crop_data.'" data-key="'.$key.'">
 								<a href="#" class="cancel"><i class="um-icon-close"></i></a>
-								<img src="' . um_user_uploads_uri() . $this->field_value( $key, $default, $data ) . '" alt="" />
+								<img src="' . $uri . '" alt="" />
 							</div><a href="#" data-modal="um_upload_single" data-modal-size="'.$modal_size.'" data-modal-copy="1" class="um-button um-btn-auto-width">'. __('Change photo') . '</a>';
 						
 					} else {
@@ -1374,11 +1382,17 @@ class UM_Fields {
 						
 						// role field
 						if ( $form_key == 'role' ) {
-							$roles = $ultimatemember->query->get_roles();
-							foreach( $roles as $k => $v ) {
-								if ( in_array( $v, $options ) )
-									$new_roles[$k] = $v;
+		
+							global $wpdb;
+							foreach($options as $key => $val ) {
+								$val = (string) $val;
+								$val = trim( $val );
+								$post_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'um_role' AND post_title = '$val'");
+								$_role = get_post($post_id);
+								$new_roles[$_role->post_name] = $_role->post_title;
+								wp_reset_postdata();
 							}
+		
 							$options = $new_roles;
 						}
 						
@@ -1483,11 +1497,17 @@ class UM_Fields {
 
 						// role field
 						if ( $form_key == 'role' ) {
-							$roles = $ultimatemember->query->get_roles();
-							foreach( $roles as $k => $v ) {
-								if ( in_array( $v, $options ) )
-									$new_roles[$k] = $v;
+		
+							global $wpdb;
+							foreach($options as $key => $val ) {
+								$val = (string) $val;
+								$val = trim( $val );
+								$post_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'um_role' AND post_title = '$val'");
+								$_role = get_post($post_id);
+								$new_roles[$_role->post_name] = $_role->post_title;
+								wp_reset_postdata();
 							}
+		
 							$options = $new_roles;
 						}
 						
@@ -2157,7 +2177,10 @@ class UM_Fields {
 				
 		// show the heading
 		if ( $heading ) {
-					
+
+			$heading_background_color = (isset($heading_background_color))?$heading_background_color:'';
+			$heading_text_color = (isset($heading_text_color))?$heading_text_color:'';
+			
 			if ( $heading_background_color ) {
 				$css_heading_background_color = 'background-color: ' . $heading_background_color .';';
 				$css_heading_padding = 'padding: 10px 15px;';
@@ -2167,7 +2190,7 @@ class UM_Fields {
 			if ( $borderradius ) $css_heading_borderradius = 'border-radius: ' . $borderradius . ' ' . $borderradius . ' 0px 0px;';
 					
 			$output .= '<div class="um-row-heading" style="' . $css_heading_background_color . $css_heading_padding . $css_heading_text_color . $css_heading_borderradius . '">';
-			if ( $icon ) $output .= '<span class="um-row-heading-icon"><i class="' . $icon . '"></i></span>';
+			if ( isset($icon) ) $output .= '<span class="um-row-heading-icon"><i class="' . $icon . '"></i></span>';
 			$output .= $heading_text .'</div>';
 					
 		} else {

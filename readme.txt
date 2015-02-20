@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.61
+Stable Tag: 1.0.62
 
 License: GNU Version 2 or Any Later Version
 
@@ -128,7 +128,8 @@ Ultimate Member has been translated into the following languages:
 * Italiano
 * Deutsch
 * Nederlands
-* Finnish
+* Suomi
+* Polski
 * Türkçe
 
 == Installation ==
@@ -187,6 +188,17 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.62: February 20, 2015 =
+
+* New: added Polish (Polski) language
+* New: added option to disable Name fields from Account page
+* New: added support for custom profile templates selectable from template dropdown
+* Tweak: remove rows with no fields from profile view
+* Tweak: remove empty rows/row headings from profile
+* Fixed: removed plain password user meta key from all users
+* Fixed: issue with image upload when form has errors
+* Fixed: resolved issue with disabling profile menu / tabs
 
 = 1.0.61: February 20, 2015 =
 
