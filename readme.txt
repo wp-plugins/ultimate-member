@@ -5,9 +5,9 @@ Contributors: ultimatemember
 Donate link: 
 Tags: access control, author, authors, author profile, comments, community, communities, conditional fields, conditional logic, conditional menus, content protection, custom fields, file uploads, form builder, front-end login, front-end registration, hide wp-admin, login, login page, logged-in users, mandrill, member, members, membership, member directory, profile, profiles, profile builder, registration, restriction, restrict content, role creation, role menus, search filters, sign in, sign up, social network, star ratings, toolbar, user, users, user fields, user profiles, user roles
 Requires at least: 4.1
-Tested up to: 4.1
+Tested up to: 4.1.1
 
-Stable Tag: 1.0.60
+Stable Tag: 1.0.61
 
 License: GNU Version 2 or Any Later Version
 
@@ -187,6 +187,12 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.61: February 20, 2015 =
+
+* Tweak: Upload button text is made translatable
+* Fixed: conflicts with Divi theme
+* Fixed: issue with Roles dropdown field
 
 = 1.0.60: February 18, 2015 =
 

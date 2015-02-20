@@ -772,7 +772,7 @@ class UM_Fields {
 					$array['allowed_types'] = implode(',',$array['allowed_types']);
 				}
 				if (!isset($array['upload_text'])) $array['upload_text'] = '';
-				if (!isset($array['button_text'])) $array['button_text'] = __('Upload');
+				if (!isset($array['button_text'])) $array['button_text'] = __('Upload','ultimatemember');
 				if (!isset($array['extension_error'])) $array['extension_error'] =  "Sorry this is not a valid image.";
 				if (!isset($array['max_size_error'])) $array['max_size_error'] = "This image is too large!";
 				if (!isset($array['min_size_error'])) $array['min_size_error'] = "This image is too small!";
@@ -793,7 +793,7 @@ class UM_Fields {
 					$array['allowed_types'] = implode(',',$array['allowed_types']);
 				}
 				if (!isset($array['upload_text'])) $array['upload_text'] = '';
-				if (!isset($array['button_text'])) $array['button_text'] = __('Upload');
+				if (!isset($array['button_text'])) $array['button_text'] = __('Upload','ultimatemember');
 				if (!isset($array['extension_error'])) $array['extension_error'] =  "Sorry this is not a valid file.";
 				if (!isset($array['max_size_error'])) $array['max_size_error'] = "This file is too large!";
 				if (!isset($array['min_size_error'])) $array['min_size_error'] = "This file is too small!";
@@ -1372,6 +1372,16 @@ class UM_Fields {
 							$options = $ultimatemember->builtin->get ( 'countries' );
 						}
 						
+						// role field
+						if ( $form_key == 'role' ) {
+							$roles = $ultimatemember->query->get_roles();
+							foreach( $roles as $k => $v ) {
+								if ( in_array( $v, $options ) )
+									$new_roles[$k] = $v;
+							}
+							$options = $new_roles;
+						}
+						
 						// add an empty option!
 						$output .= '<option value=""></option>';
 						
@@ -1470,7 +1480,17 @@ class UM_Fields {
 						}
 						
 						$output .= '<div class="um-field-area">';
-							
+
+						// role field
+						if ( $form_key == 'role' ) {
+							$roles = $ultimatemember->query->get_roles();
+							foreach( $roles as $k => $v ) {
+								if ( in_array( $v, $options ) )
+									$new_roles[$k] = $v;
+							}
+							$options = $new_roles;
+						}
+						
 						// add options
 						$i = 0;
 
