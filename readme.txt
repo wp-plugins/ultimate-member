@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.62
+Stable Tag: 1.0.63
 
 License: GNU Version 2 or Any Later Version
 
@@ -188,6 +188,14 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.63: February 21, 2015 =
+
+* Tweak: minor changes to dashboard widgets
+* Tweak: cleaned dashboard js
+* Tweak: a few action hooks refined
+* Tweak: added filters to registration form buttons
+* Fixed: issue with delete account feature
 
 = 1.0.62: February 20, 2015 =
 
