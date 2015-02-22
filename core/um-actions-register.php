@@ -98,7 +98,7 @@
 		$ultimatemember->user->set_plain_password( $args['user_password'] );
 		
 		do_action('um_post_registration_save', $user_id, $args);
-				
+
 		do_action('um_post_registration_listener', $user_id, $args);
 		
 		do_action('um_post_registration', $user_id, $args);

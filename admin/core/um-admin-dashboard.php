@@ -105,7 +105,7 @@ class UM_Admin_Dashboard {
 	***/
 	function language_not_available() {
 		$locale = get_option('WPLANG');
-		if ( $locale && !isset( $ultimatemember->available_languages[$locale] ) && !file_exists( WP_LANG_DIR . '/plugins/ultimatemember-' . $locale . '.mo' ) )
+		if ( $locale && !strstr($locale, 'en_') && !isset( $ultimatemember->available_languages[$locale] ) && !file_exists( WP_LANG_DIR . '/plugins/ultimatemember-' . $locale . '.mo' ) )
 			return true;
 		return false;
 	}

@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.63
+Stable Tag: 1.0.64
 
 License: GNU Version 2 or Any Later Version
 
@@ -188,6 +188,13 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.64: February 22, 2015 =
+
+* Tweak: updated language files on server
+* Tweak: modified account page hooks to accept custom hooks easily
+* Fixed: important css issues with safari browser
+* Fixed: language notice will no longer show on (English UK/Other) wordpress sites
 
 = 1.0.63: February 21, 2015 =
 
