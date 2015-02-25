@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.65
+Stable Tag: 1.0.66
 
 License: GNU Version 2 or Any Later Version
 
@@ -188,6 +188,11 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.66: February 25, 2015 =
+
+* New: added option to send e-mails as HTML
+* New: added default HTML templates for e-mail notifications
 
 = 1.0.65: February 24, 2015 =
 
