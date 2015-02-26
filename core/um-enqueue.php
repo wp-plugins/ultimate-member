@@ -118,7 +118,7 @@ class UM_Enqueue {
 		$this->load_datetimepicker();
 		
 		$this->load_raty();
-		
+
 		$this->load_imagecrop();
 		
 		$this->load_masonry();

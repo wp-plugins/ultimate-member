@@ -52,9 +52,7 @@ class UM_Mail {
 
 		// HTML e-mail
 		if ( um_get_option('email_html') && $this->email_template( $template ) ) {
-			$this->message = file_get_contents( $this->email_template( 'header' ) );
-			$this->message .= file_get_contents( $this->email_template( $template ) );
-			$this->message .= file_get_contents( $this->email_template( 'footer' ) );
+			$this->message = file_get_contents( $this->email_template( $template ) );
 		} else {
 			$this->message = um_get_option( $template );
 		}
@@ -93,10 +91,12 @@ class UM_Mail {
 			'{password}',
 			'{login_url}',
 			'{site_name}',
+			'{site_url}',
 			'{account_activation_link}',
 			'{password_reset_link}',
 			'{admin_email}',
 			'{user_profile_link}',
+			'{user_account_link}',
 			'{submitted_registration}',
 			'{user_avatar_url}',
 		);
@@ -113,10 +113,12 @@ class UM_Mail {
 			um_user('_um_cool_but_hard_to_guess_plain_pw'),
 			um_get_core_page('login'),
 			um_get_option('site_name'),
+			get_bloginfo('url'),
 			um_user('account_activation_link'),
 			um_user('password_reset_link'),
 			um_admin_email(),
 			um_user_profile_url(),
+			um_get_core_page('account'),
 			um_user_submitted_registration(),
 			um_get_user_avatar_url(),
 		);

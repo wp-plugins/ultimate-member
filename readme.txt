@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.66
+Stable Tag: 1.0.67
 
 License: GNU Version 2 or Any Later Version
 
@@ -188,6 +188,15 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.67: February 26, 2015 =
+
+* New: Improved the default HTML e-mail templates design
+* New: added a bunch of action hooks to account tabs and content
+* Tweak: added a few template tags to use in email: {site_url}, {user_account_link}
+* Fixed: issue with making a checkbox required prior to registering
+* Fixed: issue with comments showing in posts tab under profile
+* Fixed: issue with plugin uninstallation link not showing in multisite
 
 = 1.0.66: February 25, 2015 =
 
