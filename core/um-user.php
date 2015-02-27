@@ -416,7 +416,7 @@ class UM_User {
 	***/
 	function is_private_profile( $user_id ) {
 		$privacy = get_user_meta( $user_id, 'profile_privacy', true );
-		if ( $privacy == __('Only me') ) {
+		if ( $privacy == __('Only me','ultimatemember') ) {
 			return true;
 		}
 		return false;

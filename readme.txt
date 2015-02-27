@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.67
+Stable Tag: 1.0.68
 
 License: GNU Version 2 or Any Later Version
 
@@ -188,6 +188,13 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.68: February 27, 2015 =
+
+* New: added support for mp3 as allowed filetype / upload
+* Fixed: bug with profile privacy option (on non-english sites)
+* Fixed: uncommon php warning caused by um_get_user_avatar_url() function
+* Fixed: new translation corrections
 
 = 1.0.67: February 26, 2015 =
 
