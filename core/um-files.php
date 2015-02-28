@@ -504,6 +504,8 @@ class UM_Files {
 		rmdir( $dir );
 
 		// update user's meta
+		do_action('um_before_upload_db_meta', $user_id, $key );
+		do_action("um_before_upload_db_meta_{$key}", $user_id );
 		update_user_meta( $user_id, $key, $filename );
 		
 		// the url of upload

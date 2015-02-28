@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.68
+Stable Tag: 1.0.69
 
 License: GNU Version 2 or Any Later Version
 
@@ -188,6 +188,11 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.69: February 28, 2015 =
+
+* Tweak: better WP logout handling
+* Tweak: new action and filter hooks added
 
 = 1.0.68: February 27, 2015 =
 

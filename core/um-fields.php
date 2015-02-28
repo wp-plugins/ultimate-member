@@ -105,6 +105,11 @@ class UM_Fields {
 			}
 		}
 		
+		// custom fields support
+		if ( isset( $ultimatemember->builtin->predefined_fields[$id] ) && isset( $ultimatemember->builtin->predefined_fields[$id]['custom'] ) ) {
+			$args = array_merge( $ultimatemember->builtin->predefined_fields[$id], $args);
+		}
+		
 		$fields[$id] = $args;
 		
 		// for group field only
@@ -370,7 +375,7 @@ class UM_Fields {
 			
 			return um_user( $key );
 		
-		} else if ( um_user( $key ) && $this->viewing == true ) {
+		} else if ( ( um_user( $key ) || isset($data['show_anyway']) ) && $this->viewing == true ) {
 		
 			$value = um_filtered_value( $key, $data );
 			return $value;

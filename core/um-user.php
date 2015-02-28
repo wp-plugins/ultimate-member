@@ -269,6 +269,9 @@ class UM_User {
 		
 		$this->delete_meta('account_secret_hash');
 		$this->delete_meta('_um_cool_but_hard_to_guess_plain_pw');
+		
+		do_action('um_after_user_is_approved', um_user('ID') );
+		
 	}
 	
 	/***
