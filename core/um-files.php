@@ -378,6 +378,8 @@ class UM_Files {
 	
 		delete_user_meta( $user_id, $type );
 		
+		do_action("um_after_remove_{$type}", $user_id);
+		
 		$dir = $this->upload_basedir . $user_id . '/';
 		$prefix = $type;
 		chdir($dir);
