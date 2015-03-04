@@ -102,7 +102,7 @@ class UM_Tracking {
 
 		// Send a maximum of once per period
 		$last_send = $this->get_last_send();
-		if( $last_send && $last_send > strtotime( '-1 hour' ) )
+		if( $last_send && $last_send > strtotime( '-1 day' ) )
 			return;
 		
 		$this->setup_data();
@@ -124,7 +124,7 @@ class UM_Tracking {
 	***	@run a scheduled report
 	***/
 	private function schedule_send() {
-		add_action( 'um_hourly_scheduled_events', array( $this, 'send_checkin' ) );
+		add_action( 'um_daily_scheduled_events', array( $this, 'send_checkin' ) );
 	}
 
 	/***
