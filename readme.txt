@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.74
+Stable Tag: 1.0.75
 
 License: GNU Version 2 or Any Later Version
 
@@ -188,6 +188,14 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.75: March 5, 2015 =
+
+* New: improved & modern html e-mail templates
+* New: addon to transfer BuddyPress profile photos to Ultimate Member (user request)
+* New: added option to turn off time bot feature (fixes conflict with plugins)
+* New: added built-in addons support
+* Tweak: improved backend design and css
 
 = 1.0.74: March 4, 2015 =
 
