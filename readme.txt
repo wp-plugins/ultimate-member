@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.75
+Stable Tag: 1.0.76
 
 License: GNU Version 2 or Any Later Version
 
@@ -188,6 +188,12 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.76: March 7, 2015 =
+
+* New: added {user_avatar_small} tag to display user photo in menu (requires extra css work)
+* Tweak: Removed !important css rules from colors and backgrounds
+* Fixed: issue with content block field
 
 = 1.0.75: March 5, 2015 =
 

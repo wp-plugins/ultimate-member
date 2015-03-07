@@ -452,7 +452,10 @@ class UM_Files {
 		$name = str_replace( $ext, '', $source_name );
 		$filename = $name . $ext;
 
-		// copy file
+		// copy & overwrite file
+		if ( file_exists( $this->upload_basedir . $user_id . '/' . $filename ) ) {
+			unlink( $this->upload_basedir . $user_id . '/' . $filename );
+		}
 		copy( $source, $this->upload_basedir . $user_id . '/' . $filename );
 		
 		// thumbs
