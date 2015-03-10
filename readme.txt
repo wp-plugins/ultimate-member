@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.78
+Stable Tag: 1.0.79
 
 License: GNU Version 2 or Any Later Version
 
@@ -188,6 +188,14 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.79: March 10, 2015 =
+
+* Tweak: Redux up to date
+* Fixed: security issue related to deleting a temp file via ajax
+* Fixed: bug with a php warning on undefined field type
+
+Credits to "James Golovich http://www.pritect.net" for the security checks
 
 = 1.0.78: March 10, 2015 =
 
