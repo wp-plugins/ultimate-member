@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.80
+Stable Tag: 1.0.81
 
 License: GNU Version 2 or Any Later Version
 
@@ -41,6 +41,19 @@ Features of the plugin include:
 * Developer friendly with dozens of actions and filters
 * Multi-site compatibility
 * Mandrill compatibility
+
+** Paid Extensions **
+
+You can extend the power of Ultimate Member with one of our premium extensions:
+
+* [Social Login](https://ultimatemember.com/extensions/social-login/)
+* [MailChimp](https://ultimatemember.com/extensions/mailchimp/)
+* [bbPress](https://ultimatemember.com/extensions/bbpress/)
+* [myCRED](https://ultimatemember.com/extensions/mycred/)
+
+** Free Extensions **
+
+* [Google reCAPTCHA](https://ultimatemember.com/extensions/google-recaptcha/)
 
 **Front-end registration**
 
@@ -188,6 +201,10 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.81: March 11, 2015 =
+
+* New: official support for plugin extensions released
 
 = 1.0.80: March 10, 2015 =
 
