@@ -42,7 +42,7 @@ Features of the plugin include:
 * Multi-site compatibility
 * Mandrill compatibility
 
-** Paid Extensions **
+**Paid Extensions**
 
 You can extend the power of Ultimate Member with one of our premium extensions:
 
@@ -51,7 +51,7 @@ You can extend the power of Ultimate Member with one of our premium extensions:
 * [bbPress](https://ultimatemember.com/extensions/bbpress/)
 * [myCRED](https://ultimatemember.com/extensions/mycred/)
 
-** Free Extensions **
+**Free Extensions**
 
 * [Google reCAPTCHA](https://ultimatemember.com/extensions/google-recaptcha/)
 
