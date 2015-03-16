@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.85
+Stable Tag: 1.0.86
 
 License: GNU Version 2 or Any Later Version
 
@@ -47,9 +47,10 @@ Features of the plugin include:
 You can extend the power of Ultimate Member with one of our premium extensions:
 
 * [Social Login](https://ultimatemember.com/extensions/social-login/)
-* [MailChimp](https://ultimatemember.com/extensions/mailchimp/)
 * [bbPress](https://ultimatemember.com/extensions/bbpress/)
+* [MailChimp](https://ultimatemember.com/extensions/mailchimp/)
 * [myCRED](https://ultimatemember.com/extensions/mycred/)
+* [Notices](https://ultimatemember.com/extensions/notices/)
 
 **Free Extensions**
 
@@ -201,6 +202,12 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.86: March 16, 2015 =
+
+* Tweak: UM admins can see unapproved users on front-end members directory
+* Fixed: few misspelling errors
+* Fixed: bug with custom profile templates (showing blank) resolved
 
 = 1.0.85: March 14, 2015 =
 
