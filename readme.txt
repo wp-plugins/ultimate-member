@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.86
+Stable Tag: 1.0.87
 
 License: GNU Version 2 or Any Later Version
 
@@ -17,7 +17,7 @@ The easiest way to create powerful online communities and beautiful user profile
 
 Ultimate Member is a powerful plugin that allows you to add beautiful user profiles to your site and create advanced online communities. The plugin enables users to sign up and become members of your site all from the front-end. With a focus on flexibility and simplicity creating a community and membership site with WordPress has never been so easy.
 
-**Live Demo: Check out all of Ultimate Member's features on our [live demo](http://ultimatememberdemo.com/)!**
+**Check out all of the plugin features on our [Live Demo](https://ultimatemember.com/).**
 
 **Get support by posting in our [community forum](https://ultimatemember.com/forums/).**
 
@@ -202,6 +202,10 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.87: March 17, 2015 =
+
+* Tweak: profile edit form tweaked to be processed for profile edit only. allows you to have custom (not nested) valid forms in other profile tabs
 
 = 1.0.86: March 16, 2015 =
 
