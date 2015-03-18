@@ -542,8 +542,8 @@ function um_reset_user() {
 	function um_can_view_profile( $user_id ){
 		global $ultimatemember;
 		
-		if ( !um_current_user_can('edit', $user_id ) && !$ultimatemember->user->is_approved( $user_id ) ) {
-			return false;
+		if ( um_current_user_can('edit', $user_id ) ) {
+			return true;
 		}
 		
 		if ( !is_user_logged_in() ) {
