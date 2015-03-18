@@ -391,14 +391,8 @@ function um_profile_id() {
 	***	@get a user's display name
 	***/
 	function um_get_display_name( $user_id ) {
-		global $ultimatemember;
-		
-		$ultimatemember->user->reset( true );
-		$ultimatemember->user->set( $user_id );
-		$cached = um_user('display_name');
-		$ultimatemember->user->reset();
-		return $cached;
-		
+		$user = get_userdata( $user_id );
+		return $user->display_name;
 	}
 	
 	/***
