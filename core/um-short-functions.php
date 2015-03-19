@@ -605,7 +605,9 @@ function um_reset_user() {
 		$role = get_user_meta( $user_id, 'role', true );
 		$permissions = $ultimatemember->query->role_data( $role );
 		$permissions = apply_filters('um_user_permissions_filter', $permissions, $user_id);
-		if ( $permissions[ $permission ] == 1 )
+		if ( isset( $permissions[ $permission ] ) && is_serialized( $permissions[ $permission ] ) )
+			return unserialize( $permissions[ $permission ] );
+		if ( isset( $permissions[ $permission ] ) && $permissions[ $permission ] == 1 )
 			return true;
 		return false;
 	}
