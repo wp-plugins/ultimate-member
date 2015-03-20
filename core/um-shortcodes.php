@@ -21,6 +21,8 @@ class UM_Shortcodes {
 		global $ultimatemember;
 		$array = $ultimatemember->permalinks->core;
 		
+		if ( !$array ) return $classes;
+		
 		foreach( $array as $slug => $info ) {
 			if ( um_is_core_page( $slug ) ) {
 				$classes[] = 'um-page-' . $slug;
@@ -286,6 +288,7 @@ class UM_Shortcodes {
 			'{last_name}',
 			'{display_name}',
 			'{user_avatar_small}',
+			'{username}',
 		);
 		
 		$pattern_array = apply_filters('um_allowed_user_tags_patterns', $pattern_array);
@@ -302,6 +305,10 @@ class UM_Shortcodes {
 					$value = um_user('profile_photo', 40);
 				} elseif ( um_user( $usermeta ) ){
 					$value = um_user( $usermeta );
+				}
+				
+				if ( $usermeta == 'username' ) {
+					$value = um_user('user_login');
 				}
 				
 				$value = apply_filters("um_profile_tag_hook__{$usermeta}", $value, um_user('ID') );

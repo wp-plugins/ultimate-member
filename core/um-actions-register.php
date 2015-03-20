@@ -128,9 +128,9 @@
 		global $ultimatemember;
 
 		if ( um_user('status') != 'pending' ) {
-			$ultimatemember->mail->send( um_admin_email(), 'notification_new_user' );
+			$ultimatemember->mail->send( um_admin_email(), 'notification_new_user', array('admin' => true ) );
 		} else {
-			$ultimatemember->mail->send( um_admin_email(), 'notification_review' );
+			$ultimatemember->mail->send( um_admin_email(), 'notification_review', array('admin' => true ) );
 		}
 	
 	}

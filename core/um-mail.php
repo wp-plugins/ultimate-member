@@ -6,6 +6,8 @@ class UM_Mail {
 
 		add_filter('mandrill_nl2br', array(&$this, 'mandrill_nl2br') );
 		
+		$this->force_plain_text = '';
+		
 	}
 	
 	/***
@@ -49,6 +51,10 @@ class UM_Mail {
 
 		$this->subject = um_get_option( $template . '_sub' );
 		$this->subject = $this->convert_tags( $this->subject );
+		
+		if ( isset( $args['admin'] ) ) {
+			$this->force_plain_text = 'forced';
+		}
 
 		// HTML e-mail
 		if ( um_get_option('email_html') && $this->email_template( $template ) ) {
@@ -65,15 +71,22 @@ class UM_Mail {
 		wp_mail( $email, $this->subject, $this->message, $this->headers, $this->attachments );
 		remove_filter( 'wp_mail_content_type', array(&$this, 'set_content_type')  );
 		
+		// reset globals
+		$this->force_plain_text = '';
+		
 	}
 	
 	/***
 	***	@maybe sending HTML emails
 	***/
 	function set_content_type( $content_type ) {
-		if ( um_get_option('email_html') )
-			return 'text/html';
+		
+		if ( $this->force_plain_text == 'forced' ) return 'text/plain';
+		
+		if ( um_get_option('email_html') ) return 'text/html';
+		
 		return 'text/plain';
+	
 	}
 	
 	/***

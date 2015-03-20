@@ -453,6 +453,7 @@ class UM_User {
 		
 		if ( $send_mail ) {
 			$ultimatemember->mail->send( um_user('user_email'), 'deletion_email' );
+			$ultimatemember->mail->send( um_admin_email(), 'notification_deletion', array('admin' => true ) );
 		}
 		
 		$ultimatemember->files->remove_dir( um_user_uploads_dir() );

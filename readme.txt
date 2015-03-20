@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.91
+Stable Tag: 1.0.92
 
 License: GNU Version 2 or Any Later Version
 
@@ -202,6 +202,13 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.92: March 20, 2015 =
+
+* New: added option to customize redirection URL after e-mail activation
+* Fixed: issue with hardcoded ajax/upload URLs - they are now localized
+* Fixed: issue with admin notification for a deleted account
+* Fixed: admin notifications are in plain text format
 
 = 1.0.91: March 20, 2015 =
 

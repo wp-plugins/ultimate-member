@@ -123,7 +123,7 @@ jQuery(document).ready(function() {
 		parent.find('input[type=hidden]').val('');
 		
 		jQuery.ajax({
-			url: ultimatemember_ajax_url,
+			url: um_scripts.ajaxurl,
 			type: 'post',
 			data: {
 				action: 'ultimatemember_remove_file',
@@ -143,7 +143,7 @@ jQuery(document).ready(function() {
 		parent.find('input[type=hidden]').val('');
 		
 		jQuery.ajax({
-			url: ultimatemember_ajax_url,
+			url: um_scripts.ajaxurl,
 			type: 'post',
 			data: {
 				action: 'ultimatemember_remove_file',
@@ -222,7 +222,7 @@ jQuery(document).ready(function() {
 		var hook = jQuery(this).data('hook');
 		var container = jQuery(this).parents('.um').find('.um-ajax-items');
 		jQuery.ajax({
-			url: ultimatemember_ajax_url,
+			url: um_scripts.ajaxurl,
 			type: 'post',
 			data: {
 				action: 'ultimatemember_ajax_paginate',
@@ -251,7 +251,7 @@ jQuery(document).ready(function() {
 		}
 		
 		jQuery.ajax({
-			url: ultimatemember_ajax_url,
+			url: um_scripts.ajaxurl,
 			type: 'post',
 			data: {
 				action: 'ultimatemember_muted_action',
