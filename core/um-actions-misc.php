@@ -59,6 +59,12 @@
 		if ( isset( $_REQUEST['updated'] ) && !empty( $_REQUEST['updated'] ) && !$ultimatemember->form->errors ) {
 			switch( $_REQUEST['updated'] ) {
 				
+				default:
+					$success = apply_filters("um_custom_success_message_handler", $err, $_REQUEST['updated']);
+					if ( !$success )
+						$success = __('Thank you!','ultimatemember');
+					break;
+					
 				case 'account':
 					$success = __('Your account was updated successfully.','ultimatemember');
 					break;
