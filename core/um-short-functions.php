@@ -321,7 +321,7 @@ function um_profile_id() {
 		global $ultimatemember;
 		if ( isset($_REQUEST['um_search']) ) {
 			$query = $ultimatemember->permalinks->get_query_array();
-			if ( in_array( $val, $query ) )
+			if ( isset( $query[$filter] ) && $val == $query[$filter] )
 				echo 'selected="selected"';
 		}
 		echo '';

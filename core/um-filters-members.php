@@ -175,6 +175,8 @@
 			if ( isset( $order ) ) {
 				$query_args['order'] = $order;
 			}
+			
+			$query_args = apply_filters('um_modify_sortby_parameter', $query_args, $sortby);
 
 		}
 		

@@ -246,7 +246,16 @@ class UM_Fields {
 	***	@Print field error
 	***/
 	function field_error($text) {
-		$output = '<div class="um-field-error"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>'.$text.'</div>';
+		global $ultimatemember;
+		if ( isset( $this->set_id ) && $ultimatemember->form->processing == $this->set_id ) {
+			$output = '<div class="um-field-error"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>'.$text.'</div>';
+		} else {
+			$output = '';
+		}
+		
+		if ( !isset( $ultimatemember->form->processing ) ) {
+			$output = '<div class="um-field-error"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>'.$text.'</div>';
+		}
 		return $output;
 	}
 	
