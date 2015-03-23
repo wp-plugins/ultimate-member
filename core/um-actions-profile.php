@@ -460,10 +460,10 @@
 				$items = array_merge( $items, $actions );
 				}
 				
+				$items = apply_filters('um_profile_edit_menu_items', $items, um_profile_id() );
+				
 				$items['cancel'] = $cancel;
-				
-				$items = apply_filters('um_profile_edit_menu_items', $items );
-				
+
 			} else {
 			
 				$items = apply_filters('um_myprofile_edit_menu_items', $items );

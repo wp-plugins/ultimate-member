@@ -66,6 +66,8 @@
 
 			foreach( $query as $field => $value ) {
 
+				if(in_array($field, array('members_page'))) continue;
+				
 				if ( in_array( $field, array('gender') ) ) {
 					$operator = '=';
 				} else {

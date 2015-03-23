@@ -12,8 +12,9 @@
 		if ( um_user('default_homepage') ) return;
 		if ( !um_user('redirect_homepage') ) return;
 		
-		if( is_home() || is_front_page() )
+		if( is_front_page() ) {
 			$ultimatemember->access->redirect_handler = um_user('redirect_homepage');
+		}
 	}
 	
 	/***
