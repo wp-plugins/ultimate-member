@@ -27,14 +27,23 @@ class UM_Mail {
 	/***
 	***	@check If template exists
 	***/
-	function email_template( $template ) {
+	function email_template( $template, $args = array() ) {
 		if ( file_exists( get_stylesheet_directory() . '/ultimate-member/templates/email/' . $template . '.html' ) ) {
 			return get_stylesheet_directory() . '/ultimate-member/templates/email/' . $template . '.html';
 		}
-		if ( file_exists( um_path . 'templates/email/' . $template . '.html' ) ) {
-			return um_url . 'templates/email/' . $template . '.html';
+		
+		if ( isset( $args['path'] ) ) {
+			$path = $args['path'];
+		} else {
+			$path = um_url . 'templates/email/';
 		}
+			
+		if ( file_exists( $path . $template . '.html' ) ) {
+			return $path . $template . '.html';
+		}
+		
 		return false;
+		
 	}
 	
 	/***
@@ -50,21 +59,21 @@ class UM_Mail {
 		$this->headers = 'From: '. um_get_option('mail_from') .' <'. um_get_option('mail_from_addr') .'>' . "\r\n";
 
 		$this->subject = um_get_option( $template . '_sub' );
-		$this->subject = $this->convert_tags( $this->subject );
+		$this->subject = $this->convert_tags( $this->subject, $args );
 		
-		if ( isset( $args['admin'] ) ) {
+		if ( isset( $args['admin'] ) || isset( $args['plain_text'] ) ) {
 			$this->force_plain_text = 'forced';
 		}
 
-		// HTML e-mail
-		if ( um_get_option('email_html') && $this->email_template( $template ) ) {
-			$this->message = file_get_contents( $this->email_template( $template ) );
+		// HTML e-mail or text
+		if ( um_get_option('email_html') && $this->email_template( $template, $args ) ) {
+			$this->message = file_get_contents( $this->email_template( $template, $args ) );
 		} else {
 			$this->message = um_get_option( $template );
 		}
 		
 		// Convert tags in body
-		$this->message = $this->convert_tags( $this->message );
+		$this->message = $this->convert_tags( $this->message, $args );
 
 		// Send mail
 		add_filter( 'wp_mail_content_type', array(&$this, 'set_content_type') );
@@ -92,7 +101,7 @@ class UM_Mail {
 	/***
 	***	@convert template tags in email template
 	***/
-	function convert_tags( $content ) {
+	function convert_tags( $content, $args = array() ) {
 	
 		$search = array(
 			'{display_name}',
@@ -139,6 +148,11 @@ class UM_Mail {
 		$replace = apply_filters('um_template_tags_replaces_hook', $replace);
 		
 		$content = str_replace($search, $replace, $content);
+		
+		if ( isset( $args['tags'] ) && isset( $args['tags_replace'] ) ) {
+			$content = str_replace($args['tags'], $args['tags_replace'], $content);
+		}
+		
 		return $content;
 		
 	}

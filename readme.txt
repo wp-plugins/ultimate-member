@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.94
+Stable Tag: 1.0.95
 
 License: GNU Version 2 or Any Later Version
 
@@ -49,6 +49,7 @@ You can extend the power of Ultimate Member with one of our premium extensions:
 * [Social Login](https://ultimatemember.com/extensions/social-login/)
 * [bbPress](https://ultimatemember.com/extensions/bbpress/)
 * [MailChimp](https://ultimatemember.com/extensions/mailchimp/)
+* [User Reviews](https://ultimatemember.com/extensions/user-reviews/)
 * [myCRED](https://ultimatemember.com/extensions/mycred/)
 * [Notices](https://ultimatemember.com/extensions/notices/)
 
@@ -202,6 +203,12 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.95: March 24, 2015 =
+
+* Tweak: added more hooks to mail function to allow for sending custom e-mails
+* Fixed: issue with content lock settings in backend appearing for non-admins
+* Fixed: issue with form errors handling
 
 = 1.0.94: March 23, 2015 =
 

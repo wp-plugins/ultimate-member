@@ -253,7 +253,7 @@ class UM_Fields {
 			$output = '';
 		}
 		
-		if ( !isset( $ultimatemember->form->processing ) ) {
+		if ( !$ultimatemember->form->processing ) {
 			$output = '<div class="um-field-error"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>'.$text.'</div>';
 		}
 		return $output;

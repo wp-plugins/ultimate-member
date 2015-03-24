@@ -1,5 +1,12 @@
 <?php
 
+	$premium['user-reviews'] = array(
+		'url' => 'https://ultimatemember.com/extensions/user-reviews/',
+		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/03/userrating800x300.png',
+		'name' => 'User Reviews',
+		'desc' => 'With our user reviews extension, you can add a 5 star user rating and review system to your site so users can rate/review each other.',
+	);
+
 	$premium['social-login'] = array(
 		'url' => 'https://ultimatemember.com/extensions/social-login/',
 		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/02/sociallogin.png',
