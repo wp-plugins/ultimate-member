@@ -31,13 +31,13 @@ class UM_Mail {
 		if ( file_exists( get_stylesheet_directory() . '/ultimate-member/templates/email/' . $template . '.html' ) ) {
 			return get_stylesheet_directory() . '/ultimate-member/templates/email/' . $template . '.html';
 		}
-		
+
 		if ( isset( $args['path'] ) ) {
 			$path = $args['path'];
 		} else {
-			$path = um_url . 'templates/email/';
+			$path = um_path . 'templates/email/';
 		}
-			
+		
 		if ( file_exists( $path . $template . '.html' ) ) {
 			return $path . $template . '.html';
 		}
@@ -67,6 +67,7 @@ class UM_Mail {
 
 		// HTML e-mail or text
 		if ( um_get_option('email_html') && $this->email_template( $template, $args ) ) {
+			add_filter( 'wp_mail_content_type', array(&$this, 'set_content_type') );
 			$this->message = file_get_contents( $this->email_template( $template, $args ) );
 		} else {
 			$this->message = um_get_option( $template );
@@ -76,7 +77,6 @@ class UM_Mail {
 		$this->message = $this->convert_tags( $this->message, $args );
 
 		// Send mail
-		add_filter( 'wp_mail_content_type', array(&$this, 'set_content_type') );
 		wp_mail( $email, $this->subject, $this->message, $this->headers, $this->attachments );
 		remove_filter( 'wp_mail_content_type', array(&$this, 'set_content_type')  );
 		

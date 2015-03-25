@@ -26,6 +26,7 @@ class UM_API {
 			'fi_FI' => 'Suomi',
 			'pl_PL' => 'Polski',
 			'tr_TR' => 'Türkçe',
+			'ar' 	=> 'العربية'
 		);
 		
 		$this->addons['bp_avatar_transfer'] = array( __( 'BuddyPress Avatar Transfer','ultimatemember' ), __('This tool enables you to migrate your custom user photos from BuddyPress to use with Ultimate Member.','ultimatemember') );

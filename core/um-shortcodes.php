@@ -148,7 +148,7 @@ class UM_Shortcodes {
 		
 		$this->dynamic_css( $args );
 		
-		if ( um_get_requested_user() ) {
+		if ( um_get_requested_user() || $mode == 'logout' ) {
 			um_reset_user();
 		}
 

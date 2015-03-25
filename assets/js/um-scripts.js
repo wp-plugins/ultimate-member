@@ -55,20 +55,22 @@ jQuery(document).ready(function() {
 
 	jQuery('.um-datepicker').each(function(){
 		elem = jQuery(this);
-		
+
 		if ( elem.attr('data-disabled_weekdays') != '' ) {
 			var disable = JSON.parse( elem.attr('data-disabled_weekdays') );
 		} else {
 			var disable = false;
 		}
-		
+
 		var years_n = elem.attr('data-years');
-		
-		var min = new Date( elem.attr('data-date_min') );
-		var max = new Date( elem.attr('data-date_max') );
+
+		var min = "[" + elem.attr('data-date_min') + "]";
+		var max = "[" + elem.attr('data-date_max') + "]";
+		var min = JSON.parse(min);
+		var max = JSON.parse(max);
 
 		elem.pickadate({
-			selectYears: years_n,
+			selectYears: years_n + 1,
 			min: min,
 			max: max,
 			disable: disable,

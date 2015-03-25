@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.95
+Stable Tag: 1.0.96
 
 License: GNU Version 2 or Any Later Version
 
@@ -146,6 +146,7 @@ Ultimate Member has been translated into the following languages:
 * Suomi
 * Polski
 * Türkçe
+* العربية
 
 == Installation ==
 
@@ -203,6 +204,13 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.0.96: March 25, 2015 =
+
+* New: Added Arabic language (ar) support
+* Fixed: Date fields not working in Safari
+* Fixed: issue with HTML e-mails
+* Fixed: issue with showing sidebar logout widget on bbpress forums
 
 = 1.0.95: March 24, 2015 =
 
