@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.0.96
+Stable Tag: 1.1.0
 
 License: GNU Version 2 or Any Later Version
 
@@ -204,6 +204,16 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.1.0: March 27, 2015 =
+
+* New: added multi language support to assign different languages to different forms (beta feature)
+* New: added RTL support (beta, still partial)
+* New: added a dashboard widget to view latest blog posts from the plugin
+* Tweak: changed manage_options permission to edit_users on some admin actions
+* Fixed: corrected all active color references in the css
+* Fixed: bug with user_row_actions filter
+* Fixed: do not store user_pass in submitted metakey during registration
 
 = 1.0.96: March 25, 2015 =
 

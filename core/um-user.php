@@ -219,6 +219,15 @@ class UM_User {
 	***	@Set user's registration details
 	***/
 	function set_registration_details( $submitted ) {
+		
+		if ( isset( $submitted['user_pass'] ) ) {
+			unset( $submitted['user_pass'] );
+		}
+		
+		if ( isset( $submitted['user_password'] ) ) {
+			unset( $submitted['user_password'] );
+		}
+		
 		update_user_meta( $this->id, 'submitted', $submitted );
 	}
 	

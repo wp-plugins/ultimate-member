@@ -76,7 +76,9 @@ jQuery(document).ready(function() {
 			disable: disable,
 			format: elem.attr('data-format'),
 			formatSubmit: 'yyyy/mm/dd',
-			hiddenName: true
+			hiddenName: true,
+			onOpen: function() { elem.blur(); },
+			onClose: function() { elem.blur(); }
 		});
 	});
 
@@ -87,7 +89,9 @@ jQuery(document).ready(function() {
 			format: elem.attr('data-format'),
 			interval: parseInt( elem.attr('data-intervals') ),
 			formatSubmit: 'HH:i',
-			hiddenName: true
+			hiddenName: true,
+			onOpen: function() { elem.blur(); },
+			onClose: function() { elem.blur(); }
 		});
 	});
 

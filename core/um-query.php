@@ -9,6 +9,26 @@ class UM_Query {
 	}
 	
 	/***
+	***	@get all forms
+	***/
+	function forms() {
+	
+		$args = array(
+			'post_type' => 'um_form',
+			'posts_per_page' => 200,
+			'post_status' => array('publish')
+		);
+		
+		$query = new WP_Query( $args );
+		foreach( $query->posts as $post ) {
+			setup_postdata( $post );
+			$results[ $post->ID ] = $post->post_title;
+		}
+		return $results;
+		
+	}
+	
+	/***
 	***	@get all post types
 	***/
 	function get_post_types() {

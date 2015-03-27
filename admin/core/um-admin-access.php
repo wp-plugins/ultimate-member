@@ -90,7 +90,7 @@ class UM_Admin_Access {
 	function add_metabox_form() {
 		global $ultimatemember;
 		
-		if ( !current_user_can('manage_options') ) return;
+		if ( !current_user_can( 'edit_users' ) ) return;
 		
 		$types = $ultimatemember->query->get_post_types;
 		foreach($types as $post_type) {

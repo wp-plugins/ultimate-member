@@ -106,7 +106,7 @@ class UM_Shortcodes {
 
 		$defaults = array();
 		$args = wp_parse_args( $args, $defaults );
-
+		
 		// when to not continue
 		$this->form_id = (isset($args['form_id'])) ? $args['form_id'] : null;
 		if (!$this->form_id) return;
@@ -115,6 +115,9 @@ class UM_Shortcodes {
 		
 		// get data into one global array
 		$post_data = $ultimatemember->query->post_data( $this->form_id );
+		
+		$args = apply_filters('um_pre_args_setup', $post_data );
+
 		if ( !isset( $args['template'] ) ) $args['template'] = '';
 		if ( isset( $post_data['template'] ) && $post_data['template'] != $args['template']) $args['template'] = $post_data['template'];
 		if ( !$this->template_exists( $args['template'] ) ) $args['template'] = $post_data['mode'];
@@ -151,6 +154,8 @@ class UM_Shortcodes {
 		if ( um_get_requested_user() || $mode == 'logout' ) {
 			um_reset_user();
 		}
+		
+		do_action('um_after_everything_output');
 
 		$output = ob_get_contents();
 		ob_end_clean();

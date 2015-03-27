@@ -101,6 +101,12 @@ class UM_Enqueue {
 		
 		}
 		
+		// rtl style
+		if ( is_rtl() ) {
+			wp_register_style('um_rtl', um_url . 'assets/css/um.rtl.css', '', ultimatemember_version, 'all' );
+			wp_enqueue_style('um_rtl');
+		}
+		
 		// load a localized version for date/time
 		$locale = get_option('WPLANG');
 		if ( $locale && file_exists( um_path . 'assets/js/pickadate/translations/' . $locale . '.js' ) ) {
