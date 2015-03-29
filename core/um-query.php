@@ -44,18 +44,21 @@ class UM_Query {
 	function make( $args ) {
 		
 		$defaults = array(
-			'post_type' => 'post'
+			'post_type' => 'post',
+			'post_status' => array('publish')
 		);
 		$args = wp_parse_args( $args, $defaults );
 		
 		if ( isset( $args['post__in'] ) && empty( $args['post__in'] ) )
 			return false;
-		
+
 		extract( $args );
 
 		if ( $post_type == 'comment' ) { // comments
 
 			unset( $args['post_type'] );
+			unset( $args['post_status'] );
+			
 			$comments = get_comments($args);
 			return $comments;
 			

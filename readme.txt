@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.1.0
+Stable Tag: 1.1.1
 
 License: GNU Version 2 or Any Later Version
 
@@ -41,6 +41,7 @@ Features of the plugin include:
 * Developer friendly with dozens of actions and filters
 * Multi-site compatibility
 * Mandrill compatibility
+* Multi language support
 
 **Paid Extensions**
 
@@ -204,6 +205,12 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.1.1: March 29, 2015 =
+
+* Fixed: bug where you user could use an already existing e-mail in account page
+* Fixed: bug with special characaters in username
+* Fixed: bug with showing draft posts in user profile
 
 = 1.1.0: March 27, 2015 =
 

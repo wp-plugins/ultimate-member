@@ -129,7 +129,7 @@ class UM_Permalinks {
 	***/
 	function profile_url() {
 		global $ultimatemember;
-		
+
 		$profile_url = $this->core['user'];
 		$profile_url = get_permalink($profile_url);
 		
