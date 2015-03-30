@@ -473,19 +473,6 @@ function um_reset_user() {
 	}
 	
 	/***
-	***	@Returns profile edit link
-	***/
-	function um_edit_my_profile_uri() {
-		global $ultimatemember;
-		$url = $ultimatemember->permalinks->get_current_url( get_option('permalink_structure') );
-		$url = remove_query_arg('profiletab', $url);
-		$url = remove_query_arg('subnav', $url);
-		$url = add_query_arg('profiletab', 'main', $url);
-		$url = add_query_arg('um_action', 'edit', $url);
-		return $url;
-	}
-	
-	/***
 	***	@remove edit profile args from url
 	***/
 	function um_edit_my_profile_cancel_uri() {
@@ -656,6 +643,18 @@ function um_reset_user() {
 	}
 	
 	/***
+	***	@Returns the edit profile link
+	***/
+	function um_edit_profile_url(){
+		global $ultimatemember;
+		$url = remove_query_arg('profiletab');
+		$url = remove_query_arg('subnav', $url);
+		$url = add_query_arg('profiletab', 'main',$url);
+		$url = add_query_arg('um_action','edit', $url);
+		return $url;
+	}
+	
+	/***
 	***	@checks if user can edit his profile
 	***/
 	function um_can_edit_my_profile(){
@@ -823,6 +822,14 @@ function um_fetch_user( $user_id ) {
 			$uri = um_user_uploads_uri() . 'cover_photo-'.$attrs.'.jpg?' . current_time( 'timestamp' );
 		}
 		return $uri;
+	}
+	
+	/***
+	***	@get avatar URL instead of image
+	***/
+	function um_get_avatar_url($get_avatar){
+		preg_match('/src="(.*?)"/i', $get_avatar, $matches);
+		return $matches[1];
 	}
 	
 	/***

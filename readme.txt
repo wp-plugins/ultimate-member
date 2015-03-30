@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.1.1
+Stable Tag: 1.1.2
 
 License: GNU Version 2 or Any Later Version
 
@@ -205,6 +205,12 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.1.2: March 30, 2015 =
+
+* Fixed: Important security patch - please update
+* Fixed: conflict with The Events Calendar plugin
+* Fixed: bug with edit profile link
 
 = 1.1.1: March 29, 2015 =
 

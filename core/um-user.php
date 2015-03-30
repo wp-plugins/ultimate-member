@@ -174,6 +174,21 @@ class UM_User {
 	}
 	
 	/***
+	***	@Security check for roles
+	***/
+	function is_secure_role( $role ) {
+		
+		if ( is_admin() ) return;
+		
+		if ( $role == 'admin' )
+			wp_die( __('This is not allowed for security reasons.','ultimatemember') );
+		
+		if ( um_get_option('advanced_denied_roles') && strstr( um_get_option('advanced_denied_roles'), $role ) )
+			wp_die( __('This is not allowed for security reasons.','ultimatemember') );
+		
+	}
+	
+	/***
 	***	@Clean user profile
 	***/
 	function clean(){

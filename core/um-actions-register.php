@@ -90,6 +90,8 @@
 		if ( !isset( $args['role'] ) ) {
 			$role = um_get_option('default_role');
 		}
+		
+		$ultimatemember->user->is_secure_role( $role );
 
 		$ultimatemember->user->set_role( $role );
 		
@@ -186,7 +188,7 @@
 	add_action('um_user_registration', 'um_user_registration', 10);
 	function um_user_registration($args){
 		global $ultimatemember;
-		
+
 		do_action('um_add_user_frontend', $args);
 
 	}
@@ -214,17 +216,14 @@
 		
 		if ( isset( $args['custom_fields']['role_select'] ) || isset( $args['custom_fields']['role_radio'] ) ) return;
 		
-		if (isset($args['role']) && !empty($args['role'])){
-		
-			echo '<input type="hidden" name="role" id="role" value="'.$args['role'].'" />';
-			
+		if (isset($args['role']) && !empty($args['role'])) {
+			$role = $args['role'];
 		} else {
-		
-			$default_role = um_get_option('default_role');
-			echo '<input type="hidden" name="role" id="role" value="'.$default_role.'" />';
-			
+			$role = um_get_option('default_role');
 		}
-		
+
+		echo '<input type="hidden" name="role" id="role" value="' . $role . '" />';
+
 	}
 	
 	/***

@@ -1758,6 +1758,14 @@ $this->sections[] = array(
 		),
 	
         array(
+                'id'      		=> 'advanced_denied_roles',
+                'type'     		=> 'text',
+                'title'    		=> __( 'Do not allow registering these roles','ultimatemember' ),
+                'default'  		=> '',
+				'desc' 	   		=> __('Comma seperate roles (role slugs) that can not be registered from frontend ever for security.','ultimatemember'),
+        ),
+		
+        array(
                 'id'       		=> 'enable_timebot',
                 'type'     		=> 'switch',
                 'title'   		=> __( 'Enable Time Check Security','ultimatemember' ),

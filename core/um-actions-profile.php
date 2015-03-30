@@ -382,7 +382,7 @@
 	function um_pre_profile_shortcode($args){
 		global $ultimatemember;
 		extract( $args );
-
+		
 		if ( $mode == 'profile' && $ultimatemember->fields->editing == false ) {
 			$ultimatemember->fields->viewing = 1;
 			
@@ -440,7 +440,7 @@
 			<?php
 			
 			$items = array(
-				'editprofile' => '<a href="'.um_edit_my_profile_uri().'" class="real_url">'.__('Edit Profile','ultimatemember').'</a>',
+				'editprofile' => '<a href="'.um_edit_profile_url().'" class="real_url">'.__('Edit Profile','ultimatemember').'</a>',
 				'myaccount' => '<a href="'.um_get_core_page('account').'" class="real_url">'.__('My Account','ultimatemember').'</a>',
 				'logout' => '<a href="'.um_get_core_page('logout').'" class="real_url">'.__('Logout','ultimatemember').'</a>',
 				'cancel' => '<a href="#" class="um-dropdown-hide">'.__('Cancel','ultimatemember').'</a>',
