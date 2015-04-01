@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.1.2
+Stable Tag: 1.1.3
 
 License: GNU Version 2 or Any Later Version
 
@@ -205,6 +205,11 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.1.3: April 1, 2015 =
+
+* New: added option to manage if access control widgets can be edited by admins only
+* Tweak: update to last security patch - deletes user who try to get unauthorized access
 
 = 1.1.2: March 30, 2015 =
 

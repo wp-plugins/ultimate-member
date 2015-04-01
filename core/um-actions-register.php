@@ -91,7 +91,7 @@
 			$role = um_get_option('default_role');
 		}
 		
-		$ultimatemember->user->is_secure_role( $role );
+		$ultimatemember->user->is_secure_role( $user_id, $role );
 
 		$ultimatemember->user->set_role( $role );
 		

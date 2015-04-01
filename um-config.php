@@ -344,6 +344,15 @@ $this->sections[] = array(
         ),
 		
         array(
+                'id'       		=> 'access_widget_admin_only',
+                'type'     		=> 'switch',
+                'title'   		=> __( 'Enable the Access Control widget for Admins only?','ultimatemember' ),
+				'default' 		=> 1,
+				'on'			=> __('Yes','ultimatemember'),
+				'off'			=> __('No','ultimatemember'),
+        ),
+		
+        array(
 				'id'       		=> 'wpadmin_allow_ips',
                 'type'     		=> 'textarea',
                 'title'    		=> __( 'Whitelisted Backend IPs','ultimatemember' ),
