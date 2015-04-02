@@ -9,7 +9,7 @@
 
 	$premium['social-login'] = array(
 		'url' => 'https://ultimatemember.com/extensions/social-login/',
-		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/02/sociallogin.png',
+		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/02/socialloginv2-011.png',
 		'name' => 'Social Login',
 		'desc' => 'This extension allows users to register and login to your site using their social network accounts (Facebook, Twitter, Google+, LinkedIn, Instagram, VK)',
 	);

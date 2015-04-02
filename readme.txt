@@ -3,11 +3,11 @@ Author URI: https://ultimatemember.com/
 Plugin URI: https://ultimatemember.com/
 Contributors: ultimatemember
 Donate link: 
-Tags: access control, author, authors, author profile, comments, community, communities, conditional fields, conditional logic, conditional menus, content protection, custom fields, file uploads, form builder, front-end login, front-end registration, hide wp-admin, login, login page, logged-in users, mandrill, member, members, membership, member directory, profile, profiles, profile builder, registration, restriction, restrict content, role creation, role menus, search filters, sign in, sign up, social network, star ratings, toolbar, user, users, user fields, user profiles, user roles
+Tags: access control, author, authors, author profile, comments, community, communities, conditional fields, conditional logic, conditional menus, content protection, custom fields, file uploads, form builder, front-end login, front-end registration, hide wp-admin, login, login page, logged-in users, mandrill, member, members, membership, member directory, profile, profiles, profile builder, registration, restriction, restrict content, role creation, role menus, search filters, sign in, sign up, social network, star ratings, toolbar, user, users, user fields, user profile, user-profile, user profiles, user roles
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.1.3
+Stable Tag: 1.1.4
 
 License: GNU Version 2 or Any Later Version
 
@@ -205,6 +205,11 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.1.4: April 2, 2015 =
+
+* Fixed: Major bug with dropdown and date fields (Update recommended)
+* Fixed: hard-coded translation issues
 
 = 1.1.3: April 1, 2015 =
 

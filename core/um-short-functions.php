@@ -278,7 +278,7 @@ function um_profile_id() {
 	***/
 	function um_is_core_page( $page ) {
 		global $post, $ultimatemember;
-		if ( isset($post->ID) && $post->ID == $ultimatemember->permalinks->core[ $page ] )
+		if ( isset($post->ID) && isset( $ultimatemember->permalinks->core[ $page ] ) && $post->ID == $ultimatemember->permalinks->core[ $page ] )
 			return true;
 		return false;
 	}
