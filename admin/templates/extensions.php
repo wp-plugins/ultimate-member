@@ -1,5 +1,12 @@
 <?php
 
+	$premium['real-time-notifications'] = array(
+		'url' => 'https://ultimatemember.com/extensions/real-time-notifications/',
+		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/04/notifications-01-copy.png',
+		'name' => 'Real-time Notifications',
+		'desc' => 'Add a real-time notification system to your site so users can receive updates and notifications directly on your website as they happen.',
+	);
+	
 	$premium['user-reviews'] = array(
 		'url' => 'https://ultimatemember.com/extensions/user-reviews/',
 		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/03/userrating800x300.png',

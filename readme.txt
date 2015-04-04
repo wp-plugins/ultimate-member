@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.1.4
+Stable Tag: 1.1.5
 
 License: GNU Version 2 or Any Later Version
 
@@ -47,6 +47,7 @@ Features of the plugin include:
 
 You can extend the power of Ultimate Member with one of our premium extensions:
 
+* [Real-time Notifications](https://ultimatemember.com/extensions/real-time-notifications/)
 * [Social Login](https://ultimatemember.com/extensions/social-login/)
 * [bbPress](https://ultimatemember.com/extensions/bbpress/)
 * [MailChimp](https://ultimatemember.com/extensions/mailchimp/)
@@ -205,6 +206,13 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.1.5: April 4, 2015 =
+
+* New: new action hook that runs when user role is changed um_member_role_upgrade
+* Fixed: bug/compatibility issue with caching UM roles data
+* Fixed: bug with changing role settings/permissions
+* Fixed: bug with setting e-mail activation redirect URL
 
 = 1.1.4: April 2, 2015 =
 

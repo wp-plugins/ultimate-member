@@ -287,6 +287,8 @@ class UM_User {
 	
 		do_action('um_before_user_role_is_changed');
 		
+		do_action('um_member_role_upgrade', $role, $this->profile['role'] );
+		
 		$this->profile['role'] = $role;
 		$this->update_usermeta_info('role');
 		
