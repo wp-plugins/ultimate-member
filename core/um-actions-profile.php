@@ -329,7 +329,11 @@
 					
 						<?php if ( $args['show_name'] ) { ?>
 						<div class="um-name">
+							
 							<a href="<?php echo um_user_profile_url(); ?>" title="<?php echo um_user('display_name'); ?>"><?php echo um_user('display_name'); ?></a>
+							
+							<?php do_action('um_after_profile_name_inline', $args ); ?>
+						
 						</div>
 						<?php } ?>
 						

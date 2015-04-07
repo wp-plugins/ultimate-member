@@ -63,14 +63,17 @@ jQuery(document).ready(function() {
 		}
 
 		var years_n = elem.attr('data-years');
-
+		
 		var min = elem.attr('data-date_min');
 		var max = elem.attr('data-date_max');
 
+		var min = min.split(",");
+		var max = max.split(",");
+		
 		elem.pickadate({
-			selectYears: years_n + 1,
-			min: new Date(min),
-			max: new Date(max),
+			selectYears: years_n,
+			min: min,
+			max: max,
 			disable: disable,
 			format: elem.attr('data-format'),
 			formatSubmit: 'yyyy/mm/dd',

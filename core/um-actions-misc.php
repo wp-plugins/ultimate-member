@@ -60,9 +60,7 @@
 			switch( $_REQUEST['updated'] ) {
 				
 				default:
-					$success = apply_filters("um_custom_success_message_handler", $err, $_REQUEST['updated']);
-					if ( !$success )
-						$success = __('Thank you!','ultimatemember');
+					$success = apply_filters("um_custom_success_message_handler", $success, $_REQUEST['updated']);
 					break;
 					
 				case 'account':

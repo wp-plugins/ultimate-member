@@ -132,7 +132,7 @@
 	list-style-type: none !important;
 }
 
-.um-account-side li {margin-bottom: 6px !important;background: #eee;}
+.um-account-side li {margin-bottom: 1px !important;background: #eee;}
 
 .um-account-side li a{
 	display: block;
@@ -149,6 +149,7 @@
 	right: 10px;
 	top: 6px;
 	font-size: 26px;
+	opacity: 0.6;
 }
 
 .um-account-side li a span.um-account-icon,
