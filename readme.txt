@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.2.1
+Stable Tag: 1.2.2
 
 License: GNU Version 2 or Any Later Version
 
@@ -139,7 +139,7 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 
 == Changelog ==
 
-= 1.2.1: April 15, 2015 =
+= 1.2.2: April 15, 2015 =
 
 * New: added caching to user roles and user permissions to save queries
 * New: added user switching feature to allow super admins to sign in as another user easily (without password)
