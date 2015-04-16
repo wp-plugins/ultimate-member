@@ -927,7 +927,7 @@ class UM_Fields {
 
 						$output .= '<div class="um-field-area">';
 						
-						if ( isset($icon) && $icon && $this->field_icons == 'field' ) {
+						if ( isset($icon) && $icon && isset( $this->field_icons ) && $this->field_icons == 'field' ) {
 						
 						$output .= '<div class="um-field-icon"><i class="'.$icon.'"></i></div>';
 						
@@ -1112,7 +1112,7 @@ class UM_Fields {
 
 						$output .= '<div class="um-field-area">';
 						
-						if ( isset($icon) && $icon && $this->field_icons == 'field' ) {
+						if ( isset($icon) && $icon && isset( $this->field_icons ) && $this->field_icons == 'field' ) {
 						
 						$output .= '<div class="um-field-icon"><i class="'.$icon.'"></i></div>';
 						
