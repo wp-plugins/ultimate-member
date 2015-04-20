@@ -231,13 +231,13 @@
 						$default_size = str_replace( 'px', '', um_get_option('profile_photosize') );
 						$corner = um_get_option('profile_photocorner');
 						?>
-					<div class="um-member-photo radius-<?php echo $corner; ?>"><a href="<?php echo um_user_profile_url(); ?>" title="<?php echo um_cap_initials( um_user('display_name') ); ?>"><?php echo get_avatar( um_user('ID'), $default_size ); ?></a></div>
+					<div class="um-member-photo radius-<?php echo $corner; ?>"><a href="<?php echo um_user_profile_url(); ?>" title="<?php echo um_user('display_name'); ?>"><?php echo get_avatar( um_user('ID'), $default_size ); ?></a></div>
 					<?php } ?>
 					
 					<div class="um-member-card <?php if (!$profile_photo) { echo 'no-photo'; } ?>">
 						
 						<?php if ( $show_name ) { ?>
-						<div class="um-member-name"><a href="<?php echo um_user_profile_url(); ?>" title="<?php echo um_cap_initials( um_user('display_name') ); ?>"><?php echo um_cap_initials( um_user('display_name') ); ?></a></div>
+						<div class="um-member-name"><a href="<?php echo um_user_profile_url(); ?>" title="<?php echo um_user('display_name'); ?>"><?php echo um_user('display_name'); ?></a></div>
 						<?php } ?>
 						
 						<?php do_action('um_members_after_user_name', um_user('ID'), $args); ?>

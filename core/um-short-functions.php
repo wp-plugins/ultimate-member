@@ -264,7 +264,7 @@ function um_profile_id() {
 			$url = get_permalink( $ultimatemember->permalinks->core[ $slug ] );
 			
 			if ( $updated )
-				$url = add_query_arg( 'updated', $updated, $url );
+				$url =  esc_url( add_query_arg( 'updated', $updated, $url ) );
 				
 			return $url;
 			
@@ -650,8 +650,8 @@ function um_reset_user() {
 		$url = um_user_profile_url();
 		$url = remove_query_arg('profiletab', $url);
 		$url = remove_query_arg('subnav', $url);
-		$url = add_query_arg('profiletab', 'main',$url);
-		$url = add_query_arg('um_action','edit', $url);
+		$url =  esc_url( add_query_arg('profiletab', 'main',$url ) );
+		$url =  esc_url( add_query_arg('um_action','edit', $url ) );
 		return $url;
 	}
 	

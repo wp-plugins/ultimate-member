@@ -638,8 +638,8 @@ class UM_User {
 		$actions = apply_filters('um_admin_user_actions_hook', $actions );
 		if ( !isset( $actions ) || empty( $actions ) ) return false;
 		foreach($actions as $id => $arr ) {
-			$url = add_query_arg('um_action', $id );
-			$url = add_query_arg('uid', um_profile_id(), $url );
+			$url =  esc_url( add_query_arg('um_action', $id ) );
+			$url =  esc_url( add_query_arg('uid', um_profile_id(), $url ) );
 			$items[] = '<a href="' . $url .'" class="real_url">' . $arr['label'] . '</a>';
 		}
 		return $items;

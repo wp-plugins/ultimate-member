@@ -47,9 +47,9 @@ class UM_Password {
 		
 		if ( !um_user('reset_pass_hash') ) return false;
 		
-		$url = add_query_arg( 'act', 'reset_password', um_get_core_page('password-reset') );
-		$url = add_query_arg( 'hash', um_user('reset_pass_hash'), $url );
-		$url = add_query_arg( 'user_id', um_user('ID'), $url );
+		$url =  esc_url( add_query_arg( 'act', 'reset_password', um_get_core_page('password-reset') ) );
+		$url =  esc_url( add_query_arg( 'hash', um_user('reset_pass_hash'), $url ) );
+		$url =  esc_url( add_query_arg( 'user_id', um_user('ID'), $url ) );
 		
 		return $url;
 		

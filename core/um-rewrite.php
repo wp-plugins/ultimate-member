@@ -59,6 +59,8 @@ class UM_Rewrite {
 				flush_rewrite_rules( true );
 				update_option('um_flush_rules', true);
 			}
+			
+			flush_rewrite_rules( true );
 
 		}
 		
@@ -131,7 +133,7 @@ class UM_Rewrite {
 				
 				if ( $query ) {
 					foreach( $query as $key => $val ) {
-						$url = add_query_arg($key, $val, $url);
+						$url =  esc_url( add_query_arg($key, $val, $url) );
 					}
 				}
 				

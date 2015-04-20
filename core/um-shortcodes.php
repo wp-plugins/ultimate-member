@@ -307,7 +307,7 @@ class UM_Shortcodes {
 				$usermeta = str_replace('}','',$usermeta);
 				
 				if ( $usermeta == 'user_avatar_small' ) {
-					$value = um_user('profile_photo', 40);
+					$value = get_avatar( um_user('ID'), 40 );
 				} elseif ( um_user( $usermeta ) ){
 					$value = um_user( $usermeta );
 				}

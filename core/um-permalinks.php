@@ -32,8 +32,21 @@ class UM_Permalinks {
 	***/
 	function get_current_url( $no_query_params = false ) {
 		global $post;
-
-		$page_url = get_site_url() . $_SERVER["REQUEST_URI"];
+		 
+		if ( is_front_page() ) :
+			$page_url = home_url();
+		else :
+			$page_url = 'http';
+		 
+		if ( isset( $_SERVER["HTTPS"] ) && $_SERVER["HTTPS"] == "on" )
+			$page_url .= "s";
+			$page_url .= "://";
+		 
+		if ( $_SERVER["SERVER_PORT"] != "80" )
+			$page_url .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+		else
+			$page_url .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+		endif;
 
 		if ( $no_query_params == true ) {
 			$page_url = strtok($page_url, '?');
@@ -76,9 +89,9 @@ class UM_Permalinks {
 		
 		if ( !um_user('account_secret_hash') ) return false;
 		
-		$url = add_query_arg( 'act', 'activate_via_email', home_url() );
-		$url = add_query_arg( 'hash', um_user('account_secret_hash'), $url );
-		$url = add_query_arg( 'user_id', um_user('ID'), $url );
+		$url =  esc_url( add_query_arg( 'act', 'activate_via_email', home_url() ) );
+		$url =  esc_url( add_query_arg( 'hash', um_user('account_secret_hash'), $url ) );
+		$url =  esc_url( add_query_arg( 'user_id', um_user('ID'), $url ) );
 		
 		return $url;
 	}
@@ -101,7 +114,7 @@ class UM_Permalinks {
 	***	@add a query param to url
 	***/
 	function add_query( $key, $value ) {
-		$this->current_url = add_query_arg( $key, $value, $this->current_url );
+		$this->current_url =  esc_url( add_query_arg( $key, $value, $this->current_url ) );
 		return $this->current_url;
 	}
 	/***
@@ -153,7 +166,7 @@ class UM_Permalinks {
 		
 		} else {
 			
-			$profile_url = add_query_arg( 'um_user', $user_in_url, $profile_url );
+			$profile_url =  esc_url( add_query_arg( 'um_user', $user_in_url, $profile_url ) );
 			
 		}
 
@@ -165,9 +178,9 @@ class UM_Permalinks {
 	***/
 	function admin_act_url( $action, $subaction ) {
 		$url = $this->get_current_url();
-		$url = add_query_arg( 'um_adm_action', $action, $url );
-		$url = add_query_arg( 'sub', $subaction, $url );
-		$url = add_query_arg( 'user_id', um_user('ID'), $url );
+		$url =  esc_url( add_query_arg( 'um_adm_action', $action, $url ) );
+		$url =  esc_url( add_query_arg( 'sub', $subaction, $url ) );
+		$url =  esc_url( add_query_arg( 'user_id', um_user('ID'), $url ) );
 		return $url;
 	}
 
