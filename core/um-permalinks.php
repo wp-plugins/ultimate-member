@@ -89,9 +89,9 @@ class UM_Permalinks {
 		
 		if ( !um_user('account_secret_hash') ) return false;
 		
-		$url =  esc_url( add_query_arg( 'act', 'activate_via_email', home_url() ) );
-		$url =  esc_url( add_query_arg( 'hash', um_user('account_secret_hash'), $url ) );
-		$url =  esc_url( add_query_arg( 'user_id', um_user('ID'), $url ) );
+		$url =  add_query_arg( 'act', 'activate_via_email', home_url() );
+		$url =  add_query_arg( 'hash', um_user('account_secret_hash'), $url );
+		$url =  add_query_arg( 'user_id', um_user('ID'), $url );
 		
 		return $url;
 	}
