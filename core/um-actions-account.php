@@ -49,7 +49,7 @@
 		
 		$url = $ultimatemember->account->tab_link( $tab );
 		
-		$url = esc_url( add_query_arg('updated','account',$url) );
+		$url = add_query_arg( 'updated', 'account', $url );
 		
 		exit( wp_redirect( $url ) );
 		

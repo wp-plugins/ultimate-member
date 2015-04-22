@@ -10,13 +10,13 @@
 	
 		do_action("um_before_form", $args);
 				
-		do_action("um_before_{$template}_fields", $args);
+		do_action("um_before_{$mode}_fields", $args);
 				
-		do_action("um_main_{$template}_fields", $args);
+		do_action("um_main_{$mode}_fields", $args);
 				
 		do_action("um_after_form_fields", $args);
 				
-		do_action("um_after_{$template}_fields", $args);
+		do_action("um_after_{$mode}_fields", $args);
 				
 		do_action("um_after_form", $args);
 	
@@ -590,7 +590,7 @@
 				$nav_link = $ultimatemember->permalinks->get_current_url( get_option('permalink_structure') );
 				$nav_link = remove_query_arg( 'um_action', $nav_link );
 				$nav_link = remove_query_arg( 'subnav', $nav_link );
-				$nav_link =  esc_url( add_query_arg('profiletab', $id, $nav_link ) );
+				$nav_link =  add_query_arg('profiletab', $id, $nav_link );
 				?>
 			
 			<div class="um-profile-nav-item <?php if ( !um_get_option('profile_menu_icons') ) { echo 'without-icon'; } ?> <?php if ( $id == $active_tab ) { echo 'active'; } ?>">
@@ -623,7 +623,7 @@
 				
 				?>
 					
-					<a href="<?php echo  esc_url( add_query_arg('subnav', $id ) ); ?>" class="<?php if ( $active_subnav == $id ) echo 'active'; ?>"><?php echo $subtab; ?></a>
+					<a href="<?php echo add_query_arg('subnav', $id ); ?>" class="<?php if ( $active_subnav == $id ) echo 'active'; ?>"><?php echo $subtab; ?></a>
 					
 					<?php
 					

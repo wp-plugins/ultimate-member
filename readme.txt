@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.1.1
 
-Stable Tag: 1.2.5
+Stable Tag: 1.2.6
 
 License: GNU Version 2 or Any Later Version
 
@@ -139,6 +139,14 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.2.6: April 22, 2015 =
+
+* Fixed: password reset security fix ( do not reveal emails )
+* Fixed: bug with custom profile templates
+* Fixed: display name in member directories
+* Fixed: URL fields display in member directory
+* Fixed: many bugs with previous version
 
 = 1.2.5: April 21, 2015 =
 

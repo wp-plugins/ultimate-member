@@ -123,7 +123,7 @@ class UM_Rewrite {
 				
 			}
 			
-		} else if ( um_is_core_page('user') ) { // just base64_decode
+		} else if ( um_is_core_page('user') ) {
 		
 			if ( is_user_logged_in() ) { // just redirect to their profile
 				
@@ -133,7 +133,7 @@ class UM_Rewrite {
 				
 				if ( $query ) {
 					foreach( $query as $key => $val ) {
-						$url =  esc_url( add_query_arg($key, $val, $url) );
+						$url =  add_query_arg($key, $val, $url);
 					}
 				}
 				

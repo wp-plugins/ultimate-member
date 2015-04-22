@@ -88,16 +88,7 @@ function um_user_ip() {
 	function um_redirect_home() {
 		exit( wp_redirect( home_url() ) );
 	}
-	
-	/***
-	***	@Capitalize first initial
-	***/
-	function um_cap_initials( $name ) {
-		if ( is_email( $name ) ) return $name;
-		$name = str_replace('\' ', '\'', ucwords( str_replace('\'', '\' ', mb_strtolower($name, 'UTF-8') ) ) );
-		return $name;
-	}
-	
+
 	/***
 	***	@Get submitted user information
 	***/
@@ -264,7 +255,7 @@ function um_profile_id() {
 			$url = get_permalink( $ultimatemember->permalinks->core[ $slug ] );
 			
 			if ( $updated )
-				$url =  esc_url( add_query_arg( 'updated', $updated, $url ) );
+				$url =  add_query_arg( 'updated', esc_attr( $updated ), $url );
 				
 			return $url;
 			

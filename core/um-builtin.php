@@ -64,6 +64,8 @@ class UM_Builtin {
 		foreach ($fields as $field ) {
 			if ( isset( $this->predefined_fields[$field] ) ) {
 				$array = $this->predefined_fields[$field];
+			} else if ( isset( $this->saved_fields[$field] ) ) {
+				$array = $this->saved_fields[$field];
 			}
 		}
 		return $array;
