@@ -284,6 +284,10 @@
 		
 		<div class="um-account-heading uimob340-hide uimob500-hide"><i class="<?php echo $icon; ?>"></i><?php echo $title; ?></div>
 		
+		<div class="um-field">
+			<div class="um-field-label"><label for=""><?php _e('Email me when','ultimatemember'); ?></label><div class="um-clear"></div></div>
+		</div>
+		
 		<?php echo $output; ?>
 		
 		<?php do_action('um_after_account_notifications'); ?>
