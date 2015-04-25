@@ -240,6 +240,8 @@
 						<div class="um-member-name"><a href="<?php echo um_user_profile_url(); ?>" title="<?php echo um_user('display_name'); ?>"><?php echo um_user('display_name'); ?></a></div>
 						<?php } ?>
 						
+						<?php do_action('um_members_just_after_name', um_user('ID'), $args); ?>
+						
 						<?php do_action('um_members_after_user_name', um_user('ID'), $args); ?>
 						
 						<?php
@@ -274,7 +276,7 @@
 											
 								?>
 								
-								<div class="um-member-metaline"><span><?php echo $value; ?></span></div>
+								<div class="um-member-metaline"><span><strong><?php echo $ultimatemember->fields->get_label( $key ); ?>:</strong> <?php echo $value; ?></span></div>
 								
 								<?php 
 									}

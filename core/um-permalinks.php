@@ -101,13 +101,8 @@ class UM_Permalinks {
 	***/
 	function check_for_querystrings(){
 		global $ultimatemember;
-		
 		if ( isset($_REQUEST['message']) ) 
 			$ultimatemember->shortcodes->message_mode = true;
-		
-		if ( isset($_REQUEST['message']) && isset($_REQUEST['uid']) )
-			um_fetch_user( $_REQUEST['uid'] );
-			
 	}
 	
 	/***

@@ -517,6 +517,19 @@ class UM_Fields {
 	}
 	
 	/***
+	***	@Get Field Label
+	***/
+	function get_label( $key ) {
+		global $ultimatemember;
+		$fields = $ultimatemember->builtin->all_user_fields;
+		if ( isset( $fields[$key]['label'] ) )
+			return $fields[$key]['label'];
+		if ( isset( $fields[$key]['title'] ) )
+			return $fields[$key]['title'];
+		return '';
+	}
+	
+	/***
 	***	@Get Field Title
 	***/
 	function get_field_title( $key ) {
