@@ -245,8 +245,12 @@ class UM_Fields {
 	/***
 	***	@Print field error
 	***/
-	function field_error($text) {
+	function field_error($text, $force_show = false ) {
 		global $ultimatemember;
+		if ( $force_show ) {
+			$output = '<div class="um-field-error"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>'.$text.'</div>';
+			return $output;
+		}
 		if ( isset( $this->set_id ) && $ultimatemember->form->processing == $this->set_id ) {
 			$output = '<div class="um-field-error"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>'.$text.'</div>';
 		} else {
@@ -598,30 +602,18 @@ class UM_Fields {
 				
 				$array['input'] = 'text';
 
-				if (!isset($array['autocomplete'])) $array['autocomplete'] = 'on';
-				
-				if ( $key == 'user_login' ) $array['autocomplete'] = 'off';
-				
 				break;
 				
 			case 'password':
 				
 				$array['input'] = 'password';
 
-				if (!isset($array['autocomplete'])) $array['autocomplete'] = 'on';
-				
-				$array['autocomplete'] = 'off';
-				
 				break;
 				
 			case 'url':
 				
 				$array['input'] = 'text';
 
-				if (!isset($array['autocomplete'])) $array['autocomplete'] = 'on';
-				
-				if ( $key == 'user_login' ) $array['autocomplete'] = 'off';
-				
 				break;
 				
 			case 'date':
@@ -697,9 +689,7 @@ class UM_Fields {
 					}
 
 				}
-				
-				if (!isset($array['autocomplete'])) $array['autocomplete'] = 'on';
-
+			
 				break;
 				
 			case 'time':
@@ -723,8 +713,6 @@ class UM_Fields {
 				$array['js_format'] = $js_format;
 				
 				if ( !isset( $array['intervals'] ) ) $array['intervals'] = 60;
-				
-				if (!isset($array['autocomplete'])) $array['autocomplete'] = 'on';
 
 				break;
 				
@@ -946,7 +934,7 @@ class UM_Fields {
 						
 						}
 						
-						$output .= '<input '.$disabled.' class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="'. $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'" autocomplete="'.$autocomplete.'" />
+						$output .= '<input '.$disabled.' class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="'. $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'" />
 							
 						</div>';
 							
@@ -980,7 +968,7 @@ class UM_Fields {
 							
 							}
 							
-							$output .= '<input class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="'. $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'" autocomplete="'.$autocomplete.'" />
+							$output .= '<input class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="'. $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'" />
 								
 							</div>';
 								
@@ -1009,7 +997,7 @@ class UM_Fields {
 								
 								}
 								
-								$output .= '<input class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="' . $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'" autocomplete="'.$autocomplete.'" />
+								$output .= '<input class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="' . $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'" />
 									
 								</div>';
 									
@@ -1043,7 +1031,7 @@ class UM_Fields {
 						
 						}
 						
-						$output .= '<input class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="'. $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'" autocomplete="'.$autocomplete.'" />
+						$output .= '<input class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="'. $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'" />
 							
 						</div>';
 							
@@ -1070,7 +1058,7 @@ class UM_Fields {
 								
 								}
 								
-								$output .= '<input class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="' . $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'" autocomplete="'.$autocomplete.'" />
+								$output .= '<input class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="' . $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'" />
 									
 								</div>';
 									
@@ -1103,7 +1091,7 @@ class UM_Fields {
 						
 						}
 						
-						$output .= '<input class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="'. $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'" autocomplete="'.$autocomplete.'" />
+						$output .= '<input class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="'. $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'" />
 							
 						</div>';
 							
@@ -1131,7 +1119,7 @@ class UM_Fields {
 						
 						}
 						
-						$output .= '<input class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="'. $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'" autocomplete="'.$autocomplete.'" data-range="'.$range.'" data-years="'.$years.'" data-years_x="'.$years_x.'" data-disabled_weekdays="'.$disabled_weekdays.'" data-date_min="'.$date_min.'" data-date_max="'.$date_max.'" data-format="'.$js_format.'" data-value="'. $this->field_value( $key, $default, $data ) .'" />
+						$output .= '<input class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="'. $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'"    data-range="'.$range.'" data-years="'.$years.'" data-years_x="'.$years_x.'" data-disabled_weekdays="'.$disabled_weekdays.'" data-date_min="'.$date_min.'" data-date_max="'.$date_max.'" data-format="'.$js_format.'" data-value="'. $this->field_value( $key, $default, $data ) .'" />
 							
 						</div>';
 							
@@ -1159,7 +1147,7 @@ class UM_Fields {
 						
 						}
 						
-						$output .= '<input class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="'. $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'" autocomplete="'.$autocomplete.'" data-format="'.$js_format.'" data-intervals="'.$intervals.'" data-value="'. $this->field_value( $key, $default, $data ) .'" />
+						$output .= '<input class="'.$this->get_class($key, $data).'" type="'.$input.'" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="'. $this->field_value( $key, $default, $data ) .'" placeholder="'.$placeholder.'" data-validate="'.$validate.'" data-key="'.$key.'"  data-format="'.$js_format.'" data-intervals="'.$intervals.'" data-value="'. $this->field_value( $key, $default, $data ) .'" />
 							
 						</div>';
 							

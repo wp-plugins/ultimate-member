@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.2
 
-Stable Tag: 1.2.8
+Stable Tag: 1.2.9
 
 License: GNU Version 2 or Any Later Version
 
@@ -139,6 +139,17 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.2.9: April 29, 2015 =
+
+* New: display pending users count in backend
+* Tweak: improved user deletion process from backend
+* Tweak: tweaked filter for register/login buttons
+* Tweak: disabled registration timebot for admins
+* Fixed: wp-load.php path in image and file upload scripts
+* Fixed: RTL compatibility bugs
+* Fixed: bug with registration and role field
+* Fixed: bug with edit profile and biography length in header
 
 = 1.2.8: April 25, 2015 =
 
