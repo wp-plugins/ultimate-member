@@ -141,7 +141,7 @@
 		}
 		
 	}
-	
+
 	/***
 	***	@Error processing hook : standard
 	***/
@@ -232,6 +232,11 @@
 			
 				switch( $array['validate'] ) {
 				
+					case 'custom':
+						$custom = $array['custom_validate'];
+						do_action("um_custom_field_validation_{$custom}", $key, $array );
+						break;
+						
 					case 'numeric':
 						if ( $args[$key] && !is_numeric( $args[$key] ) ) {
 							$ultimatemember->form->add_error($key, __('Please enter numbers only in this field','ultimatemember') );

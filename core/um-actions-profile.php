@@ -7,6 +7,9 @@
 	function um_profile_content_main( $args ) {
 		extract( $args );
 		
+		if ( !um_get_option('profile_tab_main') && !isset( $_REQUEST['um_action'] ) )
+			return;
+		
 		$can_view = apply_filters('um_profile_can_view_main', -1, um_profile_id() );
 		
 		if ( $can_view == -1 ) {
@@ -582,7 +585,7 @@
 		$tabs = $ultimatemember->profile->tabs_active();
 
 		$tabs = apply_filters('um_user_profile_tabs', $tabs );
-		
+
 		$ultimatemember->user->tabs = $tabs;
 		
 		// need enough tabs to continue

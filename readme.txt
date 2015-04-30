@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.2
 
-Stable Tag: 1.2.9
+Stable Tag: 1.2.91
 
 License: GNU Version 2 or Any Later Version
 
@@ -139,6 +139,11 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.2.91: April 30, 2015 =
+
+* New: added custom field validation support via hooks um_custom_field_validation_{$hook}
+* Fixed: critical bug with profile menu tabs / system
 
 = 1.2.9: April 29, 2015 =
 
