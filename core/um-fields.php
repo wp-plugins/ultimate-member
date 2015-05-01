@@ -1220,7 +1220,13 @@ class UM_Fields {
 			case 'image':
 				$output .= '<div class="um-field' . $classes . '"' . $conditional . ' data-key="'.$key.'">';
 				
-					$output .= '<input type="hidden" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="'. $this->field_value( $key, $default, $data ) . '" />';
+					if ( in_array( $key, array('profile_photo','cover_photo') )  ) {
+						$field_value = '';
+					} else {
+						$field_value = $this->field_value( $key, $default, $data );
+					}
+					
+					$output .= '<input type="hidden" name="'.$key.$ultimatemember->form->form_suffix.'" id="'.$key.$ultimatemember->form->form_suffix.'" value="'. $field_value . '" />';
 					
 					if ( isset( $data['label'] ) ) {
 						$output .= $this->field_label($label, $key, $data);
@@ -1232,17 +1238,14 @@ class UM_Fields {
 					
 					if ( $this->field_value( $key, $default, $data ) ) {
 					
-						$uri = um_user_uploads_uri() . $this->field_value( $key, $default, $data );
-						
-						if ( isset( $ultimatemember->form->errors ) && !empty( $ultimatemember->form->errors ) ) {
-							if ( isset( $this->set_mode ) && $this->set_mode == 'register' ) {
-								$uri = $this->field_value( $key, $default, $data );
-							}
+						if ( !in_array( $key, array('profile_photo','cover_photo') ) ) {
+							$img = '<img src="' . um_user_uploads_uri() . $this->field_value( $key, $default, $data ) . '" alt="" />';
+						} else {
+							$img = '';
 						}
 						
 						$output .= '<div class="um-single-image-preview show '. $crop_class .'" data-crop="'.$crop_data.'" data-key="'.$key.'">
-								<a href="#" class="cancel"><i class="um-icon-close"></i></a>
-								<img src="' . $uri . '" alt="" />
+								<a href="#" class="cancel"><i class="um-icon-close"></i></a>' . $img . '
 							</div><a href="#" data-modal="um_upload_single" data-modal-size="'.$modal_size.'" data-modal-copy="1" class="um-button um-btn-auto-width">'. __('Change photo') . '</a>';
 						
 					} else {
