@@ -52,6 +52,10 @@ class UM_Admin_Dashboard {
 	public function menu_order_count() {
 		global $menu, $submenu;
 		
+		if( ! current_user_can( 'list_users' ) ){
+			return;
+		}
+		
 		$count = $this->get_pending_users_count();
 		
 		foreach( $menu as $key => $menu_item ) {
