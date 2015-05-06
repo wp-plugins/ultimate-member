@@ -41,6 +41,8 @@ class UM_User {
 		add_action('um_after_user_account_updated', array(&$this, 'remove_cache') );
 		add_action('personal_options_update', array(&$this, 'remove_cache') );
 		add_action('edit_user_profile_update', array(&$this, 'remove_cache') );
+		add_action('um_when_role_is_set', array(&$this, 'remove_cache') );
+		add_action('um_when_status_is_set', array(&$this, 'remove_cache') );
 		
 	}
 	
@@ -333,6 +335,8 @@ class UM_User {
 	 *
 	 */
 	function set_role( $role ){
+		
+		do_action('um_when_role_is_set', um_user('ID') );
 	
 		do_action('um_before_user_role_is_changed');
 		
@@ -350,6 +354,8 @@ class UM_User {
 	***/
 	function set_status( $status ){
 	
+		do_action( 'um_when_status_is_set', um_user('ID') );
+		
 		$this->profile['account_status'] = $status;
 		
 		$this->update_usermeta_info('account_status');
