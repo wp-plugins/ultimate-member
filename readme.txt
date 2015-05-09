@@ -5,9 +5,9 @@ Contributors: ultimatemember
 Donate link: 
 Tags: access control, author, authors, author profile, comments, community, communities, conditional fields, conditional logic, conditional menus, content protection, custom fields, file uploads, form builder, front-end login, front-end registration, gravatar, hide wp-admin, login, login page, logged-in users, mandrill, member, members, membership, member directory, online users, profile, profiles, profile builder, registration, restriction, restrict content, role creation, role menus, search filters, sign in, sign up, social network, star ratings, toolbar, user, users, user fields, user profile, user-profile, user profiles, user roles
 Requires at least: 4.1
-Tested up to: 4.2.1
+Tested up to: 4.2.2
 
-Stable Tag: 1.2.94
+Stable Tag: 1.2.95
 
 License: GNU Version 2 or Any Later Version
 
@@ -79,6 +79,8 @@ Ultimate Member has been translated into the following languages:
 * German - Deutsch
 * Dutch - Nederlands
 * Finnish - Suomi
+* Danish - Dansk
+* Swedish - Svenska
 * Polish - Polski
 * Russian - Русский
 * Turkish - Türkçe
@@ -140,6 +142,16 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.2.95: May 9, 2015 =
+
+* New: RESTful API methods update.user, get.stats, and delete.user
+* New: added Danish (Dansk) support
+* New: added Swedish (Svenska) support
+* Tweak: minor account and logout redirection tweaks
+* Fixed: issue with changing user role
+* Fixed: bug with login form validation
+* Fixed: issue with biography field and html
 
 = 1.2.94: May 6, 2015 =
 

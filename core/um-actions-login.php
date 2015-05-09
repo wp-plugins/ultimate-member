@@ -106,8 +106,9 @@
 				
 		}
 		
-		if ( isset( $args['form_id'] ) && $args['form_id'] == $ultimatemember->shortcodes->core_login_form() &&  $ultimatemember->form->errors  )
+		if ( isset( $args['form_id'] ) && $args['form_id'] == $ultimatemember->shortcodes->core_login_form() &&  $ultimatemember->form->errors && !isset( $_POST[ $ultimatemember->honeypot ] ) ) {
 			exit( wp_redirect( um_get_core_page('login') ) );
+		}
 		
 	}
 	

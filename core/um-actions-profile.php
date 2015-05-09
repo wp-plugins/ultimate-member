@@ -92,7 +92,7 @@
 		}
 		
 		if ( isset( $args['submitted']['description'] ) ) {
-			$to_update['description'] = $ultimatemember->validation->remove_html( $args['submitted']['description'] );
+			$to_update['description'] = $args['submitted']['description'];
 		}
 		
 		if ( isset( $args['submitted']['role'] ) && !empty( $args['submitted']['role'] ) ) {

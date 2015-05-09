@@ -24,6 +24,8 @@ class UM_API {
 			'de_DE'	=> 'Deutsch',
 			'nl_NL' => 'Nederlands',
 			'fi_FI' => 'Suomi',
+			'da_DK' => 'Dansk',
+			'sv_SE' => 'Svenska',
 			'pl_PL' => 'Polski',
 			'ru_RU' => 'Русский',
 			'tr_TR' => 'Türkçe',
