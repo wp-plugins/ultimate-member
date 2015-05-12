@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.2.2
 
-Stable Tag: 1.2.95
+Stable Tag: 1.2.96
 
 License: GNU Version 2 or Any Later Version
 
@@ -45,6 +45,7 @@ Read about all of the plugin's features at [Ultimate Member](https://ultimatemem
 
 Ultimate Member has a range of extensions that allow you to extend the power of the plugin
 
+* [Private Messages](https://ultimatemember.com/extensions/private-messages/) - Add a private messaging system to your site & allow users to message each other
 * [Followers](https://ultimatemember.com/extensions/followers/) - Allow users to follow each other on your site and protect their profile information
 * [Real-time Notifications](https://ultimatemember.com/extensions/real-time-notifications/) - Add a notifications system to your site so users can receive real-time notifications
 * [Social Login](https://ultimatemember.com/extensions/social-login/) - Let users register & login to your site via Facebook, Twitter, G+, LinkedIn, Instagram and Vkontakte (VK.com)
@@ -142,6 +143,12 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.2.96: May 12, 2015 =
+
+* New: hooks and compatibility with Private Messages extension
+* Fixed: bug with empty password on welcome e-mail
+* Fixed: bug with member search using default permalinks
 
 = 1.2.95: May 9, 2015 =
 

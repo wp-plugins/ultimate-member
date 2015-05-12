@@ -763,6 +763,7 @@ function prepare_Modal() {
 
 function remove_Modal() {
 	if ( jQuery('.um-popup-overlay').length ) {
+		jQuery('.tipsy').remove();
 		jQuery('.um-popup').empty().remove();
 		jQuery('.um-popup-overlay').empty().remove();
 		jQuery("body,html").css({ overflow: 'inherit' });
@@ -772,6 +773,10 @@ function remove_Modal() {
 function show_Modal( contents ) {
 	if ( jQuery('.um-popup-overlay').length ) {
 		jQuery('.um-popup').removeClass('loading').html( contents );
+		jQuery('.um-tip-n').tipsy({gravity: 'n', opacity: 1, offset: 3, delayIn: 500 });
+		jQuery('.um-tip-w').tipsy({gravity: 'w', opacity: 1, offset: 3, delayIn: 500 });
+		jQuery('.um-tip-e').tipsy({gravity: 'e', opacity: 1, offset: 3, delayIn: 500 });
+		jQuery('.um-tip-s').tipsy({gravity: 's', opacity: 1, offset: 3, delayIn: 500 });
 	}
 }
 

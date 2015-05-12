@@ -73,8 +73,10 @@ class UM_User {
 	
 	function get_cached_data( $user_id ) {
 		$find_user = get_option("um_cache_userdata_{$user_id}");
-		if ( $find_user )
+		if ( $find_user ) {
+			$find_user = apply_filters('um_user_permissions_filter', $find_user, $user_id);
 			return $find_user;
+		}
 	}
 	
 	function setup_cache( $user_id, $profile ) {
@@ -424,6 +426,9 @@ class UM_User {
 	 */
 	function approve(){
 		global $ultimatemember;
+		
+		$user_id = um_user('ID');
+		delete_option( "um_cache_userdata_{$user_id}" );
 		
 		if ( um_user('account_status') == 'awaiting_admin_review' ) {
 			$email_tpl = 'approved_email';
