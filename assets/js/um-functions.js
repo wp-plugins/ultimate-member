@@ -783,20 +783,20 @@ function show_Modal( contents ) {
 function responsive_Modal() {
 	if ( jQuery('.um-popup-overlay').length ) {
 
-		ag_height = jQuery(window).height() - jQuery('.um-popup-header').outerHeight() - jQuery('.um-popup-footer').outerHeight() - 40;
+		ag_height = jQuery(window).height() - jQuery('.um-popup um-popup-header').outerHeight() - jQuery('.um-popup .um-popup-footer').outerHeight() - 80;
 		if ( ag_height > 350 ) {
 			ag_height = 350;
 		}
 		
-		if ( jQuery('.um-popup-autogrow').length ) {
+		if ( jQuery('.um-popup-autogrow:visible').length ) {
 			
-			jQuery('.um-popup-autogrow').css({'height': ag_height + 'px'});
-			jQuery('.um-popup-autogrow').mCustomScrollbar({ theme:"dark-3", mouseWheelPixels:500 }).mCustomScrollbar("scrollTo", "bottom",{ scrollInertia:0} );
+			jQuery('.um-popup-autogrow:visible').css({'height': ag_height + 'px'});
+			jQuery('.um-popup-autogrow:visible').mCustomScrollbar({ theme:"dark-3", mouseWheelPixels:500 }).mCustomScrollbar("scrollTo", "bottom",{ scrollInertia:0} );
 			
-		} else if ( jQuery('.um-popup-autogrow2').length ) {
+		} else if ( jQuery('.um-popup-autogrow2:visible').length ) {
 			
-			jQuery('.um-popup-autogrow2').css({'max-height': ag_height + 'px'});
-			jQuery('.um-popup-autogrow2').mCustomScrollbar({ theme:"dark-3", mouseWheelPixels:500 });
+			jQuery('.um-popup-autogrow2:visible').css({'max-height': ag_height + 'px'});
+			jQuery('.um-popup-autogrow2:visible').mCustomScrollbar({ theme:"dark-3", mouseWheelPixels:500 });
 			
 		}
 	}

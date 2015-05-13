@@ -28,7 +28,7 @@
 	add_filter('um_profile_field_filter_hook__user_registered', 'um_profile_field_filter_hook__user_registered', 99, 2);
 	function um_profile_field_filter_hook__user_registered( $value, $data ) {
 		$value = strtotime($value);
-		$value = sprintf(__('Joined %s','ultimatemember'), date('d M Y', $value) );
+		$value = sprintf(__('Joined %s','ultimatemember'), date_i18n('d M Y', $value) );
 		return $value;
 	}
 	

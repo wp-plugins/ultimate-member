@@ -111,8 +111,8 @@
 			$ultimatemember->user->update_files( $files );
 		}
 		
-		do_action('um_after_user_upload', um_user('ID') );
 		do_action('um_after_user_updated', um_user('ID') );
+		do_action('um_after_user_upload', um_user('ID') );
 		do_action('um_user_after_updating_profile', $to_update );
 		
 		if ( !isset( $args['is_signup'] ) ) {

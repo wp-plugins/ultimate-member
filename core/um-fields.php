@@ -1239,7 +1239,12 @@ class UM_Fields {
 					if ( $this->field_value( $key, $default, $data ) ) {
 					
 						if ( !in_array( $key, array('profile_photo','cover_photo') ) ) {
-							$img = '<img src="' . um_user_uploads_uri() . $this->field_value( $key, $default, $data ) . '" alt="" />';
+							if ( isset( $this->set_mode ) && $this->set_mode == 'register' ) {
+								$imgValue = $this->field_value( $key, $default, $data );
+							} else {
+								$imgValue = um_user_uploads_uri() . $this->field_value( $key, $default, $data );
+							}
+							$img = '<img src="' . $imgValue . '" alt="" />';
 						} else {
 							$img = '';
 						}

@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.2.2
 
-Stable Tag: 1.2.96
+Stable Tag: 1.2.97
 
 License: GNU Version 2 or Any Later Version
 
@@ -143,6 +143,13 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.2.97: May 13, 2015 =
+
+* Fixed: issue with image upload fields
+* Fixed: date localization resolved
+* Fixed: issue with image upload during registration
+* Fixed: JS issues for PM extension
 
 = 1.2.96: May 12, 2015 =
 
