@@ -29,6 +29,7 @@ class UM_API {
 			'pl_PL' => 'Polski',
 			'ru_RU' => 'Русский',
 			'tr_TR' => 'Türkçe',
+			'he_IL' => 'Hebrew',
 			'ar' 	=> 'العربية'
 		);
 		

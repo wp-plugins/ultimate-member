@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.2.2
 
-Stable Tag: 1.2.97
+Stable Tag: 1.2.98
 
 License: GNU Version 2 or Any Later Version
 
@@ -85,6 +85,7 @@ Ultimate Member has been translated into the following languages:
 * Polish - Polski
 * Russian - Русский
 * Turkish - Türkçe
+* Hebrew
 * العربية
 
 == Installation ==
@@ -143,6 +144,20 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.2.98: May 18, 2015 =
+
+* New: added Google map field
+* New: added Vimeo video field
+* New: added YouTube video field
+* New: added SoundCloud track field
+* New: added Hebrew language support
+* Tweak: do not show captcha response in submitted registration details
+* Fixed: profile photo upload issue on profile view mode
+* Fixed: user search in backend/frontend
+* Fixed: UM login check
+* Fixed: admin settings css issue on mobile
+* Fixed: cache variable undefined issue
 
 = 1.2.97: May 13, 2015 =
 

@@ -55,24 +55,11 @@
 			}
 		}
 		
-		$check = wp_authenticate_username_password( null, $user_name, $args['user_password'] );
-		
-		if ( is_wp_error( $check ) ) {
-			$err = $check->get_error_code();
-			switch( $err ) {
-				
-				default:
-					break;
-
-				case 'incorrect_password':
-					if ( username_exists( $user_name ) ) {
-						$ultimatemember->form->add_error( 'user_password',  __('Password is incorrect. Please try again.','ultimatemember') );
-					}
-					break;
-					
-			}
-		} else {
+		$user = get_user_by( 'login', $user_name );
+		if ( $user && wp_check_password( $args['user_password'], $user->data->user_pass, $user->ID) ) {
 			$ultimatemember->login->auth_id = username_exists( $user_name );
+		} else {
+			$ultimatemember->form->add_error( 'user_password',  __('Password is incorrect. Please try again.','ultimatemember') );
 		}
 		
 	}
