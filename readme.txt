@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.2.2
 
-Stable Tag: 1.2.99
+Stable Tag: 1.2.991
 
 License: GNU Version 2 or Any Later Version
 
