@@ -218,7 +218,7 @@ p.disabled-on-off .um-admin-yesno *{
 	height: 28px;
 	text-align: center;
 	background: #f9f9f9;
-	z-index: 101;
+	z-index: 999;
 	border-radius: 3px;
 	cursor: pointer;
 	border: solid 1px #D0D9DB;
@@ -334,13 +334,13 @@ body.um-admin .select2-container-multi .select2-choices .select2-search-choice {
 }
 
 body.um-admin .select2-drop-mask {
-    z-index: 99 !important;
+    z-index: 10020 !important;
 }
 
 body.um-admin .select2-drop {
-    z-index: 100 !important;
+    z-index: 10030 !important;
 }
 
 body.um-admin .select2-search {
-    z-index: 101 !important;
+    z-index: 10040 !important;
 }
