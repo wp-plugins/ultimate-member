@@ -31,7 +31,7 @@ class UM_FontIcons {
 		}
 		
 		$this->all = get_option('um_cache_fonticons');
-
+		
 	}
 
 }

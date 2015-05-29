@@ -766,7 +766,7 @@ function remove_Modal() {
 		jQuery('.tipsy').remove();
 		jQuery('.um-popup').empty().remove();
 		jQuery('.um-popup-overlay').empty().remove();
-		jQuery("body,html").css({ overflow: 'inherit' });
+		jQuery("body,html").css({ overflow: 'auto' });
 	}
 }
 
