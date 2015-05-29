@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.2.2
 
-Stable Tag: 1.2.98
+Stable Tag: 1.2.99
 
 License: GNU Version 2 or Any Later Version
 
@@ -83,6 +83,7 @@ Ultimate Member has been translated into the following languages:
 * Danish - Dansk
 * Swedish - Svenska
 * Polish - Polski
+* Czech
 * Russian - Русский
 * Turkish - Türkçe
 * Hebrew
@@ -144,6 +145,11 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.2.99: May 29, 2015 =
+
+* New: added Czech language support
+* Fixed: WooCommerce dropdown issues and bugs in backend
 
 = 1.2.98: May 18, 2015 =
 

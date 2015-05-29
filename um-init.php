@@ -27,6 +27,7 @@ class UM_API {
 			'da_DK' => 'Dansk',
 			'sv_SE' => 'Svenska',
 			'pl_PL' => 'Polski',
+			'cs_CZ' => 'Czech',
 			'ru_RU' => 'Русский',
 			'tr_TR' => 'Türkçe',
 			'he_IL' => 'Hebrew',
