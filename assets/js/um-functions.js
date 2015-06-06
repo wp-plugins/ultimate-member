@@ -307,8 +307,6 @@ function um_responsive(){
 			jQuery('.um-account-side li a.current').trigger('click');
 		}
 
-		jQuery(this).css('opacity',1);
-	
 	});
 
 	jQuery('.um-cover, .um-member-cover').each(function(){
@@ -787,7 +785,7 @@ function responsive_Modal() {
 		if ( ag_height > 350 ) {
 			ag_height = 350;
 		}
-		
+
 		if ( jQuery('.um-popup-autogrow:visible').length ) {
 			
 			jQuery('.um-popup-autogrow:visible').css({'height': ag_height + 'px'});

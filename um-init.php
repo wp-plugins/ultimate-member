@@ -100,7 +100,9 @@ class UM_API {
 		require_once um_path . 'core/um-cache.php';
 		require_once um_path . 'core/um-tracking.php';
 		
-		require_once um_path . 'core/lib/mobiledetect/Mobile_Detect.php';
+		if ( !class_exists( 'Mobile_Detect' ) ) {
+			require_once um_path . 'core/lib/mobiledetect/Mobile_Detect.php';
+		}
 		
 		require_once um_path . 'core/um-actions-form.php';
 		require_once um_path . 'core/um-actions-access.php';
@@ -173,7 +175,7 @@ class UM_API {
 		$this->options = get_option('um_options');
 		
 		$domain = 'ultimatemember';
-		$locale = ( get_option('WPLANG') ) ? get_option('WPLANG') : 'en_US';
+		$locale = ( get_locale() != '' ) ? get_locale() : 'en_US';
 		load_textdomain($domain, WP_LANG_DIR . '/plugins/' .$domain.'-'.$locale.'.mo');
 		
 	}

@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.2.2
 
-Stable Tag: 1.2.993
+Stable Tag: 1.2.994
 
 License: GNU Version 2 or Any Later Version
 
@@ -145,6 +145,14 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.2.994: June 6, 2015 =
+
+* Tweak: added a filter hook to change priority of enqueued styles/scripts
+* Fixed: UM forms and elements not appearing in IE
+* Fixed: Skype field output
+* Fixed: conflict with libraries using Mobile Detect
+* Fixed: issue with WP locale (using get_locale() now instead)
 
 = 1.2.993: May 29, 2015 =
 

@@ -247,7 +247,7 @@
 						<?php
 						if ( $show_tagline && is_array( $tagline_fields ) ) {
 							foreach( $tagline_fields as $key ) {
-								if ( $key && um_user( $key ) ) {
+								if ( $key && um_filtered_value( $key ) ) {
 									$value = um_filtered_value( $key );
 
 						?>
@@ -271,7 +271,7 @@
 							<div class="um-member-meta <?php if ( !$userinfo_animate ) { echo 'no-animate'; } ?>">
 							
 								<?php foreach( $reveal_fields as $key ) {
-										if ( $key && um_user( $key ) ) {
+										if ( $key && um_filtered_value( $key ) ) {
 											$value = um_filtered_value( $key );
 											
 								?>

@@ -6,7 +6,8 @@ class UM_Enqueue {
 		
 		add_action('wp_head',  array(&$this, 'wp_head'), 999); // high-priority
 	
-		add_action('wp_enqueue_scripts',  array(&$this, 'wp_enqueue_scripts'), 0);
+		$priority = apply_filters( 'um_core_enqueue_priority', 0 );
+		add_action('wp_enqueue_scripts',  array(&$this, 'wp_enqueue_scripts'), $priority );
 	
 	}
 	

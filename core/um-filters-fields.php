@@ -198,14 +198,24 @@
 				if ( $data['validate'] == 'facebook_url' ) $value = 'https://facebook.com/' . $value;
 				if ( $data['validate'] == 'twitter_url' ) $value = 'https://twitter.com/' . $value;
 				if ( $data['validate'] == 'linkedin_url' ) $value = 'https://linkedin.com/' . $value;
-				if ( $data['validate'] == 'skype' ) $value = 'https://skype.com/' . $value;
+				if ( $data['validate'] == 'skype' ) $value = $value;
 				if ( $data['validate'] == 'googleplus_url' ) $value = 'https://plus.google.com/' . $value;
 				if ( $data['validate'] == 'instagram_url' ) $value = 'https://instagram.com/' . $value;	
 			}
-			if ( strpos($value, 'http://') !== 0 ) {
-				$value = 'http://' . $value;
+			
+			if ( isset( $data['validate'] ) && $data['validate'] == 'skype' ) {
+				
+				$value = $value;
+			
+			} else {
+				
+				if ( strpos($value, 'http://') !== 0 ) {
+					$value = 'http://' . $value;
+				}
+				$value = '<a href="'. $value .'" title="'.$alt.'" target="'.$data['url_target'].'" ' . $url_rel . '>'.$alt.'</a>';
+			
 			}
-			$value = '<a href="'. $value .'" title="'.$alt.'" target="'.$data['url_target'].'" ' . $url_rel . '>'.$alt.'</a>';
+			
 		}
 			
 		if ( !is_array( $value ) ) {
@@ -217,9 +227,7 @@
 		
 		$value = str_replace('https://https://','https://',$value);
 		$value = str_replace('http://https://','https://',$value);
-		
 		$value = $ultimatemember->shortcodes->emotize( $value );
-		
 		return $value;
 
 	}
