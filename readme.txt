@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.2.2
 
-Stable Tag: 1.2.994
+Stable Tag: 1.2.995
 
 License: GNU Version 2 or Any Later Version
 
@@ -145,6 +145,14 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.2.995: June 11, 2015 =
+
+* New: added required support for WooCommerce extension
+* Tweak: added option to fix conflicts of user profile links using different server method to get current url
+* Fixed: security fix for redux framework added
+* Fixed: button appearance on tablets
+* Fixed: member search by display name
 
 = 1.2.994: June 6, 2015 =
 

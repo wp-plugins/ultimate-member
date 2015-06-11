@@ -565,6 +565,7 @@ input[type=submit].um-button:focus {
 	outline: none !important;
 	margin: 0;
 	opacity: 1;
+	-webkit-appearance: none;
 }
 
 input[type=submit].um-button:hover {

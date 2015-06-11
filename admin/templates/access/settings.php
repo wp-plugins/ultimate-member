@@ -1,7 +1,14 @@
+	<?php
+		
+		$metabox = new UM_Admin_Metabox();
+		
+		do_action('um_admin_before_access_settings', $metabox);
+		
+	?>
+	
 	<h4><?php _e('Apply custom access settings?','ultimatemember'); ?> <?php $this->tooltip( __('Switch to yes to override global access settings','ultimatemember'), 'e'); ?></h4>
 	
 	<p>
-		<?php $metabox = new UM_Admin_Metabox(); ?>
 		<span><?php $metabox->ui_on_off('_um_custom_access_settings', 0, true, 1, '_um_custom_access_settings', 'xxx'); ?>	</span>
 	</p>
 	

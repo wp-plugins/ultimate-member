@@ -6,7 +6,7 @@ class UM_Members {
 		
 		add_filter('pre_user_query', array(&$this, 'custom_order_query') );
 		
-		add_filter('user_search_columns', array(&$this, 'add_display_name'), 99 );
+		add_filter('user_search_columns', array(&$this, 'user_search_columns'), 99 );
 		
 		add_action('template_redirect', array(&$this, 'access_members'), 555);
 		
@@ -19,10 +19,14 @@ class UM_Members {
 	}
 	
 	/***
-	***	@Add display name
+	***	@user_search_columns
 	***/
-	function add_display_name( $search_columns ){
-		$search_columns[] = 'display_name';
+	function user_search_columns( $search_columns ){
+		if ( is_admin() ) {
+			$search_columns[] = 'display_name';
+		} else {
+			$search_columns = array('display_name');
+		}
 		return $search_columns;
 	}
 	

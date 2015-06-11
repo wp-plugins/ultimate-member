@@ -1755,6 +1755,19 @@ $this->sections[] = array(
 				'full_width'    	=> true,
 		),
 
+		array(
+				'id'       		=> 'current_url_method',
+                'type'     		=> 'select',
+				'select2'		=> array( 'allowClear' => 0, 'minimumResultsForSearch' => -1 ),
+                'title'    		=> __( 'Current URL Method','ultimatemember' ),
+                'desc' 	   		=> __( 'Change this If you are having conflicts with profile links or redirections.','ultimatemember' ),
+                'default'  		=> 'SERVER_NAME',
+				'options' 		=> array(
+									'SERVER_NAME' 			=> __('Use SERVER_NAME','ultimatemember'),
+									'HTTP_HOST' 			=> __('Use HTTP_HOST','ultimatemember'),
+				),
+        ),
+		
         array(
                 'id'      		=> 'advanced_denied_roles',
                 'type'     		=> 'text',

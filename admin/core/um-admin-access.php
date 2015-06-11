@@ -97,7 +97,7 @@ class UM_Admin_Access {
 			
 			if ( !$this->core_post_type( $post_type ) ) {
 			
-				add_meta_box('um-admin-access-settings', __('Access Control'), array(&$this, 'load_metabox_form'), $post_type, 'side', 'default');
+				add_meta_box('um-admin-access-settings', __('Ultimate Member'), array(&$this, 'load_metabox_form'), $post_type, 'side', 'default');
 
 			}
 		
