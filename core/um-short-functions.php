@@ -717,6 +717,7 @@ function um_reset_user() {
  */
 function um_get_option($option_id) {
 	global $ultimatemember;
+	if ( !isset( $ultimatemember->options ) ) return '';
 	$um_options = $ultimatemember->options;
 	if ( isset($um_options[$option_id]) && !empty( $um_options[$option_id] ) )	{
 		return $um_options[$option_id];
