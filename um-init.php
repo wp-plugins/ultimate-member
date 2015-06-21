@@ -24,12 +24,14 @@ class UM_API {
 			'de_DE'	=> 'Deutsch',
 			'nl_NL' => 'Nederlands',
 			'fi_FI' => 'Suomi',
+			'ro_RO' => 'Română',
 			'da_DK' => 'Dansk',
 			'sv_SE' => 'Svenska',
 			'pl_PL' => 'Polski',
 			'cs_CZ' => 'Czech',
 			'ru_RU' => 'Русский',
 			'tr_TR' => 'Türkçe',
+			'fa_IR' => 'Farsi',
 			'he_IL' => 'Hebrew',
 			'ar' 	=> 'العربية'
 		);

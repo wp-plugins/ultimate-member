@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.2.2
 
-Stable Tag: 1.2.996
+Stable Tag: 1.2.997
 
 License: GNU Version 2 or Any Later Version
 
@@ -80,12 +80,14 @@ Ultimate Member has been translated into the following languages:
 * German - Deutsch
 * Dutch - Nederlands
 * Finnish - Suomi
+* Romanian - Română
 * Danish - Dansk
 * Swedish - Svenska
 * Polish - Polski
 * Czech
 * Russian - Русский
 * Turkish - Türkçe
+* Farsi - فارسى
 * Hebrew
 * العربية
 
@@ -145,6 +147,14 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.2.997: June 21, 2015 =
+
+* New: added support for Farsi / Romanian language
+* Tweak: adapted core community roles to prevent conflicts
+* Fixed: bug with search results pagination
+* Fixed: issue with panic key usage and wp-admin screen
+* Fixed: bug with custom field validation action
 
 = 1.2.996: June 11, 2015 =
 

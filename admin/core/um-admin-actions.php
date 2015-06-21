@@ -4,11 +4,19 @@
 	***	@when role is saved
 	***/
 	function um_admin_delete_role_cache($post_id, $post){
-		global $ultimatemember;
+		global $wpdb, $ultimatemember;
 		if(get_post_type( $post_id ) == 'um_role'){
 			$slug = $post->post_name;
-			delete_option("um_cached_role_{$slug}");
 			
+			$is_core = get_post_meta( $post_id, '_um_core', true );
+			if ( $is_core == 'member' || $is_core == 'admin' ) {
+				$slug = $is_core;
+				$where = array( 'ID' => $post_id );
+				$wpdb->update( $wpdb->posts, array( 'post_name' => $slug ), $where );
+			}
+			
+			delete_option("um_cached_role_{$slug}");
+
 			// need to remove cache of all users
 			$users = get_users( array( 'fields' => array( 'ID' ), 'meta_key' => 'role', 'meta_value' => $slug ) );
 			foreach( $users as $user ) {

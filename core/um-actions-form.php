@@ -234,7 +234,7 @@
 				
 					case 'custom':
 						$custom = $array['custom_validate'];
-						do_action("um_custom_field_validation_{$custom}", $key, $array );
+						do_action("um_custom_field_validation_{$custom}", $key, $array, $args );
 						break;
 						
 					case 'numeric':

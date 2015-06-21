@@ -306,6 +306,8 @@ function um_responsive(){
 		if (  jQuery('.um-account-nav').length > 0 && jQuery('.um-account-side').is(':visible') && jQuery('.um-account-tab:visible').length == 0 ) {
 			jQuery('.um-account-side li a.current').trigger('click');
 		}
+		
+		jQuery(this).css('opacity',1);
 
 	});
 
