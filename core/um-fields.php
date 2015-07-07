@@ -1996,7 +1996,6 @@ class UM_Fields {
 						}
 						
 						$res = stripslashes( $this->field_value( $key, $default, $data ) );
-						$res = esc_attr( $res );
 
 						$output .= '<div class="um-field-area">';
 						$output .= '<div class="um-field-value">' . $res . '</div>';
