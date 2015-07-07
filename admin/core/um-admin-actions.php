@@ -1,6 +1,70 @@
 <?php
 
 	/***
+	***	@Allow mass syncing for roles
+	***/
+	add_action('um_admin_do_action__mass_role_sync', 'um_admin_do_action__mass_role_sync');
+	function um_admin_do_action__mass_role_sync( $action ){
+		global $ultimatemember;
+		if ( !is_admin() || !current_user_can( 'edit_user' ) ) die();
+		
+		if ( !isset($_REQUEST['post']) || !is_numeric( $_REQUEST['post'] ) ) die();
+
+		$post_id = (int) $_REQUEST['post'];
+		
+		$post = get_post( $post_id );
+		$slug = $post->post_name;
+		
+		if ( $slug != $_REQUEST['um_role'] )
+			die();
+		
+		if ( get_post_meta( $post_id, '_um_synced_role', true ) != $_REQUEST['wp_role'] )
+			die();
+		
+		if ( $slug == 'admin' ) {
+			$_REQUEST['wp_role'] = 'administrator';
+			update_post_meta( $post_id, '_um_synced_role', 'administrator' );
+		}
+		
+		$wp_role = ( $_REQUEST['wp_role'] ) ? $_REQUEST['wp_role'] : 'subscriber';
+		
+		$users = get_users( array( 'fields' => array( 'ID' ), 'meta_key' => 'role', 'meta_value' => $slug ) );
+		foreach( $users as $user_id ) {
+			$wp_user_object = new WP_User( $user_id );
+			$wp_user_object->set_role( $wp_role );
+		}
+		
+		exit( wp_redirect( admin_url( 'post.php?post=' . $post_id ) . '&action=edit&message=1' ) );
+	
+	}
+	
+	/***
+	***	@add option for WPML
+	***/
+	add_action('um_admin_before_access_settings', 'um_admin_wpml_post_options', 10, 1 );
+	function um_admin_wpml_post_options( $instance ) {
+	
+		if ( !defined('ICL_SITEPRESS_VERSION') ) return;
+		
+		?>
+		
+		<h4><?php _e('This is a translation of UM profile page?','ultimatemember'); ?></h4>
+		
+		<p>
+			<span><?php $instance->ui_on_off( '_um_wpml_user', 0 ); ?></span>
+		</p>
+		
+		<h4><?php _e('This is a translation of UM account page?','ultimatemember'); ?></h4>
+		
+		<p>
+			<span><?php $instance->ui_on_off( '_um_wpml_account', 0 ); ?></span>
+		</p>
+		
+		<?php
+	
+	}
+	
+	/***
 	***	@when role is saved
 	***/
 	function um_admin_delete_role_cache($post_id, $post){

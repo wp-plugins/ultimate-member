@@ -1,5 +1,23 @@
 <?php
 
+	add_action( 'pre_get_posts', 'um_access_feed_posts' );
+	function um_access_feed_posts( $wp_query ) {
+		if ( ! is_admin() && $wp_query->is_feed() && ! $wp_query->is_singular() ) {
+			
+			if ( ! $meta_query = $wp_query->get( 'meta_query' ) )
+				$meta_query = array();
+
+			$meta_query[] = array(
+				'key'     => '_hidden',
+				'value'   => '',
+				'compare' => 'NOT EXISTS',
+			);
+
+			$wp_query->set( 'meta_query', $meta_query );
+			
+		}
+	}
+
 	/***
 	***	@
 	***/
@@ -128,7 +146,13 @@
 
 				if ( is_user_logged_in() && isset( $access_roles ) && !empty( $access_roles ) ){
 					if ( !in_array( um_user('role'), unserialize( $access_roles ) ) ) {
-						if ( !$access_redirect ) $access_redirect = um_get_core_page('login');
+						if ( !$access_redirect ) {
+							if ( is_user_logged_in() ) {
+								$access_redirect = home_url();
+							} else {
+								$access_redirect = um_get_core_page('login');
+							}
+						}
 						$redirect_to = $access_redirect;
 					}
 				}
@@ -138,7 +162,11 @@
 		}
 		
 		if ( $redirect_to ) {
-			$ultimatemember->access->redirect_handler = $redirect_to;
+			if ( is_feed() ) {
+
+			} else {
+				$ultimatemember->access->redirect_handler = $redirect_to;
+			}
 		}
 		
 	}

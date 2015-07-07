@@ -1,5 +1,12 @@
 <?php
 
+	$premium['woocommerce'] = array(
+		'url' => 'https://ultimatemember.com/extensions/woocommerce/',
+		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/05/woocommerce-01-copy.png',
+		'name' => 'WooCommerce',
+		'desc' => 'Integrates the popular e-commerce plugin WooCommerce with Ultimate Member.',
+	);
+	
 	$premium['private-messages'] = array(
 		'url' => 'https://ultimatemember.com/extensions/private-messages/',
 		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/05/privatemessages-01-copy.png',

@@ -109,7 +109,7 @@ class UM_Enqueue {
 		}
 		
 		// load a localized version for date/time
-		$locale = get_option('WPLANG');
+		$locale = get_locale();
 		if ( $locale && file_exists( um_path . 'assets/js/pickadate/translations/' . $locale . '.js' ) ) {
 			wp_register_script('um_datetime_locale', um_url . 'assets/js/pickadate/translations/' . $locale . '.js', '', ultimatemember_version, true );
 			wp_enqueue_script('um_datetime_locale');

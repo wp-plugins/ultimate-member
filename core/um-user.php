@@ -72,11 +72,14 @@ class UM_User {
 	}
 	
 	function get_cached_data( $user_id ) {
-		$find_user = get_option("um_cache_userdata_{$user_id}");
-		if ( $find_user ) {
-			$find_user = apply_filters('um_user_permissions_filter', $find_user, $user_id);
-			return $find_user;
+		if ( is_numeric( $user_id ) && $user_id > 0 ) {
+			$find_user = get_option("um_cache_userdata_{$user_id}");
+			if ( $find_user ) {
+				$find_user = apply_filters('um_user_permissions_filter', $find_user, $user_id);
+				return $find_user;
+			}
 		}
+		return '';
 	}
 	
 	function setup_cache( $user_id, $profile ) {
@@ -348,6 +351,8 @@ class UM_User {
 		$this->update_usermeta_info('role');
 		
 		do_action('um_after_user_role_is_changed');
+		
+		do_action('um_after_user_role_is_updated', um_user('ID'), $role );
 		
 	}
 	

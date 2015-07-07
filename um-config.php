@@ -817,7 +817,7 @@ $this->sections[] = array(
 		array(
 				'id'       		=> 'profile_photo_max_size',
                 'type'     		=> 'text',
-                'title'    		=> __( 'Profile Photo Maximum File Size','ultimatemember' ),
+                'title'    		=> __( 'Profile Photo Maximum File Size (bytes)','ultimatemember' ),
                 'desc' 	   		=> __( 'Sets a maximum size for the uploaded photo','ultimatemember' ),
 				'validate' 		=> 'numeric',
         ),
@@ -825,7 +825,7 @@ $this->sections[] = array(
 		array(
 				'id'       		=> 'cover_photo_max_size',
                 'type'     		=> 'text',
-                'title'    		=> __( 'Cover Photo Maximum File Size','ultimatemember' ),
+                'title'    		=> __( 'Cover Photo Maximum File Size (bytes)','ultimatemember' ),
                 'desc' 	   		=> __( 'Sets a maximum size for the uploaded cover','ultimatemember' ),
 				'validate' 		=> 'numeric',
         ),
@@ -833,7 +833,7 @@ $this->sections[] = array(
 		array(
 				'id'       		=> 'photo_thumb_sizes',
                 'type'     		=> 'multi_text',
-                'title'    		=> __( 'Profile Photo Thumbnail Sizes','ultimatemember' ),
+                'title'    		=> __( 'Profile Photo Thumbnail Sizes (px)','ultimatemember' ),
                 'desc' 	   		=> __( 'Here you can define which thumbnail sizes will be created for each profile photo upload.','ultimatemember' ),
                 'default'  		=> array( 40, 80, 190 ),
 				'validate' 		=> 'numeric',
@@ -843,7 +843,7 @@ $this->sections[] = array(
 		array(
 				'id'       		=> 'cover_thumb_sizes',
                 'type'     		=> 'multi_text',
-                'title'    		=> __( 'Cover Photo Thumbnail Sizes','ultimatemember' ),
+                'title'    		=> __( 'Cover Photo Thumbnail Sizes (px)','ultimatemember' ),
                 'desc' 	   		=> __( 'Here you can define which thumbnail sizes will be created for each cover photo upload.','ultimatemember' ),
                 'default'  		=> array( 300, 600 ),
 				'validate' 		=> 'numeric',
@@ -862,7 +862,7 @@ $this->sections[] = array(
 		array(
 				'id'       		=> 'image_max_width',
                 'type'     		=> 'text',
-                'title'    		=> __( 'Image Upload Maximum Width','ultimatemember' ),
+                'title'    		=> __( 'Image Upload Maximum Width (px)','ultimatemember' ),
                 'desc' 	   		=> __( 'Any image upload above this width will be resized to this limit automatically.','ultimatemember' ),
                 'default'  		=> 1000,
 				'validate' 		=> 'numeric',
@@ -871,7 +871,7 @@ $this->sections[] = array(
 		array(
 				'id'       		=> 'cover_min_width',
                 'type'     		=> 'text',
-                'title'    		=> __( 'Cover Photo Minimum Width','ultimatemember' ),
+                'title'    		=> __( 'Cover Photo Minimum Width (px)','ultimatemember' ),
                 'desc' 	   		=> __( 'This will be the minimum width for cover photo uploads','ultimatemember' ),
                 'default'  		=> 1000,
 				'validate' 		=> 'numeric',

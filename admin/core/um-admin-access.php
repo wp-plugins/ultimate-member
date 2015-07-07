@@ -8,7 +8,7 @@ class UM_Admin_Access {
 
 		add_action( 'load-post.php', array(&$this, 'add_metabox'), 9 );
 		add_action( 'load-post-new.php', array(&$this, 'add_metabox'), 9 );
-	
+
 	}
 	
 	/***

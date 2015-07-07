@@ -266,21 +266,23 @@ class UM_Admin_Metabox {
 	***/
 	function add_metabox_role() {
 
-		add_meta_box('um-admin-form-admin', __('Administrative Permissions'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
+		add_meta_box('um-admin-form-sync', __('Sync with WordPress Role','ultimatemember'), array(&$this, 'load_metabox_role'), 'um_role', 'side', 'default');
 		
-		add_meta_box('um-admin-form-general', __('General Permissions'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
+		add_meta_box('um-admin-form-admin', __('Administrative Permissions','ultimatemember'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
 		
-		add_meta_box('um-admin-form-profile', __('Profile Access'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
+		add_meta_box('um-admin-form-general', __('General Permissions','ultimatemember'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
 		
-		add_meta_box('um-admin-form-home', __('Homepage Options'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
+		add_meta_box('um-admin-form-profile', __('Profile Access','ultimatemember'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
 		
-		add_meta_box('um-admin-form-register', __('Registration Options'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
+		add_meta_box('um-admin-form-home', __('Homepage Options','ultimatemember'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
 		
-		add_meta_box('um-admin-form-login', __('Login Options'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
+		add_meta_box('um-admin-form-register', __('Registration Options','ultimatemember'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
 		
-		add_meta_box('um-admin-form-logout', __('Logout Options'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
+		add_meta_box('um-admin-form-login', __('Login Options','ultimatemember'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
 		
-		add_meta_box('um-admin-form-delete', __('Delete Options'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
+		add_meta_box('um-admin-form-logout', __('Logout Options','ultimatemember'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
+		
+		add_meta_box('um-admin-form-delete', __('Delete Options','ultimatemember'), array(&$this, 'load_metabox_role'), 'um_role', 'normal', 'default');
 	
 		do_action('um_admin_custom_role_metaboxes');
 		
@@ -1305,7 +1307,7 @@ class UM_Admin_Metabox {
 				?>
 				
 					<p><label for="_title">Title <?php $this->tooltip('This is the title of the field for your reference in the backend. The title will not appear on the front-end of your website.'); ?></label>
-						<input type="text" name="_title" id="_title" value="<?php echo $this->edit_mode_value; ?>" />
+						<input type="text" name="_title" id="_title" value="<?php echo htmlspecialchars($this->edit_mode_value, ENT_QUOTES); ?>" />
 					</p>
 				
 				<?php
@@ -1385,7 +1387,7 @@ class UM_Admin_Metabox {
 				?>
 				
 					<p><label for="_label">Label <?php $this->tooltip('The field label is the text that appears above the field on your front-end form. Leave blank to not show a label above field.'); ?></label>
-						<input type="text" name="_label" id="_label" value="<?php echo $this->edit_mode_value; ?>" />
+						<input type="text" name="_label" id="_label" value="<?php echo htmlspecialchars($this->edit_mode_value, ENT_QUOTES); ?>" />
 					</p>
 					
 				<?php
@@ -1395,7 +1397,7 @@ class UM_Admin_Metabox {
 				?>
 					
 					<p><label for="_placeholder">Placeholder <?php $this->tooltip('This is the text that appears within the field e.g please enter your email address. Leave blank to not show any placeholder text.'); ?></label>
-						<input type="text" name="_placeholder" id="_placeholder" value="<?php echo $this->edit_mode_value; ?>" />
+						<input type="text" name="_placeholder" id="_placeholder" value="<?php echo htmlspecialchars($this->edit_mode_value, ENT_QUOTES); ?>" />
 					</p>
 		
 				<?php

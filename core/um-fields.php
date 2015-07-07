@@ -1994,9 +1994,12 @@ class UM_Fields {
 						if ( isset( $data['label'] ) ) {
 							$output .= $this->field_label($label, $key, $data);
 						}
+						
+						$res = stripslashes( $this->field_value( $key, $default, $data ) );
+						$res = esc_attr( $res );
 
 						$output .= '<div class="um-field-area">';
-						$output .= '<div class="um-field-value">' . stripslashes( $this->field_value( $key, $default, $data ) ) . '</div>';
+						$output .= '<div class="um-field-value">' . $res . '</div>';
 						$output .= '</div>';
 						
 						$output .= '</div>';

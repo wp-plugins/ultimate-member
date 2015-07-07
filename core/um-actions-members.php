@@ -185,6 +185,9 @@
 
 		extract( $args );
 		
+		if ( isset( $args['search'] ) && $args['search'] == 1 && isset( $args['must_search'] ) && $args['must_search'] == 1 && !isset( $_REQUEST['um_search'] ) )
+			return;
+		
 		if ( um_members('no_users') ) {
 		
 		?>

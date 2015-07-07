@@ -273,21 +273,48 @@ function um_profile_id() {
 	}
 	
 	/***
+	***	@Get a translated core page URL
+	***/
+	function um_get_url_for_language( $post_id, $language )
+	{
+		$lang_post_id = icl_object_id( $post_id , 'page', true, $language );
+		 
+		$url = "";
+		if($lang_post_id != 0) {
+			$url = get_permalink( $lang_post_id );
+		}else {
+			// No page found, it's most likely the homepage
+			global $sitepress;
+			$url = $sitepress->language_url( $language );
+		}
+		 
+		return $url;
+	}
+	
+	/***
 	***	@Get core page url
 	***/
 	function um_get_core_page( $slug, $updated = false) {
 		global $ultimatemember;
+		$url = '';
 		
 		if ( isset( $ultimatemember->permalinks->core[ $slug ] ) ) {
-			
 			$url = get_permalink( $ultimatemember->permalinks->core[ $slug ] );
-			
 			if ( $updated )
-				$url =  add_query_arg( 'updated', esc_attr( $updated ), $url );
-				
-			return $url;
-			
+				$url =  add_query_arg( 'updated', esc_attr( $updated ), $url );	
 		}
+		
+		if ( defined('ICL_SITEPRESS_VERSION') && icl_get_current_language() != icl_get_default_language() && $slug == 'account' ) {
+			if ( get_post_meta( get_the_ID() , '_um_wpml_account', true ) == 1 ) {
+				$url = get_permalink( get_the_ID() );
+			}
+			if ( get_post_meta( get_the_ID() , '_um_wpml_user', true ) == 1 ) {
+				$url = um_get_url_for_language( $ultimatemember->permalinks->core[ $slug ], icl_get_current_language() );
+			}
+		}
+		
+		if ( $url )
+			return $url;
 		
 		return '';
 	}
@@ -298,6 +325,8 @@ function um_profile_id() {
 	function um_is_core_page( $page ) {
 		global $post, $ultimatemember;
 		if ( isset($post->ID) && isset( $ultimatemember->permalinks->core[ $page ] ) && $post->ID == $ultimatemember->permalinks->core[ $page ] )
+			return true;
+		if ( isset($post->ID) && get_post_meta( $post->ID, '_um_wpml_' . $page, true ) == 1 )
 			return true;
 		return false;
 	}
@@ -517,8 +546,11 @@ function um_reset_user() {
 	***/
 	function um_can_view_field( $data ) {
 		global $ultimatemember;
+		
+		if ( !isset( $ultimatemember->fields->set_mode ) )
+			$ultimatemember->fields->set_mode = '';
 
-		if ( isset( $data['public'] ) ) {
+		if ( isset( $data['public'] ) && $ultimatemember->fields->set_mode != 'register' ) {
 		
 			if ( !is_user_logged_in() && $data['public'] != '1' ) return false;
 			

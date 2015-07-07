@@ -611,6 +611,9 @@
 				$nav_link = remove_query_arg( 'um_action', $nav_link );
 				$nav_link = remove_query_arg( 'subnav', $nav_link );
 				$nav_link =  add_query_arg('profiletab', $id, $nav_link );
+				
+				$nav_link = apply_filters("um_profile_menu_link_{$id}", $nav_link);
+				
 				?>
 			
 			<div class="um-profile-nav-item um-profile-nav-<?php echo $id; ?> <?php if ( !um_get_option('profile_menu_icons') ) { echo 'without-icon'; } ?> <?php if ( $id == $active_tab ) { echo 'active'; } ?>">

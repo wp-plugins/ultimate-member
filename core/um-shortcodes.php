@@ -152,6 +152,10 @@ class UM_Shortcodes {
 			$classes .= ' um-in-admin';
 		}
 		
+		if ( isset( $ultimatemember->form->errors ) && $ultimatemember->form->errors ) {
+			$classes .= ' um-err';
+		}
+		
 		if ( $ultimatemember->fields->editing == true ) {
 			$classes .= ' um-editing';
 		}

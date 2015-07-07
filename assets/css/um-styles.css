@@ -324,6 +324,7 @@ p.um-notice.warning {
 
 .um-field-area {
 	position: relative;
+	word-wrap: break-word;
 }
 
 .um-field-value p {

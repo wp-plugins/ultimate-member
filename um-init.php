@@ -36,11 +36,6 @@ class UM_API {
 			'ar' 	=> 'العربية'
 		);
 		
-		$this->addons['multi_language'] = array(
-				__( 'Multi Language Support','ultimatemember' ),
-				__('This add-on helps you offer multi language forms to your visitors based on the languages you want.','ultimatemember')
-		);
-		
 		$this->addons['bp_avatar_transfer'] = array(
 				__( 'BuddyPress Avatar Transfer','ultimatemember' ),
 				__('This add-on enables you to migrate your custom user photos from BuddyPress to use with Ultimate Member.','ultimatemember')
@@ -179,7 +174,7 @@ class UM_API {
 		$domain = 'ultimatemember';
 		$locale = ( get_locale() != '' ) ? get_locale() : 'en_US';
 		load_textdomain($domain, WP_LANG_DIR . '/plugins/' .$domain.'-'.$locale.'.mo');
-		
+
 	}
 	
 }
