@@ -66,11 +66,11 @@
             }
 
             public static function isLocalHost() {
-                return ( $_SERVER['REMOTE_ADDR'] === '127.0.0.1' || $_SERVER['REMOTE_ADDR'] === 'localhost' ) ? 0 : 0;
+                return false;
             }
 
             public static function isWpDebug() {
-                return (defined( 'WP_DEBUG' ) && WP_DEBUG == false);
+                return false;
             }
             
             public static function getTrackingObject() {
