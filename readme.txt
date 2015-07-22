@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.2.2
 
-Stable Tag: 1.3.12
+Stable Tag: 1.3.13
 
 License: GNU Version 2 or Any Later Version
 
@@ -149,6 +149,10 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.3.13: July 22, 2015 =
+
+* Fixed: Woocommerce manual order dropdown conflict
 
 = 1.3.12: July 22, 2015 =
 

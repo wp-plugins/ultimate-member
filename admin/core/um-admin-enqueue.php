@@ -262,8 +262,10 @@ class UM_Admin_Enqueue {
 		
 		if ( $this->is_UM_admin() ) {
 
-			$ultimatemember->styles->wp_enqueue_scripts();
-
+			if ( get_post_type() != 'shop_order' ) {
+				$ultimatemember->styles->wp_enqueue_scripts();
+			}
+			
 			$this->load_global_css();
 			$this->load_form();
 			$this->load_modal();

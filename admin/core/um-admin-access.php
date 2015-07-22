@@ -38,6 +38,9 @@ class UM_Admin_Access {
 		if ( strstr($post_type, 'um_') )
 			return true;
 		
+		if ( $post_type == 'shop_order' )
+			return true;
+		
 		if ( !class_exists('UM_bbPress_API') && in_array($post_type,array('forum','topic','reply')) )
 			return true;
 		
