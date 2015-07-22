@@ -320,6 +320,16 @@ function um_profile_id() {
 	}
 	
 	/***
+	***	@boolean check if we are on UM page
+	***/
+	function is_ultimatemember() {
+		global $post, $ultimatemember;
+		if ( isset($post->ID) && in_array( $post->ID, $ultimatemember->permalinks->core ) )
+			return true;
+		return false;
+	}
+	
+	/***
 	***	@boolean check if we are on a core page or not
 	***/
 	function um_is_core_page( $page ) {
@@ -591,8 +601,8 @@ function um_reset_user() {
 		
 		if ( !um_user('can_access_private_profile') && $ultimatemember->user->is_private_profile( $user_id ) ) return false;
 
-		if ( um_user('can_view_roles') && $user_id != get_current_user_id() ) {
-			if ( !in_array( $ultimatemember->query->get_role_by_userid( $user_id ), um_user('can_view_roles') ) ) {
+		if ( um_user_can('can_view_roles') && $user_id != get_current_user_id() ) {
+			if ( !in_array( $ultimatemember->query->get_role_by_userid( $user_id ), um_user_can('can_view_roles') ) ) {
 				return false;
 			}
 		}

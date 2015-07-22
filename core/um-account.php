@@ -184,6 +184,10 @@ class UM_Account {
 					$args = 'user_login,user_email';
 				}
 				
+				if ( !um_get_option('account_email') && !um_user('can_edit_everyone') ) {
+					$args = str_replace(',user_email','', $args );
+				}
+				
 				$fields = $ultimatemember->builtin->get_specific_fields( $args );
 				foreach( $fields as $key => $data ){
 					$output .= $ultimatemember->fields->edit_field( $key, $data );

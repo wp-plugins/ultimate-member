@@ -153,6 +153,26 @@
 	}
 	
 	/***
+	***	@clear user cache
+	***/
+	add_action('um_admin_do_action__user_cache', 'um_admin_do_action__user_cache');
+	function um_admin_do_action__user_cache( $action ){
+		global $ultimatemember;
+		if ( !is_admin() || !current_user_can('manage_options') ) die();
+		
+		$all_options = wp_load_alloptions();
+		foreach( $all_options as $k => $v ) {
+			if ( strstr( $k, 'um_cache_userdata_' ) ) {
+				delete_option( $k );
+			}
+		}
+		
+		$url = remove_query_arg('um_adm_action', $ultimatemember->permalinks->get_current_url() );
+		$url = add_query_arg('update','cleared_cache',$url);
+		exit( wp_redirect($url) );
+	}
+	
+	/***
 	***	@purge temp
 	***/
 	add_action('um_admin_do_action__purge_temp', 'um_admin_do_action__purge_temp');

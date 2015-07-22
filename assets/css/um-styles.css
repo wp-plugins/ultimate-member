@@ -548,10 +548,11 @@ p.um-notice.warning {
 */
 
 .um div.disabled,
+.um-disabled,
 .um input[type=submit]:disabled,
 .um input[type=text]:disabled {
 	opacity: 0.6 !important;
-	cursor: default !important;
+	cursor: no-drop !important;
 }
 
 input[type=submit].um-button,

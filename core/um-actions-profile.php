@@ -598,7 +598,16 @@
 			$ultimatemember->profile->active_tab = $active_tab;
 			$ultimatemember->profile->active_subnav = null;
 		}
-
+		
+		// Move default tab priority
+		$default_tab = um_get_option('profile_menu_default_tab');
+		$dtab = ( isset( $tabs[$default_tab] ) )? $tabs[$default_tab] : 'main';
+		if ( isset( $tabs[ $default_tab ] ) ) {
+			unset( $tabs[$default_tab] );
+			$dtabs[$default_tab] = $dtab;
+			$tabs = $dtabs + $tabs;
+		}
+		
 		?>
 		
 		<div class="um-profile-nav">

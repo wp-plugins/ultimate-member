@@ -175,6 +175,11 @@ class UM_Admin_Enqueue {
 
 		wp_register_style('um_admin_misc', um_url . 'admin/assets/css/um-admin-misc.css' );
 		wp_enqueue_style('um_admin_misc');
+		
+		if ( get_post_type() != 'shop_order' ) {
+			wp_register_style('um_admin_select2', um_url . 'admin/assets/css/um-admin-select2.css' );
+			wp_enqueue_style('um_admin_select2');
+		}
 
 	}
 	

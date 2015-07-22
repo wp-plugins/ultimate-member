@@ -170,6 +170,7 @@ class UM_Admin_Dashboard {
 		add_meta_box('um-metaboxes-mainbox-1', __('Latest from our blog','ultimatemember'), array(&$this, 'um_news'), $this->pagehook, 'normal', 'core');
 		
 		add_meta_box('um-metaboxes-sidebox-1', __('Purge Temp Files','ultimatemember'), array(&$this, 'purge_temp'), $this->pagehook, 'side', 'core');
+		add_meta_box('um-metaboxes-sidebox-2', __('User Cache','ultimatemember'), array(&$this, 'user_cache'), $this->pagehook, 'side', 'core');
 		
 		if ( $this->language_avaialable_not_installed() ) {
 			add_meta_box('um-metaboxes-sidebox-2', __('Language','ultimatemember'), array(&$this, 'dl_language'), $this->pagehook, 'side', 'core');
@@ -212,6 +213,11 @@ class UM_Admin_Dashboard {
 	function purge_temp() {
 		global $ultimatemember;
 		include_once um_path . 'admin/templates/dashboard/purge.php';
+	}
+	
+	function user_cache() {
+		global $ultimatemember;
+		include_once um_path . 'admin/templates/dashboard/cache.php';
 	}
 	
 	/***

@@ -24,7 +24,9 @@ print "
 .um-account-nav a.current,
 .um-account-side li a.current span.um-account-icon,
 .um-account-side li a.current:hover span.um-account-icon,
-.um-dropdown li a:hover
+.um-dropdown li a:hover,
+i.um-active-color,
+span.um-active-color
 {
 	color: $active_color;
 }
@@ -92,12 +94,18 @@ print ".um-$form_id.um input[type=submit].um-button,
 .um-$form_id.um a.um-button {
 	background: $primary_btn_color;
 }";
+print ".um-$form_id.um a.um-link {
+	color: $primary_btn_color;
+}";
 }
 
 if ( $primary_btn_hover ) {
 print ".um-$form_id.um input[type=submit].um-button:hover,
 .um-$form_id.um a.um-button:hover {
 	background-color: $primary_btn_hover;
+}";
+print ".um-$form_id.um a.um-link:hover {
+	color: $primary_btn_hover;
 }";
 }
 

@@ -15,8 +15,8 @@ class UM_Access {
 	***	@do actions based on priority
 	***/
 	function template_redirect() {
-		global $ultimatemember;
-		
+		global $post, $ultimatemember;
+
 		do_action('um_access_homepage_per_role');
 		
 		do_action('um_access_global_settings');

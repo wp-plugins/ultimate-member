@@ -575,7 +575,7 @@ class UM_User {
 				require_once( ABSPATH . 'wp-admin/includes/user.php' );
 			}
 			
-			wp_delete_user( $this->id, 1 );
+			wp_delete_user( $this->id );
 			
 		}
 

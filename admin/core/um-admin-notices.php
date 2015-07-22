@@ -139,6 +139,10 @@ class UM_Admin_Notices {
 				$messages[0]['content'] = __('Your temp uploads directory is now clean.','ultimatemember');
 				break;
 				
+			case 'cleared_cache':
+				$messages[0]['content'] = __('Your user cache is now removed.','ultimatemember');
+				break;
+				
 			case 'form_duplicated':
 				$messages[0]['content'] = __('The form has been duplicated successfully.','ultimatemember');
 				break;

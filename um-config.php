@@ -186,6 +186,16 @@ $this->sections[] = array(
         ),
 		
         array(
+                'id'       		=> 'account_email',
+                'type'     		=> 'switch',
+                'title'   		=> __( 'Allow users to change e-mail','ultimatemember' ),
+				'default' 		=> 1,
+				'desc' 	   		=> __('Whether to allow users changing their email in account page.','ultimatemember'),
+				'on'			=> __('On','ultimatemember'),
+				'off'			=> __('Off','ultimatemember'),
+        ),
+		
+        array(
                 'id'       		=> 'account_require_strongpass',
                 'type'     		=> 'switch',
                 'title'   		=> __( 'Require a strong password?','ultimatemember' ),

@@ -1,5 +1,8 @@
 <?php
 
+	/***
+	***	@
+	***/
 	add_action( 'pre_get_posts', 'um_access_feed_posts' );
 	function um_access_feed_posts( $wp_query ) {
 		if ( ! is_admin() && $wp_query->is_feed() && ! $wp_query->is_singular() ) {

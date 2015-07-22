@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.2.2
 
-Stable Tag: 1.3.11
+Stable Tag: 1.3.12
 
 License: GNU Version 2 or Any Later Version
 
@@ -37,7 +37,7 @@ Ultimate Member is a powerful and flexible plugin that makes it a breeze for use
 * Developer friendly with dozens of actions and filters
 * Multi-site compatibility
 * Mandrill compatibility
-* Multi language support
+* WPML Support
 
 Read about all of the plugin's features at [Ultimate Member](https://ultimatemember.com)
 
@@ -76,6 +76,7 @@ Ultimate Member has been translated into the following languages:
 
 * English (US)
 * Spanish - Español
+* Spanish (Mexico) - Español (México)
 * French - Français
 * Italian - Italiano
 * German - Deutsch
@@ -148,6 +149,17 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.3.12: July 22, 2015 =
+
+* New: ability to delete user cache from plugin dashboard
+* New: function is_ultimatemember() checks if user is on UM page (developers)
+* New: option to disallow editing email in account page
+* New: added Spanish (Mexico) language support
+* Fixed: bug with profile viewing and user roles
+* Fixed: Woocommerce dropdown bugs/conflicts
+* Fixed: ipad/tablet css fixes for profile columns
+* Fixed: deleting users delete their content
 
 = 1.3.11: July 8, 2015 =
 
