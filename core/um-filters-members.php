@@ -184,6 +184,19 @@
 	}
 	
 	/***
+	***	@sorting by last login date
+	***/
+	add_filter('um_modify_sortby_parameter', 'um_sortby_last_login', 100, 2 );
+	function um_sortby_last_login( $query_args, $sortby ) {
+		if ( $sortby == 'last_login' ) {
+			$query_args['orderby'] = 'meta_value_num';
+			$query_args['order'] = 'desc';
+			$query_args['meta_key'] = '_um_last_login';
+		}
+		return $query_args;
+	}
+	
+	/***
 	***	@hook in the member results array
 	***/
 	add_filter('um_prepare_user_results_array', 'um_prepare_user_results_array', 50, 2);

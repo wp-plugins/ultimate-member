@@ -38,6 +38,7 @@ class UM_Rewrite {
 			$account_page_id = $ultimatemember->permalinks->core['account'];
 			
 			$user = get_post($user_page_id);
+			if ( isset( $user->post_name ) ) {
 			$user_slug = $user->post_name;
 
 			$account = get_post($account_page_id);
@@ -61,6 +62,7 @@ class UM_Rewrite {
 			}
 			
 			flush_rewrite_rules( true );
+			}
 
 		}
 		

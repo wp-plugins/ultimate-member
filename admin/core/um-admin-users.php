@@ -48,17 +48,13 @@ class UM_Admin_Users {
 	***	@sort users by newest first
 	***/
 	function sort_by_newest( $query ){
-		global $pagenow;
+		global $wpdb, $pagenow;
 
 		if ( is_admin() && $pagenow == 'users.php' ) {
-
-			global $wpdb;
-
 			if (!isset($_REQUEST['orderby'])) {
 				$query->query_vars["order"] = 'desc';
 				$query->query_orderby = " ORDER BY user_registered ".($query->query_vars["order"] == "desc" ? "desc " : "asc ");//set sort order
 			}
-
 		}
 
 		return $query;
@@ -69,14 +65,11 @@ class UM_Admin_Users {
 	***	@custom users filter
 	***/
 	function custom_users_filter( $query ){
-		global $pagenow;
+		global $wpdb, $pagenow;
 
 		if ( is_admin() && $pagenow=='users.php' && isset($_GET[ $this->custom_role ]) && $_GET[ $this->custom_role ] != '') {
 			
-			$role = urldecode($_GET[ $this->custom_role ]);
-
-			global $wpdb;
-
+			$role = $_GET[ $this->custom_role ];
 			$query->query_where = 
 			str_replace('WHERE 1=1', 
 					"WHERE 1=1 AND {$wpdb->users}.ID IN (
@@ -91,16 +84,12 @@ class UM_Admin_Users {
 		if ( is_admin() && $pagenow=='users.php' && isset($_GET[ 'status' ]) && $_GET[ 'status' ] != '') {
 			
 			$status = urldecode($_GET[ 'status' ]);
-
-			global $wpdb;
-
-			$query->query_where = 
-			str_replace('WHERE 1=1', 
-					"WHERE 1=1 AND {$wpdb->users}.ID IN (
-						 SELECT {$wpdb->usermeta}.user_id FROM $wpdb->usermeta 
-							WHERE {$wpdb->usermeta}.meta_key = 'account_status' 
-							AND {$wpdb->usermeta}.meta_value = '{$status}')", 
-					$query->query_where
+			$query->query_where = str_replace('WHERE 1=1', 
+						"WHERE 1=1 AND {$wpdb->users}.ID IN (
+							 SELECT {$wpdb->usermeta}.user_id FROM $wpdb->usermeta 
+								WHERE {$wpdb->usermeta}.meta_key = 'account_status' 
+								AND {$wpdb->usermeta}.meta_value = '{$status}')", 
+						$query->query_where
 			);
 
 		}
@@ -130,8 +119,10 @@ class UM_Admin_Users {
 			'awaiting_admin_review' => __('Pending review','ultimatemember'),
 			'awaiting_email_confirmation' => __('Waiting e-mail confirmation','ultimatemember'),
 			'inactive' => __('Inactive','ultimatemember'),
-			'rejected' => __('Rejected','ultimatemember'),
+			'rejected' => __('Rejected','ultimatemember')
 		);
+		
+		$ultimatemember->query->count_users_by_status( 'unassigned' );
 		
 		foreach( $status as $k => $v ) {
 			if ( isset($_REQUEST['status']) && $_REQUEST['status'] == $k ) {
@@ -270,7 +261,7 @@ class UM_Admin_Users {
 					<?php
 						$roles = $ultimatemember->query->get_roles();
 						foreach( $roles as $role => $role_name ) { ?>
-						<option value="<?php echo $role; ?>"><?php echo $role_name; ?></option>
+						<option value="<?php echo urlencode( $role ); ?>"><?php echo $role_name; ?></option>
 						<?php } ?>
 				</select>
 				

@@ -6,6 +6,63 @@
 /***
 ***	@
 ***/
+
+$core_pages = array(
+	'user' => __('User page','ultimatemember'),
+	'account' => __('Account page','ultimatemember'),
+	'members' => __('Members page','ultimatemember'),
+	'register' => __('Register page','ultimatemember'),
+	'login' => __('Login page','ultimatemember'),
+	'logout' => __('Logout page','ultimatemember'),
+	'password-reset' => __('Password reset page','ultimatemember'),
+);
+
+foreach( $core_pages as $page_s => $page ) {
+	$page_setup[] = array(
+				'id'       		=> 'core_' . $page_s,
+                'type'     		=> 'select',
+				'select2'		=> array( 'allowClear' => 0, 'minimumResultsForSearch' => -1 ),
+                'title'    		=> $page,
+                'default'  		=> ( isset( $ultimatemember->permalinks->core[ $page_s ] ) ) ? $ultimatemember->permalinks->core[ $page_s ] : '' ,
+				'options' 		=> $ultimatemember->query->wp_pages(),
+				'placeholder' 	=> __('Choose a page...','ultimatemember'),
+				'compiler' 		=> true,
+        );
+}
+
+$this->sections[] = array(
+
+    'icon'       => 'um-faicon-cog',
+    'title'      => __( 'Setup','ultimatemember'),
+    'fields'     => $page_setup
+
+);
+
+/***
+***	@
+***/
+
+add_filter('redux/options/um_options/compiler', 'um_core_page_setting_saved', 100, 3);
+function um_core_page_setting_saved($options, $css, $changed_values) {
+	$core_pages = array(
+		'user' => __('User page','ultimatemember'),
+		'account' => __('Account page','ultimatemember'),
+		'members' => __('Members page','ultimatemember'),
+		'register' => __('Register page','ultimatemember'),
+		'login' => __('Login page','ultimatemember'),
+		'logout' => __('Logout page','ultimatemember'),
+		'password-reset' => __('Password reset page','ultimatemember'),
+	);
+	$pages = get_option('um_core_pages');
+	foreach( $core_pages as $slug => $page ) {
+		$pages[ $slug ] = $options['core_' . $slug ];
+	}
+	update_option( 'um_core_pages', $pages );
+}
+
+/***
+***	@
+***/
 	
 $this->sections[] = array(
 

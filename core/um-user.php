@@ -177,23 +177,23 @@ class UM_User {
 			}
 
 			if ( $this->usermeta['account_status'][0] == 'approved' ) {
-				$this->usermeta['account_status_name'][0] = 'Approved';
+				$this->usermeta['account_status_name'][0] = __('Approved','ultimatemember');
 			}
 
 			if ( $this->usermeta['account_status'][0] == 'awaiting_email_confirmation' ) {
-				$this->usermeta['account_status_name'][0] = 'Awaiting E-mail Confirmation';
+				$this->usermeta['account_status_name'][0] = __('Awaiting E-mail Confirmation','ultimatemember');
 			}
 				
 			if ( $this->usermeta['account_status'][0] == 'awaiting_admin_review' ) {
-				$this->usermeta['account_status_name'][0] = 'Pending Review';
+				$this->usermeta['account_status_name'][0] = __('Pending Review','ultimatemember');
 			}
 			
 			if ( $this->usermeta['account_status'][0] == 'rejected' ) {
-				$this->usermeta['account_status_name'][0] = 'Membership Rejected';
+				$this->usermeta['account_status_name'][0] = __('Membership Rejected','ultimatemember');
 			}
 			
 			if ( $this->usermeta['account_status'][0] == 'inactive' ) {
-				$this->usermeta['account_status_name'][0] = 'Membership Inactive';
+				$this->usermeta['account_status_name'][0] = __('Membership Inactive','ultimatemember');
 			}
 			
 			// add user meta

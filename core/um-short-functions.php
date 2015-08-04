@@ -294,6 +294,47 @@ function um_profile_id() {
 	/***
 	***	@Get core page url
 	***/
+	function um_time_diff( $time1, $time2 ) {
+		global $ultimatemember;
+		return $ultimatemember->datetime->time_diff( $time1, $time2 );
+	}
+	
+	/***
+	***	@Get user's last login timestamp
+	***/
+	function um_user_last_login_timestamp( $user_id ) {
+		$value = get_user_meta( $user_id, '_um_last_login', true );
+		if ( $value )
+			return $value;
+		return '';
+	}
+	
+	/***
+	***	@Get user's last login time
+	***/
+	function um_user_last_login_date( $user_id ) {
+		$value = get_user_meta( $user_id, '_um_last_login', true );
+		if ( $value )
+			return date_i18n('F d, Y', $value );
+		return '';
+	}
+	
+	/***
+	***	@Get user's last login (time diff)
+	***/
+	function um_user_last_login( $user_id ) {
+		$value = get_user_meta( $user_id, '_um_last_login', true );
+		if ( $value ) {
+			$value = um_time_diff( $value, current_time('timestamp') );
+		} else {
+			$value = '';
+		}
+		return $value;
+	}
+	
+	/***
+	***	@Get core page url
+	***/
 	function um_get_core_page( $slug, $updated = false) {
 		global $ultimatemember;
 		$url = '';
@@ -449,10 +490,12 @@ function um_profile_id() {
 	***	@get a user's display name
 	***/
 	function um_get_display_name( $user_id ) {
-		$user = get_userdata( $user_id );
-		return $user->display_name;
+		um_fetch_user( $user_id );
+		$name = um_user('display_name');
+		um_reset_user();
+		return $name;
 	}
-	
+
 	/***
 	***	@get members to show in directory
 	***/

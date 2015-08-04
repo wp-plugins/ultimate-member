@@ -86,17 +86,24 @@ print ".um-$form_id.um {
 }
 
 if ( $primary_btn_color ) {
+
 print ".um-$form_id.um input[type=submit]:disabled:hover {
 	background: $primary_btn_color;
 }";
+
 print ".um-$form_id.um input[type=submit].um-button,
 .um-$form_id.um input[type=submit].um-button:focus,
-.um-$form_id.um a.um-button {
+.um-$form_id.um a.um-button,
+.um-$form_id.um a.um-button.um-disabled:hover,
+.um-$form_id.um a.um-button.um-disabled:focus,
+.um-$form_id.um a.um-button.um-disabled:active {
 	background: $primary_btn_color;
 }";
+
 print ".um-$form_id.um a.um-link {
 	color: $primary_btn_color;
 }";
+
 }
 
 if ( $primary_btn_hover ) {

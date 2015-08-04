@@ -80,7 +80,16 @@
 	add_filter('um_profile_field_filter_hook__user_registered', 'um_profile_field_filter_hook__user_registered', 99, 2);
 	function um_profile_field_filter_hook__user_registered( $value, $data ) {
 		$value = strtotime($value);
-		$value = sprintf(__('Joined %s','ultimatemember'), date_i18n('d M Y', $value) );
+		$value = sprintf(__('Joined %s','ultimatemember'), date_i18n('F d, Y', $value) );
+		return $value;
+	}
+	
+	/***
+	***	@last login date
+	***/
+	add_filter('um_profile_field_filter_hook__last_login', 'um_profile_field_filter_hook__last_login', 99, 2);
+	function um_profile_field_filter_hook__last_login( $value, $data ) {
+		$value = sprintf( __('Last login: %s','ultimatemember'), um_user_last_login( um_user('ID') ) );
 		return $value;
 	}
 	
@@ -212,6 +221,7 @@
 				if ( strpos($value, 'http://') !== 0 ) {
 					$value = 'http://' . $value;
 				}
+				$data['url_target'] = ( isset( $data['url_target'] ) ) ? $data['url_target'] : '_blank';
 				$value = '<a href="'. $value .'" title="'.$alt.'" target="'.$data['url_target'].'" ' . $url_rel . '>'.$alt.'</a>';
 			
 			}

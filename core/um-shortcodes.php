@@ -261,10 +261,14 @@ class UM_Shortcodes {
 		extract($args);
 		
 		$global = um_path . 'assets/dynamic_css/dynamic_global.php';
-		$file = um_path . 'assets/dynamic_css/dynamic_'.$mode.'.php';
+		
+		if ( isset( $mode ) ) {
+			$file = um_path . 'assets/dynamic_css/dynamic_'.$mode.'.php';
+		}
 		
 		include $global;
-		if ( file_exists( $file ) )
+		
+		if ( isset( $file ) && file_exists( $file ) )
 			include $file;
 		
 		if ( isset( $args['custom_css'] ) ) {

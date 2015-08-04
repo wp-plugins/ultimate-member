@@ -20,15 +20,13 @@ class UM_Logout {
 				if ( isset($_REQUEST['redirect_to']) && $_REQUEST['redirect_to'] !== '' ) {
 					$redirect_to = $_REQUEST['redirect_to'];
 				} else if ( um_user('after_logout') == 'redirect_home' ) {
-					$redirect_to = home_url();
+					wp_logout();
+					um_redirect_home();
 				} else {
-					$redirect_to = um_user('logout_redirect_url');
+					wp_logout();
+					exit( wp_redirect( um_user('logout_redirect_url') ) );
 				}
-				
-				wp_logout();
-				
-				exit( wp_redirect( $redirect_to ) );
-				
+
 			} else {
 				um_redirect_home();
 			}

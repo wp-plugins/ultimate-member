@@ -595,6 +595,17 @@ class UM_Builtin {
 				'edit_forbidden' => 1,
 			),
 			
+			'last_login' => array(
+				'title' => __('Last Login','ultimatemember'),
+				'metakey' => 'last_login',
+				'type' => 'text',
+				'label' => __('Last Login','ultimatemember'),
+				'required' => 0,
+				'public' => 1,
+				'editable' => 1,
+				'edit_forbidden' => 1,
+			),
+			
 			'display_name' => array(
 				'title' => __('Display Name','ultimatemember'),
 				'metakey' => 'display_name',
