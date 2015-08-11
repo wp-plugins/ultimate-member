@@ -150,26 +150,15 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 
 == Changelog ==
 
-<<<<<<< .mine
 = 1.3.16: August 11, 2015 =
 
 * New: added option to restrict categories in addition to per post content restriction
-* New: now you can use dynamic user ID in shortcode fields e.g. [your_shortcode user_id={profile_id}] should automatically work for the current profile only
+* New: added support to use dynamic user/profile ID in shortcode field e.g. [your-shortcode user_id={profile_id}]
 * New: added security feature to disable admin logging via frontend (optional)
 * New: added filter to um_get_core_page() function (for developers)
 * Tweak: removed delay from tooltips
 * Fixed: conflict with Podcast feed
 
-=======
-= 1.3.16: August 11, 2015 =
-
-* New: added option to restrict categories in addition to per post content restriction
-* New: added security feature to disable admin logging via frontend (optional)
-* New: added filter to um_get_core_page() function (for developers)
-* Tweak: removed delay from tooltips
-* Fixed: conflict with Podcast feed
-
->>>>>>> .r1218055
 = 1.3.15: August 4, 2015 =
 
 * Fixed: issue with logout from adminbar
