@@ -311,9 +311,16 @@ class UM_Files {
 		$fileinfo = $this->get_image_data($file);
 		$data = $ultimatemember->fields->get_field($field);
 		
+		if ( $data == null ) {
+			$data = apply_filters("um_custom_image_handle_{$field}", '' );
+			if ( !$data  ) {
+				$error = __('This media type is not recognized.','ultimatemember');
+			}
+		}
+	
 		if ( $fileinfo['invalid_image'] == true ) {
 			$error = sprintf(__('Your image is invalid or too large!','ultimatemember') );
-		} elseif ( !$this->in_array( $fileinfo['extension'], $data['allowed_types'] ) ) {
+		} elseif ( isset( $data['allowed_types'] ) && !$this->in_array( $fileinfo['extension'], $data['allowed_types'] ) ) {
 			$error = ( isset( $data['extension_error'] ) && !empty( $data['extension_error'] ) ) ? $data['extension_error'] : 'not allowed';
 		} elseif ( isset($data['min_size']) && ( $fileinfo['size'] < $data['min_size'] ) ) {
 			$error = $data['min_size_error'];

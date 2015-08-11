@@ -68,10 +68,11 @@ class UM_Admin_Notices {
 		if ( $pages && is_array( $pages ) ) {
 			
 			$err = false;
+			
 			foreach( $pages as $slug => $page_id ) {
 				
 				$page = get_post( $page_id );
-				if ( !isset( $page->ID ) ) {
+				if ( !isset( $page->ID ) && in_array( $slug, array( 'user','account','members','register','login','logout','password-reset' ) ) ) {
 					$err = true;
 				}
 				

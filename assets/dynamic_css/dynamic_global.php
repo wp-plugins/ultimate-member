@@ -111,7 +111,7 @@ print ".um-$form_id.um input[type=submit].um-button:hover,
 .um-$form_id.um a.um-button:hover {
 	background-color: $primary_btn_hover;
 }";
-print ".um-$form_id.um a.um-link:hover {
+print ".um-$form_id.um a.um-link:hover, .um-$form_id.um a.um-link-hvr:hover {
 	color: $primary_btn_hover;
 }";
 }

@@ -354,8 +354,10 @@ function um_profile_id() {
 			}
 		}
 		
-		if ( $url )
+		if ( $url ) {
+			$url = apply_filters('um_get_core_page_filter', $url, $slug, $updated);
 			return $url;
+		}
 		
 		return '';
 	}

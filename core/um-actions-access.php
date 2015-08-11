@@ -3,27 +3,6 @@
 	/***
 	***	@
 	***/
-	add_action( 'pre_get_posts', 'um_access_feed_posts' );
-	function um_access_feed_posts( $wp_query ) {
-		if ( ! is_admin() && $wp_query->is_feed() && ! $wp_query->is_singular() ) {
-			
-			if ( ! $meta_query = $wp_query->get( 'meta_query' ) )
-				$meta_query = array();
-
-			$meta_query[] = array(
-				'key'     => '_hidden',
-				'value'   => '',
-				'compare' => 'NOT EXISTS',
-			);
-
-			$wp_query->set( 'meta_query', $meta_query );
-			
-		}
-	}
-
-	/***
-	***	@
-	***/
 	add_action('um_access_homepage_per_role','um_access_homepage_per_role');
 	function um_access_homepage_per_role() {
 		global $ultimatemember;
@@ -76,6 +55,57 @@
 			
 		}
 
+	}
+	
+	/***
+	***	@
+	***/
+	add_action('um_access_category_settings','um_access_category_settings');
+	function um_access_category_settings() {
+		global $post, $wp_query, $ultimatemember;
+		if ( is_single() && get_the_category() ) {
+			$categories = get_the_category();
+			foreach( $categories as $cat ) {
+				$term_id = $cat->term_id;
+				$opt = get_option("category_$term_id");
+				if ( isset( $opt['_um_accessible'] ) ) {
+					switch( $opt['_um_accessible'] ) {
+						
+						case 0:	
+							$ultimatemember->access->allow_access = true;
+							$ultimatemember->access->redirect_handler = false; // open to everyone
+							break;
+				
+						case 1:
+							
+							if ( is_user_logged_in() )
+								$ultimatemember->access->redirect_handler = ( isset( $opt['_um_redirect'] ) ) ? $opt['_um_redirect'] : home_url();
+							
+							if ( !is_user_logged_in() )
+								$ultimatemember->access->allow_access = true;
+							
+							break;
+							
+						case 2:
+						
+							if ( !is_user_logged_in() )
+								$ultimatemember->access->redirect_handler = ( isset( $opt['_um_redirect'] ) ) ? $opt['_um_redirect'] : um_get_core_page('login');
+							
+							if ( is_user_logged_in() && isset( $opt['_um_roles'] ) && !empty( $opt['_um_roles'] ) ){
+								if ( !in_array( um_user('role'), $opt['_um_roles'] ) ) {
+									
+									if ( is_user_logged_in() )
+										$ultimatemember->access->redirect_handler = ( isset( $opt['_um_redirect'] ) ) ? $opt['_um_redirect'] : home_url();
+									
+									if ( !is_user_logged_in() )
+										$ultimatemember->access->redirect_handler =  um_get_core_page('login');
+								}
+							}
+							
+					}
+				}
+			}
+		}
 	}
 	
 	/***

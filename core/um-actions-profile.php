@@ -630,13 +630,11 @@
 
 					<i class="<?php echo $tab['icon']; ?>"></i>
 					
-					<?php if ( isset( $tab['notifier'] ) && $tab['notifier'] > 0 ) { ?><span class="um-tab-notifier uimob500-show uimob340-show uimob800-show"><?php echo $tab['notifier']; ?></span><?php } ?>
+					<?php if ( isset( $tab['notifier'] ) && $tab['notifier'] > 0 ) { ?>
+					<span class="um-tab-notifier uimob500-show uimob340-show uimob800-show"><?php echo $tab['notifier']; ?></span>
+					<?php } ?>
 					
 					<span class="uimob500-hide uimob340-hide uimob800-hide title"><?php echo $tab['name']; ?></span>
-					
-					<?php if ( um_get_option('profile_menu_counts') && isset( $tab['count'] ) ) { ?>
-					<span class="uimob500-hide uimob340-hide uimob800-hide count"><?php echo $tab['count']; ?></span>
-					<?php } ?>
 					
 				</a>
 			</div>

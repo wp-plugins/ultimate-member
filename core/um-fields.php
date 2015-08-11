@@ -566,6 +566,9 @@ class UM_Fields {
 		if ( isset( $fields ) && is_array( $fields ) && isset( $fields[$key] ) ) {
 			$array = $fields[$key];
 		} else {
+			if ( !isset( $ultimatemember->builtin->predefined_fields[$key] ) && !isset( $ultimatemember->builtin->all_user_fields[$key] ) ) {
+				return '';
+			}
 			$array = (isset( $ultimatemember->builtin->predefined_fields[$key] ) ) ? $ultimatemember->builtin->predefined_fields[$key] :  $ultimatemember->builtin->all_user_fields[$key];
 		}
 		
@@ -1290,7 +1293,7 @@ class UM_Fields {
 						
 						$output .= '<div class="um-single-image-preview show '. $crop_class .'" data-crop="'.$crop_data.'" data-key="'.$key.'">
 								<a href="#" class="cancel"><i class="um-icon-close"></i></a>' . $img . '
-							</div><a href="#" data-modal="um_upload_single" data-modal-size="'.$modal_size.'" data-modal-copy="1" class="um-button um-btn-auto-width">'. __('Change photo') . '</a>';
+							</div><a href="#" data-modal="um_upload_single" data-modal-size="'.$modal_size.'" data-modal-copy="1" class="um-button um-btn-auto-width">'. __('Change photo','ultimatemember') . '</a>';
 						
 					} else {
 					
@@ -1716,8 +1719,11 @@ class UM_Fields {
 				
 			/* Shortcode */
 			case 'shortcode':
+			
+				$content = str_replace('{profile_id}', um_profile_id(), $content );
+				
 				$output .= '<div class="um-field' . $classes . '"' . $conditional . ' data-key="'.$key.'">
-								<div class="um-field-shortcode">'.do_shortcode($content).'</div>
+								<div class="um-field-shortcode">' . do_shortcode($content) . '</div>
 							</div>';
 				break;
 				
@@ -2014,8 +2020,11 @@ class UM_Fields {
 				
 			/* Shortcode */
 			case 'shortcode':
+			
+				$content = str_replace('{profile_id}', um_profile_id(), $content );
+				
 				$output .= '<div class="um-field' . $classes . '"' . $conditional . ' data-key="'.$key.'">
-								<div class="um-field-shortcode">'.do_shortcode($content).'</div>
+								<div class="um-field-shortcode">' . do_shortcode($content) . '</div>
 							</div>';
 				break;
 				

@@ -773,10 +773,10 @@ function remove_Modal() {
 function show_Modal( contents ) {
 	if ( jQuery('.um-popup-overlay').length ) {
 		jQuery('.um-popup').removeClass('loading').html( contents );
-		jQuery('.um-tip-n').tipsy({gravity: 'n', opacity: 1, offset: 3, delayIn: 500 });
-		jQuery('.um-tip-w').tipsy({gravity: 'w', opacity: 1, offset: 3, delayIn: 500 });
-		jQuery('.um-tip-e').tipsy({gravity: 'e', opacity: 1, offset: 3, delayIn: 500 });
-		jQuery('.um-tip-s').tipsy({gravity: 's', opacity: 1, offset: 3, delayIn: 500 });
+		jQuery('.um-tip-n').tipsy({gravity: 'n', opacity: 1, offset: 3 });
+		jQuery('.um-tip-w').tipsy({gravity: 'w', opacity: 1, offset: 3 });
+		jQuery('.um-tip-e').tipsy({gravity: 'e', opacity: 1, offset: 3 });
+		jQuery('.um-tip-s').tipsy({gravity: 's', opacity: 1, offset: 3 });
 	}
 }
 

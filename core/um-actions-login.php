@@ -126,6 +126,9 @@
 
 		$rememberme = ( isset($args['rememberme']) ) ? 1 : 0;
 		
+		if ( um_get_option('deny_admin_frontend_login') && strstr( um_user('wp_roles' ), 'administrator' ) )
+			wp_die( __('This action has been prevented for security measures.','ultimatemember') );
+		
 		$ultimatemember->user->auto_login( um_user('ID'), $rememberme );
 		
 		// Hook that runs after successful login and before user is redirected

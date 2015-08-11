@@ -77,7 +77,7 @@ $this->sections[] = array(
                 'title'    		=> __( 'Default New User Role','ultimatemember' ),
                 'desc' 	   		=> __( 'Select the default role that will be assigned to user after registration If you did not specify custom role settings per form.','ultimatemember' ),
                 'default'  		=> 'member',
-				'options' 		=> $ultimatemember->query->get_roles( ),
+				'options' 		=> $ultimatemember->query->get_roles(),
 				'placeholder' 	=> __('Choose user role...','ultimatemember'),
         ),
 		
@@ -322,6 +322,16 @@ $this->sections[] = array(
                 'title'   		=> __( 'Allow Backend Login Screen for Guests','ultimatemember' ),
 				'default' 		=> 1,
 				'desc' 	   		=> __('Control whether guests are able to access the WP-admin login screen or not','ultimatemember'),
+				'on'			=> __('Yes','ultimatemember'),
+				'off'			=> __('No','ultimatemember'),
+        ),
+		
+        array(
+                'id'       		=> 'deny_admin_frontend_login',
+                'type'     		=> 'switch',
+                'title'   		=> __( 'Disable Admin Login via Frontend','ultimatemember' ),
+				'default' 		=> 0,
+				'desc' 	   		=> __('DO NOT turn this option on if you have set the option  "Allow Backend Login Screen for Guests" to NO. This will result in being locked out of admin.','ultimatemember'),
 				'on'			=> __('Yes','ultimatemember'),
 				'off'			=> __('No','ultimatemember'),
         ),
@@ -1547,16 +1557,6 @@ $tab_options[] = array(
                 'id'       		=> 'profile_menu_icons',
                 'type'     		=> 'switch',
                 'title'    		=> __('Enable menu icons in desktop view','ultimatemember'),
-				'default' 		=> 1,
-				'required'		=> array( 'profile_menu', '=', 1 ),
-				'on'			=> __('On','ultimatemember'),
-				'off'			=> __('Off','ultimatemember'),
-);
-
-$tab_options[] = array(
-                'id'       		=> 'profile_menu_counts',
-                'type'     		=> 'switch',
-                'title'    		=> __('Enable counts in menu','ultimatemember'),
 				'default' 		=> 1,
 				'required'		=> array( 'profile_menu', '=', 1 ),
 				'on'			=> __('On','ultimatemember'),

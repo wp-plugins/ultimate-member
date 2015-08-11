@@ -89,6 +89,9 @@ class UM_Shortcodes {
 	***/
 	function body_class( $classes ) {
 		global $ultimatemember;
+		
+		$classes[] = ( $ultimatemember->mobile->isMobile() ) ? 'um-mobile' : 'um-desktop';
+		
 		$array = $ultimatemember->permalinks->core;
 		
 		if ( !$array ) return $classes;

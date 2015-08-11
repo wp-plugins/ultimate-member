@@ -1,5 +1,101 @@
 <?php
 
+	/**
+	*
+	* Add access settings to category
+	*
+	**/
+	
+	add_action( 'category_add_form_fields', 'um_category_access_fields_create' );
+	add_action( 'category_edit_form_fields', 'um_category_access_fields_edit' );
+	add_action( 'create_category', 'um_category_access_fields_save' );
+	add_action( 'edited_category', 'um_category_access_fields_save' );
+
+	function um_category_access_fields_create( $term ){
+		global $ultimatemember;
+		
+		echo '<div class="form-field term-access-wrap">';
+		echo '<label>' . __('Content Availability','ultimatemember') . '</label>';
+		echo '<label><input type="radio" name="_um_accessible" value="0" checked /> '. __('Content accessible to Everyone','ultimatemember') . '</label>
+			<label><input type="radio" name="_um_accessible" value="1" /> ' . __('Content accessible to Logged Out Users','ultimatemember') . '</label>
+			<label><input type="radio" name="_um_accessible" value="2" /> ' . __('Content accessible to Logged In Users','ultimatemember') . '</label>';
+		echo '<p class="description">Who can see content/posts in this category.</p>';
+		echo '</div>';
+		
+		echo '<div class="form-field term-roles-wrap">';
+		echo '<label>' . __('Roles who can see the content','ultimatemember') . '</label>';
+		foreach($ultimatemember->query->get_roles() as $role_id => $role) {
+		echo '<label><input type="checkbox" name="_um_roles[]" value="' . $role_id . '" /> ' . $role . '</label>';
+		}
+		echo '<p class="description">' . __('This is applicable only if you allow logged-in users to view the content.','ultimatemember') . '</p>';
+		echo '</div>';
+		
+		echo '<div class="form-field term-redirect-wrap">';
+		echo '<label>' . __('Content Restriction Redirect URL','ultimatemember') . '</label>';
+		echo '<input type="text" name="_um_redirect" id="_um_redirect" value="" />';
+		echo '<p class="description">' . __('Users who cannot see content will get redirected to that URL.','ultimatemember') . '</p>';
+		echo '</div>';
+	
+	}
+
+	function um_category_access_fields_edit( $term ){
+		global $ultimatemember;
+		
+		$termID = $term->term_id;
+		$termMeta = get_option( "category_$termID" );    
+		$_um_accessible= (isset( $termMeta['_um_accessible'] ) )? $termMeta['_um_accessible'] : '';
+		$_um_redirect=  (isset( $termMeta['_um_redirect'] ) )? $termMeta['_um_redirect'] : '';
+		$_um_roles=  (isset( $termMeta['_um_roles'] ) )? $termMeta['_um_roles'] : '';
+
+		echo "<tr class='form-field form-required term-access-wrap'>";
+		echo "<th scope='row'><label>" . __('Content Availability','ultimatemember') . "</label></th>";
+		echo '<td><label><input type="radio" name="_um_accessible" value="0"  ' . checked( 0, $_um_accessible, 0 ) . ' /> '. __('Content accessible to Everyone','ultimatemember') . '</label><br />
+			<label><input type="radio" name="_um_accessible" value="1" ' . checked( 1, $_um_accessible, 0 ) . ' /> ' . __('Content accessible to Logged Out Users','ultimatemember') . '</label><br />
+			<label><input type="radio" name="_um_accessible" value="2" ' . checked( 2, $_um_accessible, 0 ) . ' /> ' . __('Content accessible to Logged In Users','ultimatemember') . '</label>';
+		echo '<p class="description">Who can see content/posts in this category.</p>';
+		echo "</td></tr>";
+		
+		echo "<tr class='form-field form-required term-roles-wrap'>";
+		echo "<th scope='row'><label>" .  __('Roles who can see the content','ultimatemember') . "</label></th>";
+		echo '<td>';
+		foreach($ultimatemember->query->get_roles() as $role_id => $role) {
+			if (  ( isset( $_um_roles ) && is_array( $_um_roles ) && in_array($role_id, $_um_roles ) ) || ( isset( $_um_roles ) && $role_id == $_um_roles ) ) {
+				$checked = 'checked';
+			} else {
+				$checked = '';
+			}
+		echo '<label><input type="checkbox" name="_um_roles[]" value="' . $role_id . '" ' .  $checked . ' /> ' . $role . '</label>&nbsp;&nbsp;';
+		}
+		echo '<p class="description">' . __('Users who cannot see content will get redirected to that URL.','ultimatemember') . '</p>';
+		echo "</td></tr>";
+		
+		echo "<tr class='form-field form-required term-redirect-wrap'>";
+		echo "<th scope='row'><label>" . __('Content Restriction Redirect URL','ultimatemember') . "</label></th>";
+		echo '<td>';
+		echo '<input type="text" name="_um_redirect" id="_um_redirect" value="' . $_um_redirect . '" />';
+		echo '<p class="description">' . __('Users who cannot see content will get redirected to that URL.','ultimatemember') . '</p>';
+		echo "</td></tr>";
+		
+	}
+
+	function um_category_access_fields_save( $termID ){
+
+		if ( isset( $_POST['_um_accessible'] ) ) {
+			
+			// get options from database - if not a array create a new one
+			$termMeta = get_option( "category_$termID" );
+			if ( !is_array( $termMeta ))
+				$termMeta = array();
+			
+			// get value and save it into the database - maybe you have to sanitize your values (urls, etc...)
+			$termMeta['_um_accessible'] = isset( $_POST['_um_accessible'] ) ? $_POST['_um_accessible'] : '';
+			$termMeta['_um_redirect'] = isset( $_POST['_um_redirect'] ) ? $_POST['_um_redirect'] : '';
+			$termMeta['_um_roles'] = isset( $_POST['_um_roles'] ) ? $_POST['_um_roles'] : '';
+			
+			update_option( "category_$termID", $termMeta );
+		}
+	}
+	
 	/***
 	***	@Allow mass syncing for roles
 	***/

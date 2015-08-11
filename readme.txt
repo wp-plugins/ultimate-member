@@ -5,9 +5,9 @@ Contributors: ultimatemember
 Donate link: 
 Tags: access control, author, authors, author profile, comments, community, communities, conditional fields, conditional logic, conditional menus, content protection, custom fields, file uploads, form builder, front-end login, front-end registration, gravatar, hide wp-admin, login, login page, logged-in users, mandrill, member, members, membership, member directory, online users, profile, profiles, profile builder, registration, restriction, restrict content, role creation, role menus, search filters, sign in, sign up, social network, star ratings, toolbar, user, users, user fields, user profile, user-profile, user profiles, user roles
 Requires at least: 4.1
-Tested up to: 4.2.3
+Tested up to: 4.2.4
 
-Stable Tag: 1.3.15
+Stable Tag: 1.3.16
 
 License: GNU Version 2 or Any Later Version
 
@@ -149,6 +149,14 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.3.16: August 11, 2015 =
+
+* New: added option to restrict categories in addition to per post content restriction
+* New: added security feature to disable admin logging via frontend (optional)
+* New: added filter to um_get_core_page() function (for developers)
+* Tweak: removed delay from tooltips
+* Fixed: conflict with Podcast feed
 
 = 1.3.15: August 4, 2015 =
 
