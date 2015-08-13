@@ -153,6 +153,7 @@ class UM_Account {
 			case 'privacy':
 				
 				$args = 'profile_privacy,hide_in_members';
+				$args = apply_filters('um_account_tab_privacy_fields', $args );
 				
 				$fields = $ultimatemember->builtin->get_specific_fields( $args );
 				foreach( $fields as $key => $data ){

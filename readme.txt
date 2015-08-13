@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.2.4
 
-Stable Tag: 1.3.16
+Stable Tag: 1.3.17
 
 License: GNU Version 2 or Any Later Version
 
@@ -81,6 +81,7 @@ Ultimate Member has been translated into the following languages:
 * Italian - Italiano
 * German - Deutsch
 * Dutch - Nederlands
+* Brazilian Portuguese - Português do Brasil
 * Finnish - Suomi
 * Romanian - Română
 * Danish - Dansk
@@ -149,6 +150,11 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.3.17: August 13, 2015 =
+
+* New: added Brazilian Portuguese language support
+* Tweak: added support for upcoming social activity extension
 
 = 1.3.16: August 11, 2015 =
 

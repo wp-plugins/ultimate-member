@@ -3,7 +3,7 @@
 Plugin Name: Ultimate Member
 Plugin URI: http://ultimatemember.com/
 Description: The easiest way to create powerful online communities and beautiful user profiles with WordPress
-Version: 1.3.16
+Version: 1.3.17
 Author: Ultimate Member
 Author URI: http://ultimatemember.com/
 */

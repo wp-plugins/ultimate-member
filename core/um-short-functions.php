@@ -409,8 +409,9 @@ function um_profile_id() {
 		global $ultimatemember;
 		if ( isset($_REQUEST['um_search']) ) {
 			$query = $ultimatemember->permalinks->get_query_array();
-			if ( $query[$filter] != '' )
+			if ( $query[$filter] != '' ) {
 				echo $query[$filter];
+			}
 		}
 		echo '';
 	}

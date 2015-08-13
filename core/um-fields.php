@@ -1478,7 +1478,7 @@ class UM_Fields {
 						
 						// add an empty option!
 						$output .= '<option value=""></option>';
-						
+
 						// add options
 						foreach($options as $k => $v) {
 						
@@ -1488,6 +1488,10 @@ class UM_Fields {
 								$option_value = $k;
 							} else {
 								$option_value = $v;
+							}
+							
+							if ( isset( $options_pair ) ) {
+								$option_value = $k;
 							}
 							
 							$output .= '<option value="'.$option_value.'" ';
