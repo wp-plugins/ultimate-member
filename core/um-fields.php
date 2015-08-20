@@ -2006,8 +2006,6 @@ class UM_Fields {
 						}
 						
 						$res = stripslashes( $this->field_value( $key, $default, $data ) );
-						
-						$res = htmlentities( $res );
 
 						$output .= '<div class="um-field-area">';
 						$output .= '<div class="um-field-value">' . $res . '</div>';
