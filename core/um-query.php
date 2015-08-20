@@ -70,6 +70,7 @@ class UM_Query {
 
 			unset( $args['post_type'] );
 			unset( $args['post_status'] );
+			$args['type__not_in'] = apply_filters( 'um_excluded_comment_types', array('') );
 			
 			$comments = get_comments($args);
 			return $comments;

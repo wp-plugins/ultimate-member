@@ -138,6 +138,8 @@ class UM_Enqueue {
 		
 		$this->load_raty();
 		
+		$this->load_scrollto();
+		
 		$this->load_scrollbar();
 
 		$this->load_imagecrop();
@@ -286,6 +288,16 @@ class UM_Enqueue {
 		wp_register_style('um_datetime_time', um_url . 'assets/css/pickadate/default.time.css' );
 		wp_enqueue_style('um_datetime_time');
 		
+	}
+	
+	/***
+	***	@Load scrollto
+	***/
+	function load_scrollto(){
+	
+		wp_register_script('um_scrollto', um_url . 'assets/js/um-scrollto.js' );
+		wp_enqueue_script('um_scrollto');
+
 	}
 	
 	/***

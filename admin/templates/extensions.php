@@ -1,5 +1,12 @@
 <?php
 
+	$premium['social-activity'] = array(
+		'url' => 'https://ultimatemember.com/extensions/social-activity/',
+		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/08/socialactivity1.png',
+		'name' => 'Social Activity',
+		'desc' => 'Increase engagement and allow users to interact with each other by adding an activity system to your site.',
+	);
+	
 	$premium['woocommerce'] = array(
 		'url' => 'https://ultimatemember.com/extensions/woocommerce/',
 		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/05/woocommerce-01-copy.png',

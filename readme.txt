@@ -5,9 +5,9 @@ Contributors: ultimatemember
 Donate link: 
 Tags: access control, author, authors, author profile, comments, community, communities, conditional fields, conditional logic, conditional menus, content protection, custom fields, file uploads, form builder, front-end login, front-end registration, gravatar, hide wp-admin, login, login page, logged-in users, mandrill, member, members, membership, member directory, online users, profile, profiles, profile builder, registration, restriction, restrict content, role creation, role menus, search filters, sign in, sign up, social network, star ratings, toolbar, user, users, user fields, user profile, user-profile, user profiles, user roles
 Requires at least: 4.1
-Tested up to: 4.2.4
+Tested up to: 4.3
 
-Stable Tag: 1.3.17
+Stable Tag: 1.3.18
 
 License: GNU Version 2 or Any Later Version
 
@@ -150,6 +150,13 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.3.18: August 20, 2015 =
+
+* New: filter for comment types tab in profile
+* New: jQuery.scrollto script added (for developers and extensions support)
+* Fixed: XSS vulnerability in text input
+* Fixed: user goes to profile about tab after editing profile
 
 = 1.3.17: August 13, 2015 =
 

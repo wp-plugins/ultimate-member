@@ -582,6 +582,7 @@ function um_reset_user() {
 	function um_edit_my_profile_cancel_uri() {
 		$url = remove_query_arg( 'um_action' );
 		$url = remove_query_arg( 'profiletab', $url );
+		$url = add_query_arg('profiletab', 'main', $url );
 		return $url;
 	}
 	
