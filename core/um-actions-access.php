@@ -198,6 +198,7 @@
 			if ( is_feed() ) {
 
 			} else {
+				$ultimatemember->access->allow_access = false;
 				$ultimatemember->access->redirect_handler = $redirect_to;
 			}
 		}

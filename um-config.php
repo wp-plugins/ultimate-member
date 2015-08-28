@@ -17,6 +17,8 @@ $core_pages = array(
 	'password-reset' => __('Password reset page','ultimatemember'),
 );
 
+$core_pages = apply_filters('um_core_pages', $core_pages );
+
 foreach( $core_pages as $page_s => $page ) {
 	$page_setup[] = array(
 				'id'       		=> 'core_' . $page_s,
@@ -54,6 +56,9 @@ function um_core_page_setting_saved($options, $css, $changed_values) {
 		'password-reset' => __('Password reset page','ultimatemember'),
 	);
 	$pages = get_option('um_core_pages');
+	
+	$core_pages = apply_filters('um_core_pages', $core_pages );
+
 	foreach( $core_pages as $slug => $page ) {
 		$pages[ $slug ] = $options['core_' . $slug ];
 	}

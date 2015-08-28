@@ -44,6 +44,9 @@ class UM_Enqueue {
 		}
 		
 		$exclude = um_get_option('js_css_exclude');
+		if ( is_array( $exclude ) ) {
+			array_filter( $exclude );
+		}
 		if ( $exclude && !is_admin() && is_array( $exclude ) ) {
 			
 			$c_url = $ultimatemember->permalinks->get_current_url( get_option('permalink_structure') );
@@ -57,6 +60,9 @@ class UM_Enqueue {
 		}
 		
 		$include = um_get_option('js_css_include');
+		if ( is_array( $include ) ) {
+			array_filter( $include );
+		}
 		if ( $include && !is_admin() && is_array( $include ) ) {
 
 			$c_url = $ultimatemember->permalinks->get_current_url( get_option('permalink_structure') );

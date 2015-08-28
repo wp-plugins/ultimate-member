@@ -129,6 +129,9 @@ function um_user_ip() {
 		if ( $style ) $output .= '<div class="um-admin-infobox">';
 		
 		if ( isset( $data ) && is_array( $data ) ) {
+			
+			$data = apply_filters('um_email_registration_data', $data );
+
 			foreach( $data as $k => $v ) {
 				
 				if ( !strstr( $k, 'user_pass' ) && $k != 'g-recaptcha-response' && $k != 'request' ) {
@@ -697,6 +700,8 @@ function um_reset_user() {
 	***/
 	function um_user_can( $permission ) {
 		global $ultimatemember;
+		if ( !is_user_logged_in() )
+			return false;
 		$user_id = get_current_user_id();
 		$role = get_user_meta( $user_id, 'role', true );
 		$permissions = $ultimatemember->query->role_data( $role );
@@ -1113,65 +1118,64 @@ function um_user( $data, $attrs = null ) {
 				
 			if ( $op == 'full_name' ) {
 				if ( um_user('first_name') && um_user('last_name') ) {
-					return um_user('first_name') . ' ' . um_user('last_name');
+					$name = um_user('first_name') . ' ' . um_user('last_name');
 				} else {
-					return um_profile( $data );
+					$name = um_profile( $data );
 				}
 			}
 				
 			if ( $op == 'sur_name' ) {
 				if ( um_user('first_name') && um_user('last_name') ) {
-					return um_user('last_name') . ', ' . um_user('first_name');
+					$name = um_user('last_name') . ', ' . um_user('first_name');
 				} else {
-					return um_profile( $data );
+					$name = um_profile( $data );
 				}
 			}
 				
 			if ( $op == 'first_name' ) {
 				if ( um_user('first_name') ) {
-					return um_user('first_name');
+					$name = um_user('first_name');
 				} else {
-					return um_profile( $data );
+					$name = um_profile( $data );
 				}
 			}
 				
 			if ( $op == 'username' ) {
-				return um_user('user_login');
+				$name = um_user('user_login');
 			}
 				
 			if ( $op == 'initial_name' ) {
 				if ( um_user('first_name') && um_user('last_name') ) {
 					$initial = um_user('last_name');
-					return um_user('first_name') . ' ' . $initial[0];
+					$name = um_user('first_name') . ' ' . $initial[0];
 				} else {
-					return um_profile( $data );
+					$name = um_profile( $data );
 				}
 			}
 				
 			if ( $op == 'initial_name_f' ) {
 				if ( um_user('first_name') && um_user('last_name') ) {
 					$initial = um_user('first_name');
-					return $initial[0] . ' ' . um_user('last_name');
+					$name = $initial[0] . ' ' . um_user('last_name');
 				} else {
-					return um_profile( $data );
+					$name = um_profile( $data );
 				}
 			}
 				
 			if ( $op == 'public_name' ) {
-				return um_profile( $data );
+				$name = um_profile( $data );
 			}
 				
 			if ( $op == 'field' && um_get_option('display_name_field') != '' ) {
 				$fields = array_filter(preg_split('/[,\s]+/', um_get_option('display_name_field') )); 
-				$output = '';
+				$name = '';
 				foreach( $fields as $field ) {
-					$output .= um_profile( $field ) . ' ';
+					$$name .= um_profile( $field ) . ' ';
 				}
-				return $output;
 			}
-				
-			return um_profile( $data );
-				
+			
+			return apply_filters('um_user_display_name_filter', $name, um_user('ID') );
+			
 			break;
 				
 		case 'role_select':

@@ -446,6 +446,14 @@ class UM_Files {
 		// if he does not have uploads dir yet
 		$this->new_user( $user_id );
 		
+		if ( is_user_logged_in() && ( get_current_user_id() != $user_id ) && !um_user_can('can_edit_everyone') ) {
+			wp_die( __('Unauthorized to do this attempt.','ultimatemember') );
+		}
+		
+		if ( !is_user_logged_in() && ( $key == 'profile_photo' || $key == 'cover_photo' ) ) {
+			wp_die( __('Unauthorized to do this attempt.','ultimatemember') );
+		}
+		
 		// name and extension stuff
 		$source_name = basename( $source );
 		
@@ -530,7 +538,11 @@ class UM_Files {
 		// update user's meta
 		do_action('um_before_upload_db_meta', $user_id, $key );
 		do_action("um_before_upload_db_meta_{$key}", $user_id );
+		
 		update_user_meta( $user_id, $key, $filename );
+		
+		do_action('um_after_upload_db_meta', $user_id, $key );
+		do_action("um_after_upload_db_meta_{$key}", $user_id );
 		
 		// the url of upload
 		return $this->upload_baseurl . $user_id . '/' . $filename;

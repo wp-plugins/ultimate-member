@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.3
 
-Stable Tag: 1.3.19
+Stable Tag: 1.3.20
 
 License: GNU Version 2 or Any Later Version
 
@@ -150,6 +150,19 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.3.20: August 28, 2015 =
+
+* New: added security measure for profile photo uploads
+* New: added filter to hook in registration details sent in email notification
+* New: added core pages filter to allow you change pages of extensions within plugin settings (e.g. activity)
+* Fixed: multi-select field filtering bug
+* Fixed: strip slashes from field names in fields modal
+* Fixed: show drag and drop footer content only in the drag and drop form builder page
+* Fixed: profile photo crop/upload issue
+* Fixed: category/post specific restriction conflict
+* Fixed: display UM classes only in UM pages
+* Fixed: minor code improvements
 
 = 1.3.19: August 20, 2015 =
 

@@ -733,7 +733,7 @@ function um_modal_responsive() {
 
 function um_remove_modal(){
 
-	jQuery('.um-modal .um-single-image-preview img').cropper("destroy");
+	jQuery('img.cropper-hidden').cropper('destroy');
 	
 	jQuery('body,html,textarea').css("overflow", "auto");
 	
