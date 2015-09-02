@@ -228,7 +228,7 @@ function um_user_ip() {
 			
 			foreach( $data as $k => $v ) {
 				
-				if ( strstr( $v, 'ultimatemember/temp' ) ) {
+				if ( !is_array( $v ) && strstr( $v, 'ultimatemember/temp' ) ) {
 					$file = basename( $v );
 					$v = um_user_uploads_uri() . $file;
 				}
