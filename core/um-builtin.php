@@ -77,10 +77,10 @@ class UM_Builtin {
 	function unique_field_err( $key ){
 		global $ultimatemember;
 		if ( empty( $key ) ) return 'Please provide a meta key';
-		if ( isset( $this->core_fields[ $key ] ) ) return 'Your meta key is a reserved core field and cannot be used';
-		if ( isset( $this->predefined_fields[ $key ] ) ) return 'Your meta key is a predefined reserved key and cannot be used';
-		if ( isset( $this->saved_fields[ $key ] ) ) return 'Your meta key already exists in your fields list';
-		if ( !$ultimatemember->validation->safe_string( $key ) ) return 'Your meta key contains illegal characters. Please correct it.';
+		if ( isset( $this->core_fields[ $key ] ) ) return __('Your meta key is a reserved core field and cannot be used','ultimatemember');
+		if ( isset( $this->predefined_fields[ $key ] ) ) return __('Your meta key is a predefined reserved key and cannot be used','ultimatemember');
+		if ( isset( $this->saved_fields[ $key ] ) ) return __('Your meta key already exists in your fields list','ultimatemember');
+		if ( !$ultimatemember->validation->safe_string( $key ) ) return __('Your meta key contains illegal characters. Please correct it.','ultimatemember');
 		return 0;
 	}
 	
@@ -89,8 +89,8 @@ class UM_Builtin {
 	***/
 	function date_range_start_err( $date ) {
 		global $ultimatemember;
-		if ( empty( $date ) ) return 'Please provide a date range beginning';
-		if ( !$ultimatemember->validation->validate_date( $date ) ) return 'Please enter a valid start date in the date range';
+		if ( empty( $date ) ) return __('Please provide a date range beginning','ultimatemember');
+		if ( !$ultimatemember->validation->validate_date( $date ) ) return __('Please enter a valid start date in the date range','ultimatemember');
 		return 0;
 	}
 	
@@ -99,9 +99,9 @@ class UM_Builtin {
 	***/
 	function date_range_end_err( $date, $start_date ) {
 		global $ultimatemember;
-		if ( empty( $date ) ) return 'Please provide a date range end';
-		if ( !$ultimatemember->validation->validate_date( $date ) ) return 'Please enter a valid end date in the date range';
-		if ( strtotime( $date ) <= strtotime( $start_date ) ) return 'The end of date range must be greater than the start of date range';
+		if ( empty( $date ) ) return __('Please provide a date range end','ultimatemember');
+		if ( !$ultimatemember->validation->validate_date( $date ) ) return __('Please enter a valid end date in the date range','ultimatemember');
+		if ( strtotime( $date ) <= strtotime( $start_date ) ) return __('The end of date range must be greater than the start of date range','ultimatemember');
 		return 0;
 	}
 	

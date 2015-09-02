@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.3
 
-Stable Tag: 1.3.20
+Stable Tag: 1.3.21
 
 License: GNU Version 2 or Any Later Version
 
@@ -45,6 +45,7 @@ Read about all of the plugin's features at [Ultimate Member](https://ultimatemem
 
 Ultimate Member has a range of extensions that allow you to extend the power of the plugin
 
+* [Social Activity](https://ultimatemember.com/extensions/social-activity/) - Let users create public wall posts & see the activity of other users
 * [WooCommerce](https://ultimatemember.com/extensions/woocommerce/) - Allow you to integrate WooCommerce with Ultimate Member
 * [Private Messages](https://ultimatemember.com/extensions/private-messages/) - Add a private messaging system to your site & allow users to message each other
 * [Followers](https://ultimatemember.com/extensions/followers/) - Allow users to follow each other on your site and protect their profile information
@@ -150,6 +151,15 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.3.21: September 2, 2015 =
+
+* Tweak: added security by sanitizing file/image uploads
+* Fixed: issue with account page > notifications tab
+* Fixed: image upload path in email notification
+* Fixed: php issue with displaying name
+* Fixed: missing localisation strings
+* Fixed: couple of php notices
 
 = 1.3.20: August 28, 2015 =
 

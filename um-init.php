@@ -176,6 +176,9 @@ class UM_API {
 		$domain = 'ultimatemember';
 		$locale = ( get_locale() != '' ) ? get_locale() : 'en_US';
 		load_textdomain($domain, WP_LANG_DIR . '/plugins/' .$domain.'-'.$locale.'.mo');
+		
+		if ( !get_option('show_avatars') )
+			update_option('show_avatars', 1 );
 
 	}
 	

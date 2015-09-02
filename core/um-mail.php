@@ -97,13 +97,13 @@ class UM_Mail {
 	***	@maybe sending HTML emails
 	***/
 	function set_content_type( $content_type ) {
+		if ( $this->force_plain_text == 'forced' )
+			return 'text/plain';
 		
-		if ( $this->force_plain_text == 'forced' ) return 'text/plain';
-		
-		if ( um_get_option('email_html') ) return 'text/html';
+		if ( um_get_option('email_html') )
+			return 'text/html';
 		
 		return 'text/plain';
-	
 	}
 	
 	/***

@@ -66,28 +66,30 @@
 		do_action('um_user_before_updating_profile', $userinfo );
 		
 		// loop through fields
-		foreach( $fields as $key => $array ) {
-		
-			if ( $fields[$key]['type'] == 'multiselect' ||  $fields[$key]['type'] == 'checkbox' && !isset($args['submitted'][$key]) ) {
-				delete_user_meta( um_user('ID'), $key );
-			}
+		if ( isset( $fields ) && is_array( $fields ) ) {
+			foreach( $fields as $key => $array ) {
 			
-			if ( isset( $args['submitted'][ $key ] ) ) {
-
-				if ( isset( $fields[$key]['type'] ) && in_array( $fields[$key]['type'], array('image','file') ) && um_is_temp_upload( $args['submitted'][ $key ] )  ) {
-					
-					$files[ $key ] = $args['submitted'][ $key ];
-				
-				} else {
-
-					if ( isset( $userinfo[$key]) && $args['submitted'][$key] != $userinfo[$key] ) {
-						$to_update[ $key ] = $args['submitted'][ $key ];
-					} else if ( $args['submitted'][$key] ) {
-						$to_update[ $key ] = $args['submitted'][ $key ];
-					}
-				
+				if ( $fields[$key]['type'] == 'multiselect' ||  $fields[$key]['type'] == 'checkbox' && !isset($args['submitted'][$key]) ) {
+					delete_user_meta( um_user('ID'), $key );
 				}
 				
+				if ( isset( $args['submitted'][ $key ] ) ) {
+
+					if ( isset( $fields[$key]['type'] ) && in_array( $fields[$key]['type'], array('image','file') ) && um_is_temp_upload( $args['submitted'][ $key ] )  ) {
+						
+						$files[ $key ] = $args['submitted'][ $key ];
+					
+					} else {
+
+						if ( isset( $userinfo[$key]) && $args['submitted'][$key] != $userinfo[$key] ) {
+							$to_update[ $key ] = $args['submitted'][ $key ];
+						} else if ( $args['submitted'][$key] ) {
+							$to_update[ $key ] = $args['submitted'][ $key ];
+						}
+					
+					}
+					
+				}
 			}
 		}
 		
@@ -346,7 +348,7 @@
 						<?php if ( $args['show_name'] ) { ?>
 						<div class="um-name">
 							
-							<a href="<?php echo um_user_profile_url(); ?>" title="<?php echo um_user('display_name'); ?>"><?php echo um_user('display_name'); ?></a>
+							<a href="<?php echo um_user_profile_url(); ?>" title="<?php echo um_user('display_name'); ?>"><?php echo um_user('display_name', 'html'); ?></a>
 							
 							<?php do_action('um_after_profile_name_inline', $args ); ?>
 						
@@ -389,7 +391,11 @@
 						<span><?php printf(__('This user account status is %s','ultimatemember'), um_user('account_status_name') ); ?></span>
 					</div>
 					
+					<?php do_action('um_after_header_meta', um_user('ID'), $args ); ?>
+					
 				</div><div class="um-clear"></div>
+				
+				<?php do_action('um_after_header_info', um_user('ID'), $args); ?>
 				
 			</div>
 			

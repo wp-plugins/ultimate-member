@@ -24,6 +24,8 @@
 			<label><input type="radio" name="_um_accessible" value="1" <?php if (isset($value)) checked(1, $value); ?> /> <?php _e('Content accessible to Logged Out Users','ultimatemember'); ?></label><br />
 			<label><input type="radio" name="_um_accessible" value="2" <?php if (isset($value)) checked(2, $value); ?> /> <?php _e('Content accessible to Logged In Users','ultimatemember'); ?></label>
 			
+			<?php do_action( 'um_admin_extend_access_settings' ); ?>
+			
 		</p>
 		
 		<div class="um-admin-access-loggedout">

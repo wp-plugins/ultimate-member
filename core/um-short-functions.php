@@ -1,5 +1,95 @@
 <?php
 
+	function UM_Mail( $user_id_or_email = 1, $subject_line = 'Email Subject', $template, $path = null, $args = array() ) {
+		
+		if ( absint( $user_id_or_email ) ) {
+			$user = get_userdata( $user_id_or_email );
+			$email = $user->user_email;
+		} else {
+			$email = $user_id_or_email;
+		}
+		
+		$headers = 'From: '. um_get_option('mail_from') .' <'. um_get_option('mail_from_addr') .'>' . "\r\n";
+		$attachments = null;
+		
+		if ( file_exists( get_stylesheet_directory() . '/ultimate-member/templates/email/' . get_locale() . '/' . $template . '.html' ) ) {
+			$path_to_email = get_stylesheet_directory() . '/ultimate-member/templates/email/' . get_locale() . '/' . $template . '.html';
+		} else if ( file_exists( get_stylesheet_directory() . '/ultimate-member/templates/email/' . $template . '.html' ) ) {
+			$path_to_email = get_stylesheet_directory() . '/ultimate-member/templates/email/' . $template . '.html';
+		} else {
+			$path_to_email = $path . $template . '.html';
+		}
+
+		if ( um_get_option('email_html') ) {
+			$message = file_get_contents( $path_to_email );
+			add_filter( 'wp_mail_content_type', function ( $content_type ) { return 'text/html'; } );
+		} else {
+			$message = ( um_get_option('email-' . $template ) ) ? um_get_option('email-' . $template ) : 'Untitled';
+		}
+		
+		$message = um_convert_tags( $message, $args );
+		wp_mail( $email, $subject_line, $message, $headers, $attachments );
+	}
+	
+	/***
+	***	@convert template tags
+	***/
+	function um_convert_tags( $content, $args = array() ) {
+	
+		$search = array(
+			'{display_name}',
+			'{first_name}',
+			'{last_name}',
+			'{gender}',
+			'{username}',
+			'{email}',
+			'{password}',
+			'{login_url}',
+			'{site_name}',
+			'{site_url}',
+			'{account_activation_link}',
+			'{password_reset_link}',
+			'{admin_email}',
+			'{user_profile_link}',
+			'{user_account_link}',
+			'{submitted_registration}',
+			'{user_avatar_url}',
+		);
+		
+		$search = apply_filters('um_template_tags_patterns_hook', $search);
+		
+		$replace = array(
+			um_user('display_name'),
+			um_user('first_name'),
+			um_user('last_name'),
+			um_user('gender'),
+			um_user('user_login'),
+			um_user('user_email'),
+			um_user('_um_cool_but_hard_to_guess_plain_pw'),
+			um_get_core_page('login'),
+			um_get_option('site_name'),
+			get_bloginfo('url'),
+			um_user('account_activation_link'),
+			um_user('password_reset_link'),
+			um_admin_email(),
+			um_user_profile_url(),
+			um_get_core_page('account'),
+			um_user_submitted_registration(),
+			um_get_user_avatar_url(),
+		);
+		
+		$replace = apply_filters('um_template_tags_replaces_hook', $replace);
+		
+		$content = str_replace($search, $replace, $content);
+		
+		if ( isset( $args['tags'] ) && isset( $args['tags_replace'] ) ) {
+			$content = str_replace($args['tags'], $args['tags_replace'], $content);
+		}
+		
+		return $content;
+		
+	}
+
 /**
  * @function um_user_ip()
  *
@@ -131,8 +221,13 @@ function um_user_ip() {
 		if ( isset( $data ) && is_array( $data ) ) {
 			
 			$data = apply_filters('um_email_registration_data', $data );
-
+			
 			foreach( $data as $k => $v ) {
+				
+				if ( strstr( $v, 'ultimatemember/temp' ) ) {
+					$file = basename( $v );
+					$v = um_user_uploads_uri() . $file;
+				}
 				
 				if ( !strstr( $k, 'user_pass' ) && $k != 'g-recaptcha-response' && $k != 'request' ) {
 				
@@ -1076,7 +1171,7 @@ function um_fetch_user( $user_id ) {
 function um_user( $data, $attrs = null ) {
 	
 	global $ultimatemember;
-		
+	
 	switch($data){
 		
 		default:
@@ -1170,11 +1265,11 @@ function um_user( $data, $attrs = null ) {
 				$fields = array_filter(preg_split('/[,\s]+/', um_get_option('display_name_field') )); 
 				$name = '';
 				foreach( $fields as $field ) {
-					$$name .= um_profile( $field ) . ' ';
+					$name .= um_profile( $field ) . ' ';
 				}
 			}
 			
-			return apply_filters('um_user_display_name_filter', $name, um_user('ID') );
+			return apply_filters('um_user_display_name_filter', $name, um_user('ID'), ( $attrs == 'html' ) ? 1 : 0 );
 			
 			break;
 				

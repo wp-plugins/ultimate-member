@@ -1685,7 +1685,7 @@ class UM_Fields {
 							}
 							
 							$output .= '<label class="um-field-checkbox '.$active.' um-field-half '.$col_class.'">';
-							$output .= '<input type="checkbox" name="'.$key.'[]" value="'.$v.'" ';
+							$output .= '<input type="checkbox" name="'.$key.'[]" value="'.strip_tags( $v ).'" ';
 							
 							if ( $this->is_selected($key, $v, $data) ) { 
 								$output.= 'checked';
@@ -1694,7 +1694,7 @@ class UM_Fields {
 							$output .= ' />';
 							
 							$output .= '<span class="um-field-checkbox-state"><i class="'.$class.'"></i></span>';
-							$output .= '<span class="um-field-checkbox-option">'.$v.'</span>';
+							$output .= '<span class="um-field-checkbox-option">'. $v .'</span>';
 							$output .= '</label>';
 						
 							if ($i % 2 == 0) {

@@ -35,12 +35,14 @@ class UM_Admin_Users {
 		unset( $actions['edit'] );
 		unset( $actions['delete'] );
 
-		$actions['backend_profile'] = "<a class='' href='" . admin_url('user-edit.php?user_id='. $user_id ) . "'>" . __( 'Edit','ultimatemember' ) . "</a>";
-		$actions['frontend_profile'] = "<a class='' href='" . um_user_profile_url() . "'>" . __( 'Edit in frontend','ultimatemember') . "</a>";
+		$actions['frontend_profile'] = "<a class='' href='" . um_user_profile_url() . "'>" . __( 'Profile','ultimatemember') . "</a>";
 		
 		if ( um_user('submitted') ) {
 			$actions['view_info'] = '<a href="#" data-modal="UM_preview_registration" data-modal-size="smaller" data-dynamic-content="um_admin_review_registration" data-arg1="'.$user_id.'" data-arg2="edit_registration">' . __('Info','ultimatemember') . '</a>';
 		}
+		
+		$actions = apply_filters('um_admin_user_row_actions', $actions, $user_id );
+		
 		return $actions;
 	}
 	
@@ -304,7 +306,7 @@ class UM_Admin_Users {
 	function manage_users_columns($columns) {
 	
 		$admin = new UM_Admin_Metabox();
-		
+
 		$columns['um_role'] = __('Community Role','ultimatemember') . $admin->_tooltip( __('This is the membership role set by Ultimate Member plugin','ultimatemember') );
 
 		return $columns;
@@ -318,7 +320,9 @@ class UM_Admin_Users {
 
 		if ( $this->custom_role == $column_name ) {
 		
-			delete_option( "um_cache_userdata_{$user_id}" );
+			if ( get_option( "um_cache_userdata_{$user_id}" ) ) {
+				delete_option( "um_cache_userdata_{$user_id}" );
+			}
 			um_fetch_user( $user_id );
 			return um_user('role_name');
 			

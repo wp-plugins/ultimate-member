@@ -377,6 +377,8 @@ class UM_Admin_Metabox {
 		
 		do_action('um_admin_before_saving_role_meta', $post_id );
 		
+		do_action('um_admin_before_save_role', $post_id, $post );
+		
 		foreach( $_POST as $k => $v ) {
 			if (strstr($k, '_um_')){
 				update_post_meta( $post_id, $k, $v);
@@ -384,6 +386,8 @@ class UM_Admin_Metabox {
 		}
 
 		do_action('um_admin_after_editing_role', $post_id, $post);
+		
+		do_action('um_admin_after_save_role', $post_id, $post );
 		
 	}
 	

@@ -165,7 +165,7 @@
 	***/
 	function um_admin_delete_role_cache($post_id, $post){
 		global $wpdb, $ultimatemember;
-		if(get_post_type( $post_id ) == 'um_role'){
+		if( get_post_type( $post_id ) == 'um_role') {
 			$slug = $post->post_name;
 			
 			$is_core = get_post_meta( $post_id, '_um_core', true );
@@ -263,7 +263,7 @@
 			}
 		}
 		
-		$url = remove_query_arg('um_adm_action', $ultimatemember->permalinks->get_current_url() );
+		$url = admin_url('admin.php?page=ultimatemember');
 		$url = add_query_arg('update','cleared_cache',$url);
 		exit( wp_redirect($url) );
 	}
