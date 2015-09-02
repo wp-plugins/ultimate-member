@@ -79,6 +79,8 @@ class UM_Permalinks {
 				$redirect = ( um_user('url_email_activate') ) ? um_user('url_email_activate') : um_get_core_page('login', 'account_active');
 				
 				um_reset_user();
+				
+				do_action('um_after_email_confirmation', $user_id );
 
 				exit( wp_redirect( $redirect ) );
 				

@@ -1,5 +1,9 @@
 <?php
 
+	function um_mail_content_type( $content_type ) {
+		return 'text/html';
+	}
+	
 	function UM_Mail( $user_id_or_email = 1, $subject_line = 'Email Subject', $template, $path = null, $args = array() ) {
 		
 		if ( absint( $user_id_or_email ) ) {
@@ -22,7 +26,7 @@
 
 		if ( um_get_option('email_html') ) {
 			$message = file_get_contents( $path_to_email );
-			add_filter( 'wp_mail_content_type', function ( $content_type ) { return 'text/html'; } );
+			add_filter( 'wp_mail_content_type', 'um_mail_content_type' );
 		} else {
 			$message = ( um_get_option('email-' . $template ) ) ? um_get_option('email-' . $template ) : 'Untitled';
 		}
