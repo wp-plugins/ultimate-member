@@ -84,6 +84,7 @@ class UM_Admin_Dashboard {
 				'value' => 'awaiting_admin_review',
 				'compare' => '='
 		);
+		$args = apply_filters('um_admin_pending_queue_filter', $args );
 		$users = new WP_User_Query( $args );
 		
 		delete_option('um_cached_users_queue');

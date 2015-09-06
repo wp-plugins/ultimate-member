@@ -86,6 +86,16 @@ class UM_Admin_Users {
 		if ( is_admin() && $pagenow=='users.php' && isset($_GET[ 'status' ]) && $_GET[ 'status' ] != '') {
 			
 			$status = urldecode($_GET[ 'status' ]);
+			
+			if ( $status == 'needs-verification') {
+			$query->query_where = str_replace('WHERE 1=1', 
+						"WHERE 1=1 AND {$wpdb->users}.ID IN (
+							 SELECT {$wpdb->usermeta}.user_id FROM $wpdb->usermeta 
+								WHERE {$wpdb->usermeta}.meta_key = '_um_verified' 
+								AND {$wpdb->usermeta}.meta_value = 'pending')", 
+						$query->query_where
+			);
+			} else {
 			$query->query_where = str_replace('WHERE 1=1', 
 						"WHERE 1=1 AND {$wpdb->users}.ID IN (
 							 SELECT {$wpdb->usermeta}.user_id FROM $wpdb->usermeta 
@@ -93,6 +103,7 @@ class UM_Admin_Users {
 								AND {$wpdb->usermeta}.meta_value = '{$status}')", 
 						$query->query_where
 			);
+			}
 
 		}
 
@@ -135,6 +146,8 @@ class UM_Admin_Users {
 			
 			$views[ $k ] = '<a href="'.admin_url('users.php').'?status='.$k.'" ' . $current . '>'. $v . ' <span class="count">('.$ultimatemember->query->count_users_by_status( $k ).')</span></a>';
 		}
+		
+		$views = apply_filters('um_admin_views_users', $views );
 		
 		return $views;
 	}
