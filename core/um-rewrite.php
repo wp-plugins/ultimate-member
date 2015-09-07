@@ -31,8 +31,8 @@ class UM_Rewrite {
 	function rewrite_rules(){
 
 		global $ultimatemember;
-		
-		if ( isset( $ultimatemember->permalinks->core['user'] ) && !get_option('um_flush_rules') ) {
+
+		if ( isset( $ultimatemember->permalinks->core['user'] ) ) {
 		
 			$user_page_id = $ultimatemember->permalinks->core['user'];
 			$account_page_id = $ultimatemember->permalinks->core['account'];
@@ -57,8 +57,7 @@ class UM_Rewrite {
 				);
 
 				flush_rewrite_rules( true );
-				update_option('um_flush_rules', true);
-				
+
 			}
 
 		}

@@ -362,7 +362,7 @@
 			
 			<?php } ?>
 			
-			<div class="um-account-name uimob800-hide"><a href="<?php echo um_user_profile_url(); ?>"><?php echo um_user('display_name'); ?></a></div>
+			<div class="um-account-name uimob800-hide"><a href="<?php echo um_user_profile_url(); ?>"><?php echo um_user('display_name', 'html'); ?></a></div>
 		
 		</div>
 	
