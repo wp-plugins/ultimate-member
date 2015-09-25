@@ -283,7 +283,7 @@
 											
 								?>
 								
-								<div class="um-member-metaline"><span><strong><?php echo $ultimatemember->fields->get_label( $key ); ?>:</strong> <?php echo $value; ?></span></div>
+								<div class="um-member-metaline um-member-metaline-<?php echo $key; ?>"><span><strong><?php echo $ultimatemember->fields->get_label( $key ); ?>:</strong> <?php echo $value; ?></span></div>
 								
 								<?php 
 									}

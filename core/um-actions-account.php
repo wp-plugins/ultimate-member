@@ -53,7 +53,7 @@
 		
 		$url = add_query_arg( 'updated', 'account', $url );
 		
-		if ( defined('ICL_SITEPRESS_VERSION') ) {
+		if ( function_exists('icl_get_current_language') ) {
 			if ( icl_get_current_language() != icl_get_default_language() ) {
 				$url = $ultimatemember->permalinks->get_current_url( true );
 				$url = add_query_arg( 'updated', 'account', $url );

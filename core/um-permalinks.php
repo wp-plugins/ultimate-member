@@ -136,7 +136,7 @@ class UM_Permalinks {
 		$page_id = $this->core['user'];
 		$profile_url = get_permalink( $page_id );
 		
-		if ( defined('ICL_SITEPRESS_VERSION') && icl_get_current_language() != icl_get_default_language() ) {
+		if ( function_exists('icl_get_current_language') && icl_get_current_language() != icl_get_default_language() ) {
 			if ( get_the_ID() > 0 && get_post_meta( get_the_ID(), '_um_wpml_user', true ) == 1 ) {
 				$profile_url = get_permalink( get_the_ID() );
 			}

@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.3
 
-Stable Tag: 1.3.25
+Stable Tag: 1.3.26
 
 License: GNU Version 2 or Any Later Version
 
@@ -54,6 +54,7 @@ Ultimate Member has a range of extensions that allow you to extend the power of 
 * [bbPress](https://ultimatemember.com/extensions/bbpress/) - With the bbPress extension you can beautifully integrate Ultimate Member with bbPress
 * [MailChimp](https://ultimatemember.com/extensions/mailchimp/) - Allow users to subscribe to your MailChimp lists when they signup on your site and sync user meta to MailChimp
 * [User Reviews](https://ultimatemember.com/extensions/user-reviews/) - Allow users to rate & review each other using a 5 star rate/review system
+* [Verified Users](https://ultimatemember.com/extensions/verified-users/) - Add a user verficiation system to your site so user accounts can be verified
 * [myCRED](https://ultimatemember.com/extensions/mycred/) - With the myCRED extension you can integrate Ultimate Member with the popular myCRED points management plugin
 * [Notices](https://ultimatemember.com/extensions/notices/) - Alert users to important information using conditional notices
 * [Profile Completeness](https://ultimatemember.com/extensions/profile-completeness/) - Encourage or force users to complete their profiles with the profile completeness extension
@@ -89,6 +90,7 @@ Ultimate Member has been translated into the following languages:
 * Swedish - Svenska
 * Polish - Polski
 * Czech
+* Greek
 * Russian - Русский
 * Turkish - Türkçe
 * Farsi - فارسى
@@ -151,6 +153,17 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.3.26: September 25, 2015 =
+
+* New: added Greek language support
+* Tweak: added custom class to every user meta in member directory
+* Tweak: added option to stop flushing rewrite rules every load (performance tweak)
+* Fixed: WPML issue on multisite install
+* Fixed: Removed redux menu from tools
+* Fixed: fix for wp_authenticate_username_password()
+* Fixed: searching users by e-mail address
+* Fixed: conflict with sites with thousands of pages
 
 = 1.3.25: September 7, 2015 =
 

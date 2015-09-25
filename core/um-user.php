@@ -652,7 +652,9 @@ class UM_User {
 	/***
 	***	@Update one key in user meta
 	***/
-	function update_usermeta_info( $key ){
+	function update_usermeta_info( $key ) {
+		// delete the key first just in case
+		delete_user_meta( $this->id, $key );
 		update_user_meta( $this->id, $key, $this->profile[$key] );
 	}
 

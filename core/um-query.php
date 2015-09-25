@@ -12,6 +12,11 @@ class UM_Query {
 	***	@get wp pages
 	***/
 	function wp_pages() {
+		$count_pages = wp_count_posts('page');
+		
+		if ( $count_pages->publish > 300 )
+			return;
+		
 		$pages = get_pages();
 		$array = '';
 		foreach ($pages as $page_data) {

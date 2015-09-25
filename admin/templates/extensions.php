@@ -1,5 +1,12 @@
 <?php
 
+	$premium['verified-users'] = array(
+		'url' => 'https://ultimatemember.com/extensions/verified-users/',
+		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/09/image.png',
+		'name' => 'Verified Users',
+		'desc' => 'Add a user verficiation system to your site so users can request verification and be manually verified by site admin.',
+	);
+	
 	$premium['social-activity'] = array(
 		'url' => 'https://ultimatemember.com/extensions/social-activity/',
 		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/08/socialactivity1.png',

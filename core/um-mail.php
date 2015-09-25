@@ -30,7 +30,7 @@ class UM_Mail {
 	function email_template( $template, $args = array() ) {
 		$lang = '';
 		
-		if ( defined('ICL_SITEPRESS_VERSION') ) {
+		if ( function_exists('icl_get_current_language') ) {
 			if ( icl_get_current_language() != 'en' ) {
 				$lang = icl_get_current_language() . '/';
 			}

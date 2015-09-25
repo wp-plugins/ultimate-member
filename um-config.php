@@ -1827,6 +1827,16 @@ $this->sections[] = array(
 				'full_width'    	=> true,
 		),
 
+        array(
+                'id'       		=> 'um_flush_stop',
+                'type'     		=> 'switch',
+                'title'   		=> __( 'Stop rewriting rules on every load','ultimatemember' ),
+				'default' 		=> 0,
+				'desc' 	   		=> __('Turn on If you have performance issue and are not getting 404 error/conflicts with other plugins/themes.','ultimatemember'),
+				'on'			=> __('On','ultimatemember'),
+				'off'			=> __('Off','ultimatemember'),
+        ),
+		
 		array(
 				'id'       		=> 'current_url_method',
                 'type'     		=> 'select',

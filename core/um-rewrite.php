@@ -32,7 +32,7 @@ class UM_Rewrite {
 
 		global $ultimatemember;
 
-		if ( isset( $ultimatemember->permalinks->core['user'] ) ) {
+		if ( isset( $ultimatemember->permalinks->core['user'] ) && !um_get_option('um_flush_stop') ) {
 		
 			$user_page_id = $ultimatemember->permalinks->core['user'];
 			$account_page_id = $ultimatemember->permalinks->core['account'];

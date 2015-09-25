@@ -31,6 +31,7 @@ class UM_API {
 			'sv_SE' => 'Svenska',
 			'pl_PL' => 'Polski',
 			'cs_CZ' => 'Czech',
+			'el'	=> 'Greek',
 			'ru_RU' => 'Русский',
 			'tr_TR' => 'Türkçe',
 			'fa_IR' => 'Farsi',

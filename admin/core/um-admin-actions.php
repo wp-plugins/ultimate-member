@@ -140,7 +140,8 @@
 	add_action('um_admin_before_access_settings', 'um_admin_wpml_post_options', 10, 1 );
 	function um_admin_wpml_post_options( $instance ) {
 	
-		if ( !defined('ICL_SITEPRESS_VERSION') ) return;
+		if ( !function_exists('icl_get_current_language') )
+			return;
 		
 		?>
 		

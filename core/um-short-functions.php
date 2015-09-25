@@ -447,7 +447,7 @@ function um_profile_id() {
 				$url =  add_query_arg( 'updated', esc_attr( $updated ), $url );	
 		}
 		
-		if ( defined('ICL_SITEPRESS_VERSION') && icl_get_current_language() != icl_get_default_language() && $slug == 'account' ) {
+		if ( function_exists('icl_get_current_language') && icl_get_current_language() != icl_get_default_language() && $slug == 'account' ) {
 			if ( get_post_meta( get_the_ID() , '_um_wpml_account', true ) == 1 ) {
 				$url = get_permalink( get_the_ID() );
 			}

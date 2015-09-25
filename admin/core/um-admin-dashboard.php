@@ -151,7 +151,11 @@ class UM_Admin_Dashboard {
 	***	@extension menu
 	***/
 	function extension_menu() {
+		
 		add_submenu_page( $this->slug, __('Extensions', $this->slug), '<span style="color: #00B9EB">' .__('Extensions', $this->slug) . '</span>', 'manage_options', $this->slug . '-extensions', array(&$this, 'admin_page') );
+		
+		remove_submenu_page('tools.php','redux-about');
+		
 	}
 	
 	/***
