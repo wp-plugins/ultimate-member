@@ -270,6 +270,24 @@
 	}
 	
 	/***
+	***	@secure passwords
+	***/
+	add_action('um_admin_do_action__um_passwords_secured', 'um_admin_do_action__um_passwords_secured');
+	function um_admin_do_action__um_passwords_secured( $action ){
+		global $ultimatemember;
+		if ( !is_admin() || !current_user_can('manage_options') ) die();
+		
+		$users = get_users();
+		foreach( $users as $user ) {
+			delete_user_meta( $user->ID, 'confirm_user_password' );
+			update_user_meta( $user->ID, 'submitted', '' );
+		}
+		
+		update_option( 'um_passwords_secured', 1 );
+		exit( wp_redirect( admin_url() ) );
+	}
+	
+	/***
 	***	@purge temp
 	***/
 	add_action('um_admin_do_action__purge_temp', 'um_admin_do_action__purge_temp');

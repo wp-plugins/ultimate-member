@@ -7,7 +7,7 @@ Tags: access control, author, authors, author profile, comments, community, comm
 Requires at least: 4.1
 Tested up to: 4.3
 
-Stable Tag: 1.3.26
+Stable Tag: 1.3.29
 
 License: GNU Version 2 or Any Later Version
 
@@ -68,9 +68,9 @@ Ultimate Member has a range of extensions that allow you to extend the power of 
 
 If you're a developer and would like to contribute to the source code of the plugin you can do so via our [GitHub Repository](https://github.com/ultimatemember/ultimatemember).
 
-= Support =
+= Documentation & Support =
 
-Looking for help with Ultimate Member? Join our [community forum](https://ultimatemember.com/forums/) to ask questions and get help from other users as well as the Ultimate Member team. This is also the place to report bugs and plugin/theme compatibility issues. As well as providing basic free support we also provide paid priority support for users who want faster and more in-depth support.
+Got a problem or need help with Ultimate Member? Head over to our [documentation](http://docs.ultimatemember.com/) and perform a search of the knowledge base. If you can’t find a solution to your issue then you can create a [support ticket](https://ultimatemember.com/support-contact/).
 
 = Languages =
 
@@ -101,7 +101,7 @@ Ultimate Member has been translated into the following languages:
 
 1. Activate the plugin
 2. That's it. Go to Ultimate Member > Settings to customize plugin options
-3. For more details, please visit the official [Documentation](https://ultimatemember.com/docs/) page.
+3. For more details, please visit the official [Documentation](http://docs.ultimatemember.com/) page.
 
 == Frequently Asked Questions ==
 
@@ -116,14 +116,6 @@ Yes. Ultimate Member is designed to adapt nicely to any screen resolution. It in
 = Is Ultimate Member multi-site compatible? =
 
 Yes. Ultimate Member works great on both single site and multi-site WordPress installs.
-
-= Where can I get support? =
-
-If you need help with Ultimate Member the best place to ask for help is via the Ultimate Member community forum where you can get answers from the Ultimate Member team and other members.
-
-= Where can I report bugs? =
-
-If you have found a bug with Ultimate Member you can report it in the community forum or on the Ultimate Member GitHub repository
 
 = Does the plugin work with any WordPress theme? =
 
@@ -153,6 +145,23 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.3.29: October 31, 2015 =
+
+* New: added new documentation links to plugin files
+* New: added filters to control profile photo menu (for developers)
+* Fixed: added security patch to remove decrypted passwords from database
+* Fixed: bug with blocked words during registration
+* Fixed: some localization strings
+* Fixed: php warnings/bugs on specific installs
+
+= 1.3.28: October 13, 2015 =
+
+* Fixed: Bug with plugin folder structure
+
+= 1.3.27: October 13, 2015 =
+
+* Fixed: Role name display in Users dashboard
 
 = 1.3.26: September 25, 2015 =
 

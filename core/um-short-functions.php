@@ -300,30 +300,7 @@ function um_user_ip() {
 		return $value;
 	}
 	
-/**
- * @function um_profile_id()
- *
- * @description This function returns the user ID for current profile.
- *
- * @usage <?php $user_id = um_profile_id(); ?>
- *
- * @returns Returns the user ID of profile if found, or current user ID if user is logged in. Also returns blank 
-   if no user ID is set.
- *
- * @example The example below will retrieve the user ID when viewing someone profile.
 
-	<?php
-	
-		$user_id = um_profile_id();
-		if ( $user_id == 1 ) {
-			echo 'This is administrator profile.';
-		}
-		
-	?>
-
- *
- *
- */
 function um_profile_id() {
 	
 	if ( um_get_requested_user() ) {
@@ -331,7 +308,7 @@ function um_profile_id() {
 	} else if ( is_user_logged_in() && get_current_user_id() ) {
 		return get_current_user_id();
 	}
-		
+
 	return 0;
 }
 
@@ -1142,36 +1119,7 @@ function um_fetch_user( $user_id ) {
 			return $uri;
 		return '';
 	}
-	
-/**
- * @function um_user()
- *
- * @description This function can be used to get user's data. This can be user profile data or user permissions.
- *
- * @usage <?php echo um_user( $data ); ?>
- *
- * @param $data (string) (required) The field or data you want to retrieve for user.
- * @param $attrs (string) (optional) Additional attribute for profile data that may need extra configuration.
- *
- * @returns Returns the user data requested If found. A user must be previously set using um_fetch_user() to 
-	properly retrieve user data.
- *
- * @example The example below can retrieve the user's display name
 
-	<?php
-	
-		$display_name = um_user('display_name');
-		echo $display_name; // prints the user's display name
-		
-	?>
-
- *
- * @example The example below can retrieve user's community role
- 
-	<?php echo um_user('role_name'); // example: Member or Admin ?>
- 
- *
- */
 function um_user( $data, $attrs = null ) {
 	
 	global $ultimatemember;
@@ -1279,7 +1227,7 @@ function um_user( $data, $attrs = null ) {
 				
 		case 'role_select':
 		case 'role_radio':
-			return um_user('role_name');
+			return $ultimatemember->user->get_role_name( um_user('role') );
 			break;
 				
 		case 'submitted':

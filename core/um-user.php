@@ -303,7 +303,16 @@ class UM_User {
 			unset( $submitted['user_password'] );
 		}
 		
+		if ( isset( $submitted['confirm_user_password'] ) ) {
+			unset( $submitted['confirm_user_password'] );
+		}
+
+		do_action('um_before_save_registration_details', $this->id, $submitted );
+		
 		update_user_meta( $this->id, 'submitted', $submitted );
+		
+		do_action('um_after_save_registration_details', $this->id, $submitted );
+		
 	}
 	
 	/***
@@ -313,32 +322,6 @@ class UM_User {
 		update_user_meta( $this->id, '_um_cool_but_hard_to_guess_plain_pw', $plain );
 	}
 	
-	/**
-	 * @function set_role()
-	 *
-	 * @description This method assign a role to a user. The user must be already set before processing this API method.
-	 *
-	 * @usage <?php $ultimatemember->user->set_role( $role ); ?>
-	 *
-	 * @param $role (string) (required) The user role slug you want to assign to user.
-	 *
-	 * @returns Changes user role if the given user role was a valid plugin role.
-	 *
-	 * @example Set a user and give them the role community-member
-
-		<?php
-		
-		// Sets a user. Can accept numeric user ID
-		um_fetch_user( 14 );
-		
-		// Change user role
-		$ultimatemember->user->set_role('community-member');
-		
-		?>
-
-	 *
-	 *
-	 */
 	function set_role( $role ){
 		
 		do_action('um_when_role_is_set', um_user('ID') );
@@ -539,6 +522,9 @@ class UM_User {
 	function deactivate(){
 		global $ultimatemember;
 		$this->set_status('inactive');
+		
+		do_action('um_after_user_is_inactive', um_user('ID') );
+		
 		$ultimatemember->mail->send( um_user('user_email'), 'inactive_email' );
 	}
 	
@@ -619,34 +605,10 @@ class UM_User {
 		}
 	}
 	
-	/**
-	 * @function get_role_name()
-	 *
-	 * @description This method is similar to $ultimatemember->user->get_role() but returns the role name instead of slug.
-	 *
-	 * @usage <?php $ultimatemember->user->get_role_name(); ?>
-	 *
-	 * @returns The user role's name.
-	 *
-	 * @example Do something if the user's role is Paid Customer
-
-		<?php
-		
-			um_fetch_user( 12 );
-			
-			if ( $ultimatemember->user->get_role_name() == 'Paid Customer' ) {
-				// Show this to paid customers
-			} else {
-				// You are a free member
-			}
-			
-		?>
-
-	 *
-	 *
-	 */
-	function get_role_name() {
-		return $this->profile['role_name'];
+	function get_role_name( $slug ) {
+		global $wpdb;
+		$post_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'um_role' AND post_name = '$slug'");
+		return get_the_title( $post_id );
 	}
 	
 	/***

@@ -337,7 +337,7 @@ class UM_Admin_Users {
 				delete_option( "um_cache_userdata_{$user_id}" );
 			}
 			um_fetch_user( $user_id );
-			return um_user('role_name');
+			return $ultimatemember->user->get_role_name( um_user('role') );
 			
 		}
 			

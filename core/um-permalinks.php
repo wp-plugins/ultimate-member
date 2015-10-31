@@ -34,6 +34,9 @@ class UM_Permalinks {
 		global $post;
 		
 		$server_name_method = ( um_get_option('current_url_method') ) ? um_get_option('current_url_method') : 'SERVER_NAME';
+		
+		if ( !isset( $_SERVER['SERVER_NAME'] ) )
+			return '';
 
 		if ( is_front_page() ) :
 			$page_url = home_url();
@@ -44,7 +47,7 @@ class UM_Permalinks {
 			$page_url .= "s";
 			$page_url .= "://";
 		 
-		if ( $_SERVER["SERVER_PORT"] != "80" && $_SERVER["SERVER_PORT"] != "443" )
+		if ( isset( $_SERVER["SERVER_PORT"] ) && $_SERVER["SERVER_PORT"] != "80" && $_SERVER["SERVER_PORT"] != "443" )
 			$page_url .= $_SERVER[ $server_name_method ].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
 		else
 			$page_url .= $_SERVER[ $server_name_method ].$_SERVER["REQUEST_URI"];

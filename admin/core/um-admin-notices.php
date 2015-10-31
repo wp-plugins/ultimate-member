@@ -41,6 +41,14 @@ class UM_Admin_Notices {
 		global $ultimatemember;
 		$hide_register_notice = get_option('um_can_register_notice');
 		
+		if ( !get_option('um_passwords_secured') ) {
+			echo '<div class="updated error"><p>';
+		
+			echo sprintf(__( 'Secure your database by removing hardcoded user passwords now. Click <a href="%s">here</a> to secure your database.', 'ultimatemember' ), add_query_arg('um_adm_action', 'um_passwords_secured') );
+		
+			echo '</p></div>';
+		}
+		
 		if ( !get_option('users_can_register') && !$hide_register_notice ) {
 			
 			echo '<div class="updated" style="border-color: #3ba1da;"><p>';
@@ -97,6 +105,8 @@ class UM_Admin_Notices {
 			}
 			
 		}
+		
+		do_action('um_admin_after_main_notices');
 		
 	}
 	
@@ -162,7 +172,7 @@ class UM_Admin_Notices {
 				$ignore = admin_url('users.php');
 				
 				$messages[0]['err_content'] = sprintf(__('Are you sure you want to delete the selected user(s)? The following users will be deleted: <p>%s</p> <strong>This cannot be undone!</strong>','ultimatemember'), $users);
-				$messages[0]['err_content'] .= '<p><a href="'.$confirm_uri.'" class="button-primary">' . __('Remove','ultimatemember') . '</a>&nbsp;&nbsp;<a href="'.$ignore.'" class="button">' . __('Undo','ultimatemember') . '</a></p>';
+				$messages[0]['err_content'] .= '<p><a href="'. esc_attr( $confirm_uri ) .'" class="button-primary">' . __('Remove','ultimatemember') . '</a>&nbsp;&nbsp;<a href="'.$ignore.'" class="button">' . __('Undo','ultimatemember') . '</a></p>';
 				
 				break;
 				

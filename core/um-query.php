@@ -258,7 +258,6 @@ class UM_Query {
 		if ( isset($post_id) && $post_id != '' ){
 			$meta = get_post_custom( $post_id );
 			$array['role'] = $real_role_slug;
-			$array['role_name'] = get_the_title( $post_id );
 			foreach ($meta as $k => $v){
 				if ( strstr($k, '_um_') ) {
 					$k = str_replace('_um_', '', $k);

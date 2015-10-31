@@ -321,6 +321,8 @@
 								'<a href="#" class="um-dropdown-hide">'.__('Cancel','ultimatemember').'</a>',
 							);
 							
+							$items = apply_filters('um_user_photo_menu_view', $items );
+							
 							echo $ultimatemember->menu->new_ui( 'bc', 'div.um-profile-photo', 'click', $items );
 							
 						} else if ( $ultimatemember->fields->editing == true ) {
@@ -330,6 +332,8 @@
 								'<a href="#" class="um-reset-profile-photo" data-user_id="'.um_profile_id().'" data-default_src="'.um_get_default_avatar_uri().'">'.__('Remove photo','ultimatemember').'</a>',
 								'<a href="#" class="um-dropdown-hide">'.__('Cancel','ultimatemember').'</a>',
 							);
+							
+							$items = apply_filters('um_user_photo_menu_edit', $items );
 							
 							echo $ultimatemember->menu->new_ui( 'bc', 'div.um-profile-photo', 'click', $items );
 							

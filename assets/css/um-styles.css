@@ -716,9 +716,6 @@ div.um-photo img {max-height: 300px; max-width: 100%;}
 
 span.um-req {
 	margin: 0 0 0 8px;
-	font-size: x-large;
+	font-size: 14px;
 	display: inline-block;
-	font-weight: bold;
-	position: relative;
-	top: 8px;
 }
