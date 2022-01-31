@@ -256,10 +256,11 @@
 	padding: 10px 0 0 0;
 }
 
-.um-name {
+.um-profile .um-name a{
 	float: left;
 	font-size: 24px;
 	font-weight: bold;
+	color:#000000 !important
 	margin-right: 30px;
 	line-height: 1.7em;
 }
@@ -284,9 +285,9 @@ font-weight: normal;
 	margin: 0 5px 0 0;
 }
 
-.um-meta-text {
+.um-profile .um-meta-text {
 	margin: 6px 0 0 0;
-	color: #666;
+	color:#000000 !important;
 }
 
 .um-meta-text p {
@@ -303,7 +304,7 @@ font-weight: normal;
 	border-left: 3px solid #C74A4A;
 	padding-left: 10px;
 	font-size: 14px;
-	color: #777;
+	color: #000000;
 }
 
 /*
